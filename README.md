@@ -1,6 +1,6 @@
-# nuxt-test
+# nuxtbolg
 
-> My best Nuxt.js project
+> My best Nuxt.js blog project
 
 ## Build Setup
 
