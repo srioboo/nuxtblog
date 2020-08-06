@@ -1,7 +1,13 @@
 ---
-layout: post
+name: 'adf'
 title: HTML y CSS Buenas prácticas
+year:
+id:
+description:
+layout: post
 tags: [CSS, HTML, código, buenas prácticas]
+author:
+  name: Salva
 ---
 
 ## Nunca uses estilos inline
@@ -26,7 +32,7 @@ El objetivo principal es que la pagina se carge lo más rápido posible para el 
 
 ## No uses javascript en linea, no estamos en 1996!
 
-Hace años era una práctica común poner comandos JS directamente en el interior de los tags. Por lo general un "onclick" o similar se añade al tag. 
+Hace años era una práctica común poner comandos JS directamente en el interior de los tags. Por lo general un "onclick" o similar se añade al tag.
 Ni que decir tiene que no se debe hacer nunca esto. Lo mejor es pasar el código a un JS externo y usar un "addEventListener/attachEvent" para escuchar el evento o usar un framework como JQuery.
 
 ```javascript

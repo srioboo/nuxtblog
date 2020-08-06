@@ -1,7 +1,14 @@
 ---
-layout: post
+name: 'notas-vs-code'
 title: Notas VS Code
+year: 04 Abr 2020
+id: 'notas-vs-code'
+description:
+    Apuntes y notas de VS Code
+layout: post
 tags: [VS Code]
+author:
+  name: Salva
 ---
 
 VS Code es un editor de código multiplataforma que permite multitud de lenguajes y alta configuración, es bastante últil para Angular, Vue o React y fue creado por Microsoft

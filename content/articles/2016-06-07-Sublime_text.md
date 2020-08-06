@@ -1,6 +1,12 @@
 ---
-layout: post
+name: 'test1'
 title: Mis apuntes de Sublime Text
+year:
+id:
+description:
+layout: post
+author:
+  name: Salva
 ---
 
 # Sublime Text Cheat Sheet

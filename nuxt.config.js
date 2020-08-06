@@ -44,9 +44,7 @@ export default {
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
-    '@nuxtjs/pwa',
-    '@nuxtjs/content',
+    '@nuxt/content',
   ],
   /*
    ** Axios module configuration
@@ -60,6 +58,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {},
+    // extend(config, ctx) {},
   },
 };

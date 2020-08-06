@@ -2,64 +2,51 @@
   <div>
     <Header />
     <BlogSection :blogs="blogs" />
-    <h1>{{ page.title }}</h1>
+    <!-- <h1>{{ page.title }}</h1>
     <p>{{ page.description }}</p>
     <nuxt-content :document="page" />
-    <div class="container">
-      <!-- <logo />
-      <h1 class="title">
-        nuxt-test
-      </h1>
-      <h2 class="subtitle">
-        My best Nuxt.js project
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>  -->
+    <nuxt-content :document="articles" /> -->
+
+    <div class="xs:w-full md:w-1/2 px-2 xs:mb-6 md:mb-12 article-card">
+      <h1>Blog Posts</h1>
+      <ul>
+        <li v-for="article of articles" :key="article.slug">
+          <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
+            <img
+              :src="article.img"
+              class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover"
+            />
+            <div>
+              <h2>{{ article.title }}</h2>
+              <p>by {{ article.author.name }}</p>
+              <p>{{ article.description }}</p>
+            </div>
+          </NuxtLink>
+        </li>
+      </ul>
     </div>
+
     <Footer />
   </div>
 </template>
 
 <script>
 // import Logo from '~/components/Logo.vue';
-import BlogSection from '~/components/sections/BlogSection';
+// import BlogSection from '~/components/sections/BlogSection';
 import Header from '~/components/sections/Header.vue';
 import Footer from '~/components/sections/Footer.vue';
-
-// import blogsEn from '~/contents/en/blogsEn.js';
-// import blogsEs from '~/content/es/blogsEs.js';
 
 export default {
   components: {
     // Logo,
-    BlogSection,
+    // BlogSection,
     Header,
     Footer,
   },
   async asyncData({ $content, params, error }) {
-    // const slug = params.slug || 'blog-using-vue-nuxt-markdown';
-    // const slug = blogsEs[0] || 'index';
-    // const blogs = blogsEs;
-
-    // const page = await $content('en/blog', slug)
-    const page = await $content('articles')
-      .fetch()
-      .catch(err => {
-        error({ statusCode: 404, message: 'Page not found' });
-        console.error(err);
-      });
-
-    const blogs = await $content('articles')
+    const articles = await $content('articles', params.slug)
+      .only(['title', 'description', 'img', 'slug', 'author'])
+      .sortBy('createdAt', 'asc')
       .fetch()
       .catch(err => {
         error({ statusCode: 404, message: 'Page not found' });
@@ -67,28 +54,9 @@ export default {
       });
 
     return {
-      page,
-      blogs,
+      articles,
     };
   },
-  /* asyncData({ app }) {
-    // const blogs = app.i18n.locale === 'en' ? blogsEn : blogsEs;
-    const blogs = blogsEs;
-
-    async function asyncImport(blogName) {
-      const wholeMD = await import(
-        // `~/contents/${app.i18n.locale}/blog/${blogName}.md`
-        `~/content/es/blog/${blogName}.md`
-      );
-      return wholeMD.attributes;
-    }
-
-    return Promise.all(blogs.map(blog => asyncImport(blog))).then(res => {
-      return {
-        blogs: res,
-      };
-    });
-  }, */
 };
 </script>
 

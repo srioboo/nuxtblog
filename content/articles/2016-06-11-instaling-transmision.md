@@ -1,10 +1,16 @@
 ---
-layout: post
+name: 'est'
 title: Instalando Transmision en Linux
+year:
+id:
+description:
+layout: post
 tags:
 - Linux
 - transmission
 - instalación
+author:
+  name: Salva
 ---
 # Instalación de Transmission como cliente bittorrent en Raspberry PI
 Para instalar transmission como nuestro cliente de bt en Linux segiremos los siguientes pasos.
@@ -55,7 +61,7 @@ Cambiando solo lo siguiente
 
 ```bash
 sudo /etc/init.d/transmission-daemon start
-``` 
+```
 
 Ahora podemos acceder desde: http://raspberiPi_PI:9091/transmission
 usuario / password: transmission / transmission

@@ -3,13 +3,15 @@ name: 'apuntes-javascript-i-variables-y-tipos'
 title: Apuntes de Javascript I - Variables y Tipos
 year: 10 Oct 2020
 id: 'apuntes-javascript-i-variables-y-tipos'
-description: |
+description:
   Primera parte del los apuntes de javascript "Javascript variables y tipos"
 layout: post
 tags:
 - Javascript
 - Programación
 - Web
+author:
+  name: Salva
 ---
 
 ## Variables y constantes

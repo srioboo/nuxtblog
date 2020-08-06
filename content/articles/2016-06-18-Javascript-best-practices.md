@@ -1,7 +1,13 @@
 ---
+name:
 layout: post
+year:
+id:
+description:
 title: Buenas prácticas con Javascript
 tags: [Javascript, código]
+author:
+  name: Salva
 ---
 
 # Enlaces:
@@ -133,9 +139,9 @@ Usando metodos nativos (como join()), es a veces más rápido que metodos no nat
 ```javascript
 var name = 'Jeffrey';
 var lastName = 'Way';
- 
+
 function doSomething() {...}
- 
+
 console.log(name); // Jeffrey -- or window.name
 ```
 
@@ -157,7 +163,7 @@ Se ha reducido la huella a solamente el objeto "DudeNameSpace".
 Sin comentarios :)
 
 ```javascript
-// Cycle through array and echo out each name. 
+// Cycle through array and echo out each name.
 for(var i = 0, len = array.length; i < len; i++) {
    console.log(array[i]);
 }
@@ -319,7 +325,7 @@ function TimeTracker(){
 }
 ```
 
-## Lecturas recomendadas 
+## Lecturas recomendadas
 
 Object-Oriented JavaScript
 JavaScript: The Good Parts

@@ -1,7 +1,14 @@
 ---
-layout: post
+name: 'apuntes-de-vim'
 title: Apuntes de Vim
+year: 06 Jun 2016
+id: 'apuntes-de-vim'
+description:
+    Apuntes y anotaciones sobre vim
+layout: post
 tags: [tutorial, chuleta, vim]
+author:
+  name: Salva
 ---
 
 Vim es un editor de consola muy versatil, pero al ser bastante antiguo tiene sus peculiaridades y hacerse con él para emplearlo eficazmente puedes ser bastante tedioso. Sabiendo esto me cree una pequeña chuletas para conocer los atajos de teclado y el funcionamiento básico.

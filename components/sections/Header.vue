@@ -50,6 +50,8 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+@import '~/assets/css/_colors.scss';
+
 .header {
   @apply flex;
   @apply items-center;
@@ -59,6 +61,7 @@ export default Vue.extend({
   @apply text-gray-500;
   @apply border-gray-500;
   @apply border-b;
+  height: $he-header;
 
   .burger {
     @apply flex;

@@ -1,10 +1,16 @@
 ---
-layout: post
+name:
 title: Gestión de proyectos con Grunt
+year:
+id:
+description:
+layout: post
 tags:
 - Grunt
 - Web
 - Programación
+author:
+  name: Salva
 ---
 
 Grunt es un gestor de automatización tareas que permite facilitar la validación, despliegue de código, compilación, etc.

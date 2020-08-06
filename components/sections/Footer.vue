@@ -3,8 +3,8 @@
     <div class="footer__info">
       <div class="container footer__info-container">
         <div class="footer__copyright">
-          © {{ year }} —
-          <span>Salvador Riobo</span>
+          © {{ year }}
+          <span> Salvador. Powered by <a href="www.nuxtjs.org">Nuxt</a></span>
         </div>
         <a href="#top" class="footer__top-page">^</a>
       </div>
@@ -22,14 +22,14 @@ export default {
 </script>
 
 <style lang="scss">
-$screen-sm: 500px;
-$screen-md: 500px;
-$text-negative: black;
+@import '~/assets/css/_colors.scss';
+
 .footer {
   &__info {
-    background-color: #f2f3f3; //$background-secondary;
-    padding: 1.5em 0;
-    border-top: 1px solid #bdc1c4;
+    background-color: $grey-light; //$background-secondary;
+    padding: 1.5em 1em;
+    border-top: 1px solid $grey-medium;
+    height: $he-footer;
   }
 
   &__info-container {
@@ -45,13 +45,14 @@ $text-negative: black;
 
   &__copyright {
     text-align: center;
+    color: $grey;
     @media (min-width: $screen-sm) {
       text-align: inherit;
     }
   }
 
   &__top-page {
-    color: $text-negative;
+    color: $grey;
     display: block;
     text-align: center;
     line-height: 1;

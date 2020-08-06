@@ -1,9 +1,16 @@
 ---
-layout: default
+name:
 title: Apuntes de BootStrap
+year:
+id:
+description:
+layout: default
+author:
+  name: Salva
 ---
 
-# MisApuntes de BootStrap
+## MisApuntes de BootStrap
+
 Se puede descargar de:
 
 [Pagina web de bootstrap](getbootstrap.com)
@@ -26,4 +33,5 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script
 ```
 
 ## Primera pagina
+
 1. Requiere del doctipe de html5 y de un charset correcto (utf8)

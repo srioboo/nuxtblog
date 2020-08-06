@@ -1,10 +1,21 @@
 ---
-layout: archive
+name: 'apuntes-de-ruby'
 title: Apuntes de Ruby
-date:   2015-12-12 16:58:04
+year: 12 Dic 2015
+id: 'apuntes-de-ruby'
+description:
+    Apuntes de Ruby
+layout: archive
+tags:
+- Programación
+- Ruby
+- Script
+author:
+  name: Salva
 ---
 
-# Vistazo general y adelanto
+## Vistazo general y adelanto
+
 Ruby es un lenguaje de programación poderoso y flexible que puedes usar en el desarrollo de redes o Internet, para procesar texto y crear juegos, y como parte del popular entorno web "Ruby on Rails". Ruby es:
 
 **De alto nivel**, lo que quiere decir que leer y escribir Ruby es realmente fácil.
@@ -15,7 +26,7 @@ Ruby es un lenguaje de programación poderoso y flexible que puedes usar en el d
 
 **Fácil de usar**. Ruby fue diseñado por Yukihiro Matsumoto (conocido como "Matz") en 1995. Matz se propuso diseñar un lenguaje a escala humana y por eso Ruby es tan fácil de aprender.
 
-# Tipos de datos: números, cadenas y booleanos
+## Tipos de datos: números, cadenas y booleanos
 
 ```ruby
 mi_num = 25    		# esto es un número
@@ -25,7 +36,7 @@ mi_booleano = true    	# un booleano (verdadero o falso)
 mi_string = "Ruby"    	# Y una cadena de texto
 ```
 
-# Matemáticas
+## Matemáticas
 
 - 5 + 5    # Suma (+)
 - 10 - 3   # Resta (-)
@@ -34,7 +45,7 @@ mi_string = "Ruby"    	# Y una cadena de texto
 - 3**2     # Exponenciación ( ** )
 - 12 % 3   # Módulo (%)
 
-# puts' y 'print'
+## puts' y 'print'
 
 El comando print toma cualquier cosa que escribas y lo muestra en la pantalla.
 puts (que significa "put string") es un poco diferente: agrega una línea nueva (en blanco) después de lo que quieres que se muestre en pantalla. Se usan de la siguiente manera:
@@ -44,7 +55,7 @@ puts "¿Qué gusto tiene la sal?"
 print "Salado"
 ```
 
-# Los métodos '.length', '.reverse', '.upcase', '.downcase'
+## Los métodos '.length', '.reverse', '.upcase', '.downcase'
 
 ```ruby
 "Me encanta el café con leche".length
@@ -60,7 +71,7 @@ print "Salado"
 # ==> "salvador"
 ```
 
-# Comentarios
+## Comentarios
 
 ```ruby
 # esto es un comentario de una linea
@@ -71,7 +82,7 @@ No necesito signos #.
 =end
 ```
 
-# Convenciones para la definición de nombres
+## Convenciones para la definición de nombres
 
 A medida que avances en estos cursos vas a encontrar muchos tipos diferentes de variables, pero justo ahora nos estamos ocupando de las variables locales. Por convención, estas variables comienzan con una letra en minúscula, y las palabras están separadas por guiones bajos, como en contador y metodo_experto. Ruby no impedirá que uses otros símbolos, tales como letras mayúsculas, $, o @, al comienzo de tus variables locales; pero por convención, estos símbolos significan cosas distintas, así que es mejor seguir el ejemplo de la comunidad de Ruby y así evitar confusiones.
 
@@ -80,7 +91,7 @@ nombre = "salvador"
 nombre.downcase.reverse.upcase
 ```
 
-# Leyendo datos
+## Leyendo datos
 
 ```ruby
 print "¿Cuál es tu nombre?"
