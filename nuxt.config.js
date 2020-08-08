@@ -1,5 +1,14 @@
 export default {
+  /*
+   ** Nuxt rendering mode
+   ** See https://nuxtjs.org/api/configuration-mode
+   */
   mode: 'universal',
+  /*
+   ** Nuxt target
+   ** See https://nuxtjs.org/api/configuration-target
+   */
+  target: 'static',
   /*
    ** Headers of the page
    */
@@ -43,7 +52,7 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
+    // Doc: https://github.com/nuxt/content
     '@nuxt/content',
   ],
   /*

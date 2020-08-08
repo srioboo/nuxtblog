@@ -1,6 +1,7 @@
 ---
-name: 'apuntes-de-vim'
 title: Apuntes de Vim
+alt: test
+img: https://images.unsplash.com/photo-1571723141898-68dfa1e50431?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60
 year: 06 Jun 2016
 id: 'apuntes-de-vim'
 description:

@@ -1,13 +1,13 @@
 ---
-name: 'adf'
 title: HTML y CSS Buenas prácticas
-year:
-id:
-description:
+year: 06 Jun 2016
+alt: article 2
+description: Buenas prácticas en HTML y CSS, todo lo que se debe hacer para construir una buena estructura de HTML y uno CSS correctos
 layout: post
 tags: [CSS, HTML, código, buenas prácticas]
 author:
-  name: Salva
+  name: S.R.N.
+  bio: I am a person.
 ---
 
 ## Nunca uses estilos inline
