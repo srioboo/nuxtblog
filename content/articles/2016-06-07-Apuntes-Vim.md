@@ -17,6 +17,7 @@ Vim es un editor de consola muy versatil, pero al ser bastante antiguo tiene sus
 ## Cursor movimiento
 
 **Tecla** | **Acción** | **Memotécnica**
+---|---|---
 h | moverse izquierda |
 j | moverse abajo |
 k | moversea arriba |
@@ -37,6 +38,7 @@ G | ir al comando (prefijo numeral - 5G va a la linea 5) | Go
 ## Insertar (Modo) - Insertar/Añadir texto
 
 **Tecla** | **Acción** | **Memotécnica**
+---|---|---
 i | insertar en la posición del cursor | insert
 I | insertar a principio linea | Insert
 a | añadir detrás del curso | add
@@ -49,6 +51,7 @@ Esc | salir de insert mode | Esc siempre sale
 ## Editar (Modo)
 
 **Tecla** | **Acción** | **Memotécnica**
+---|---|---
 r | reemplazar un solo caracter sin hacer insert mode |  replace
 J | une linea de abajo con la actual | Join
 cc | cambia (reemplaza) una linea completa | change
@@ -63,6 +66,7 @@ u | deshacer | undo
 ## Marcado de texto (visual mode)
 
 **Tecla** | **Acción** | **Memotécnica**
+---|---|---
 v | visual mode, marca lineas y luego un comando (como y - yank) | visual
 V | visual mode, comenzando con linea | Visual
 o | mueve a otro final de area marcada | other
@@ -78,6 +82,7 @@ Esc | exit visual mode | Esc para salir
 ## Visual comandos
 
 **Tecla** | **Acción** | **Memotécnica**
+---|---|---
 > | tabula a la derecha |
 < | tabula a la izquierda |
 y | yank (copy) el texto marcado | yank
@@ -87,6 +92,7 @@ d | borra el texto marcado | delete
 ## Copiar y pegar
 
 **Tecla** | **Acción** | **Memotécnica**
+---|---|---
 yy | yank (copy) a line | yank
 2yy | yank 2 lines | 2 yank
 yw | yank word | yank word
@@ -100,6 +106,7 @@ x | corta (cut) el caracter actual | x como cortar
 ## Saliendo
 
 **Tecla** | **Acción** | **Memotécnica**
+---|---|---
 :w | graba (save) el archivo, pero sin salir | write
 :wq | graba (save) y sale | write quit
 :q | sale (falla si algo ha cambiado) | quit
@@ -108,6 +115,7 @@ x | corta (cut) el caracter actual | x como cortar
 ## Buscar/Remplazar
 
 **Tecla** | **Acción** | **Memotécnica**
+---|---|---
 /*pattern* | busca un patron |
 ?*pattern* | buscan un patron al inverso |
 n | repite busqueda en la misma dirección |
@@ -118,6 +126,7 @@ N | repite busqueda en dirección opuesta |
 ## Trabajando con multiples archivos
 
 **Tecla** | **Acción** | **Memotécnica**
+---|---|---
 :e *filename* | Editar un archivo en un nuevo buffer | edit
 :bnext (or :bn) | ir a un nuevo buffer  |
 :bprev (of :bp) | ir al buffer anterior |
@@ -127,5 +136,3 @@ ctrl+ws | dividir ventana | window split
 ctrl+ww | cambiar entre ventanas | windows sWitch
 ctrl+wq | cerrar ventana | windows quit
 ctrl+wv | dividir ventana verticalmente | windows split Verticaly
-
-
