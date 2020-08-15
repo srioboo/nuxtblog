@@ -61,6 +61,18 @@ export default {
    */
   axios: {},
   /*
+   ** Content module configuration
+   ** See https://content.nuxtjs.org/configuration
+   */
+  /* content: {
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-material-oceanic.css',
+      },
+    },
+    nestedProperties: ['author.name'],
+  }, */
+  /*
    ** Build configuration
    */
   build: {

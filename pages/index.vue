@@ -22,8 +22,15 @@
             class="flex transition-shadow duration-150 ease-in-out shadow-sm hover:shadow-md xxlmax:flex-col"
           >
             <img
+              v-if="article.img"
               :src="article.img"
               :alt="article.alt"
+              class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover"
+            />
+            <img
+              v-else
+              src="https://via.placeholder.com/150/ffffff/ffffff"
+              alt="no image"
               class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover"
             />
             <div
@@ -75,10 +82,12 @@ export default {
 </script>
 
 <style lang="scss">
+@import '~/assets/css/_colors.scss';
+
 .article-card {
   border-radius: 8px;
   a {
-    background-color: #fff;
+    background-color: $white;
     border-radius: 8px;
   }
   img div {

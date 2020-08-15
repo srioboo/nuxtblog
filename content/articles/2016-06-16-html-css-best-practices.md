@@ -1,12 +1,13 @@
 ---
 title: HTML y CSS Buenas prácticas
 year: 06 Jun 2016
+img: https://images.unsplash.com/photo-1588065394015-68bf7e40738d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80
 alt: article 2
 description: Buenas prácticas en HTML y CSS, todo lo que se debe hacer para construir una buena estructura de HTML y uno CSS correctos
 layout: post
 tags: [CSS, HTML, código, buenas prácticas]
 author:
-  name: S.R.N.
+  name: Salva
   bio: I am a person.
 ---
 
