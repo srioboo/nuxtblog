@@ -7,7 +7,7 @@ description: Buenas prácticas en HTML y CSS, todo lo que se debe hacer para con
 layout: post
 tags: [CSS, HTML, código, buenas prácticas]
 author:
-  name: Salva
+  name: SRN
   bio: I am a person.
 ---
 

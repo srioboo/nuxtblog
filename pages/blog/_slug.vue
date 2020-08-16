@@ -27,7 +27,7 @@
           </div>
           <!-- <p class="bg-blue-300 font-bolder p-2">Secciones</p> -->
           <ul class="font-bold list-disc p-2">
-            <li v-for="link of article.toc" :key="link.id" class="list-none">
+            <li v-for="link of article.toc" :key="link.id" class="list-decimal">
               <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
             </li>
           </ul>

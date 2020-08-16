@@ -1,7 +1,7 @@
 {
-  "name": "nuxtblog2",
+  "name": "salrionblog",
   "version": "1.0.0",
-  "description": "My best Nuxt.js project",
+  "description": "Blog personal",
   "author": "salrio",
   "private": true,
   "scripts": {

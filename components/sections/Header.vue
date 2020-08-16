@@ -1,22 +1,22 @@
 <template>
   <header class="header">
-    <div class="burger" @click="togleMenu()">
+    <div class="xs:flex lg:hidden  burger" @click="togleMenu()">
       <div class="burger-line"></div>
       <div class="burger-line"></div>
       <div class="burger-line"></div>
     </div>
 
     <div class="logo">
-      <a href="http://srioboo.github.io/">Salrion</a>
+      <a href="/">Salrion</a>
     </div>
 
     <div id="navmenu">
       <ul class="flex">
         <li class="mr-6">
-          <a href="http://srioboo.github.io/year-archive/">Posts</a>
+          <a href="/year-archive/">Posts</a>
         </li>
         <li class="mr-6">
-          <a href="http://srioboo.github.io/tags/">Tags</a>
+          <a href="/tags/">Tags</a>
         </li>
       </ul>
     </div>
@@ -64,7 +64,7 @@ export default Vue.extend({
   height: $he-header;
 
   .burger {
-    @apply flex;
+    //@apply flex;
     @apply flex-wrap;
     @apply justify-around;
     @apply self-center;
