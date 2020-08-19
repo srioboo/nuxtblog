@@ -1,14 +1,17 @@
 ---
 name:
 title: Dojo Kun
-year:
-id:
-description:
+year: 07 May 2017
+img: https://images.unsplash.com/photo-1492571350019-22de08371fd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80
+alt: Dojo kun
+id: 'dojokun'
+description: Dojo kun, reglas dojo para practicantes de Karate Shotokan
 layout: post
 tags: [chuleta]
 author:
-  name: Salva
+  name: Salrion
 ---
+
 # *Dojo Kun - 道場訓 - Preceptos del Dojo*
 
 一丶 人格完成に努むること。

@@ -1,13 +1,14 @@
 ---
-name:
+title: Javascript Buenas prácticas
+year: 18 Jun 2016
 layout: post
-year:
-id:
-description:
-title: Buenas prácticas con Javascript
-tags: [Javascript, código]
+id: 'notas de javascript'
+img: https://images.unsplash.com/photo-1568589098025-33a4dab4341f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80
+alt: Javascript
+description: Buenas prácticas en el desarrollo de javascript
+tags: [Javascript]
 author:
-  name: Salva
+  name: SRN
 ---
 
 # Enlaces:

@@ -1,16 +1,15 @@
 ---
-name:
+name: 'gestion-proyectos-grunt'
 title: Gestión de proyectos con Grunt
-year:
-id:
-description:
+year: 14 Mar 2020
+img: https://images.unsplash.com/photo-1565109624019-cf28e0cdc1d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80
+alt: grunt
+id: 'grunt'
+description: Apuntes sobre gestión de proyectos y automatización con Grunt
 layout: post
-tags:
-- Grunt
-- Web
-- Programación
+tags: [Grunt, Web, Programación]
 author:
-  name: Salva
+  name: Salrion
 ---
 
 Grunt es un gestor de automatización tareas que permite facilitar la validación, despliegue de código, compilación, etc.

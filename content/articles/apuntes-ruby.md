@@ -2,16 +2,14 @@
 name: 'apuntes-de-ruby'
 title: Apuntes de Ruby
 year: 12 Dic 2015
+img: https://images.unsplash.com/photo-1551122102-63cd339bfaab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80
+alt: ruby
 id: 'apuntes-de-ruby'
-description:
-    Apuntes de Ruby
+description: Apuntes de Ruby
 layout: archive
-tags:
-- Programación
-- Ruby
-- Script
+tags: [Programación, Ruby, Script]
 author:
-  name: Salva
+  name: Salrion
 ---
 
 ## Vistazo general y adelanto

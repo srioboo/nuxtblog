@@ -1,35 +1,30 @@
 <template>
   <div class="blog">
-    <!-- <nuxt-link
-      :to="localePath({ name: 'blog-slug', params: { slug: blog.name } })"
-    > -->
-    <!-- <nuxt-link :to="'es/' + blog.name"> -->
-    <nuxt-link :to="blog.name">
-      <!--  <ImageResponsive
-        :image-u-r-l="`blog/${blog.id}/_thumbnail.jpg`"
-        :classes="'cardThumbnail'"
-        :width="'952'"
-        :height="'509'"
-        :alt="blog.cardAlt"
-      /> -->
-      <div class="image-wrap">
-        <vlazyimage src="/images/blog/bacon-ipsum/_main.jpg" />
-      </div>
-
-      <!--  <vlazyimage
-        src="https://cdn-images-1.medium.com/max/1600/1*xjGrvQSXvj72W4zD6IWzfg.jpeg"
-        src-placeholder="https://cdn-images-1.medium.com/max/30/1*xjGrvQSXvj72W4zD6IWzfg.jpeg"
-      /> -->
-
-      <article>
-        <h2 class="blog__title">
-          {{ blog.title }}
-        </h2>
-        <p class="blog__description">
-          {{ blog.description }}
+    <NuxtLink
+      :to="{ name: 'blog-slug', params: { slug: article.slug } }"
+      class="flex transition-shadow duration-150 ease-in-out shadow-sm hover:shadow-md xxlmax:flex-col"
+    >
+      <Vlazyimage />
+      <img
+        v-if="article.img"
+        :src="article.img"
+        :alt="article.alt"
+        class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover"
+      />
+      <img
+        v-else
+        src="https://via.placeholder.com/150/ffffff/ffffff"
+        alt="no image"
+        class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover"
+      />
+      <div class="p-6 flex flex-col justify-between xxlmin:w-1/2 xxlmax:w-full">
+        <h2 class="font-bold">{{ article.title }}</h2>
+        <p>por {{ article.author.name }} {{ article.year }}</p>
+        <p class="font-bold text-gray-600 text-sm">
+          {{ article.description }}
         </p>
-      </article>
-    </nuxt-link>
+      </div>
+    </NuxtLink>
   </div>
 </template>
 

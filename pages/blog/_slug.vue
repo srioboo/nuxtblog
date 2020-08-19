@@ -2,7 +2,9 @@
   <article
     class="flex lg:h-screen w-screen lg:overflow-hidden xs:flex-col lg:flex-row"
   >
-    <div class="relative xs:w-full xs:h-84 lg:w-1/4 lg:h-full post-left">
+    <div
+      class="relative xs:w-full xs:h-84 lg:w-1/4 lg:h-full post-left flex justify-center"
+    >
       <!-- <p>{{ article.description }}</p> -->
       <img
         v-if="article.img"
@@ -12,10 +14,10 @@
       />
       <div class="overlay"></div>
       <div
-        class="absolute text-menu top-30 left-30 xs:w-full bg-gray-400 bg-opacity-75"
+        class="absolute text-menu top-30 left-30 xs:w-full lg:w-5/6 bg-gray-400 bg-opacity-75 m-2 rounded-lg"
       >
         <nav
-          class="mt-5 lg:relative xs:absolute xs:top-0 xs:left-0 lg:top-100 lg:left-10 bg-gray-400 bg-opacity-75"
+          class="mt-5 lg:relative xs:absolute xs:top-0 xs:left-0 lg:top-100 lg:left-10"
         >
           <div class="text-xs p-2 font-bold">
             <span
@@ -26,8 +28,8 @@
             <span>Actualizado el: {{ formatDate(article.updatedAt) }}</span>
           </div>
           <!-- <p class="bg-blue-300 font-bolder p-2">Secciones</p> -->
-          <ul class="font-bold list-disc p-2">
-            <li v-for="link of article.toc" :key="link.id" class="list-decimal">
+          <ul class="font-bold text-xs leading-9 list-none p-2">
+            <li v-for="link of article.toc" :key="link.id">
               <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
             </li>
           </ul>
