@@ -1,7 +1,7 @@
 ---
 name: 'apuntes-de-ruby'
 title: Apuntes de Ruby
-year: 12 Dic 2015
+year: 2015-12-12
 img: https://images.unsplash.com/photo-1551122102-63cd339bfaab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80
 alt: ruby
 id: 'apuntes-de-ruby'

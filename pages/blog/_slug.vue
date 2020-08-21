@@ -26,6 +26,7 @@
               ></span
             ><br />
             <span>Actualizado el: {{ formatDate(article.updatedAt) }}</span>
+            <span>Actualizado el: {{ formatDate(article.year) }}</span>
           </div>
           <!-- <p class="bg-blue-300 font-bolder p-2">Secciones</p> -->
           <ul class="font-bold text-xs leading-9 list-none p-2">
@@ -46,7 +47,11 @@
 </template>
 
 <script>
+// import Header from '~/components/sections/Header.vue';
 export default {
+  components: {
+    // Header,
+  },
   async asyncData({ $content, params }) {
     const article = await $content('articles', params.slug).fetch();
 

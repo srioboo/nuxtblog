@@ -1,7 +1,7 @@
 ---
 name:
 title: Dojo Kun
-year: 07 May 2017
+year: 2017-05-07
 img: https://images.unsplash.com/photo-1492571350019-22de08371fd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80
 alt: Dojo kun
 id: 'dojokun'

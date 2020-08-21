@@ -78,5 +78,14 @@ export default Vue.extend({
       @apply w-8;
     }
   }
+
+  .logo {
+    @apply font-bold;
+    color: $grey-semi;
+  }
+
+  #navmenu {
+    @apply font-bold;
+  }
 }
 </style>

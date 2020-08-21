@@ -1,7 +1,7 @@
 ---
 name: 'raspberrypi'
 title: Apuntes de Raspberry Pi
-year: 22 May 2016
+year: 2016-05-22
 img: https://images.unsplash.com/photo-1553406830-4fd6df625354?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80
 alt: Raspberry Pi
 id: 'raspberrypi'

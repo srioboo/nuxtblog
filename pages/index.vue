@@ -8,7 +8,7 @@
     <nuxt-content :document="articles" /> -->
 
     <div class="m-8">
-      <h1 class="text-gray-600 border-b border-gray-300 my-5">
+      <h1 class="text-gray-600 border-b border-gray-300 my-5 font-bold">
         Entradas recientes
       </h1>
       <ul class="flex flex-wrap">

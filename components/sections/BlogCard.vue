@@ -18,7 +18,7 @@
       />
       <div class="p-6 flex flex-col justify-between xxlmin:w-1/2 xxlmax:w-full">
         <h2 class="font-bold">{{ article.title }}</h2>
-        <p>por {{ article.author.name }} {{ article.year }}</p>
+        <p>por {{ article.author.name }} {{ formatDate(article.year) }}</p>
         <p class="font-bold text-gray-600 text-sm">
           {{ article.description }}
         </p>
@@ -54,6 +54,12 @@ export default {
     article: {
       type: Object,
       default() {},
+    },
+  },
+  methods: {
+    formatDate(date) {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      return new Date(date).toLocaleDateString('es', options);
     },
   },
   /* async asyncData({ $content, params, error }) {

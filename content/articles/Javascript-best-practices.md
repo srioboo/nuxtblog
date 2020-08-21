@@ -1,6 +1,6 @@
 ---
 title: Javascript Buenas prácticas
-year: 18 Jun 2016
+year: 2016-06-18
 layout: post
 id: 'notas de javascript'
 img: https://images.unsplash.com/photo-1568589098025-33a4dab4341f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80

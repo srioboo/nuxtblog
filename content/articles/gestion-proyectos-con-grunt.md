@@ -1,7 +1,7 @@
 ---
 name: 'gestion-proyectos-grunt'
 title: Gestión de proyectos con Grunt
-year: 14 Mar 2020
+year: 2020-03-14
 img: https://images.unsplash.com/photo-1565109624019-cf28e0cdc1d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80
 alt: grunt
 id: 'grunt'
