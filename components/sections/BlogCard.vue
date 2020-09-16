@@ -18,7 +18,9 @@
       />
       <div class="p-6 flex flex-col justify-between xxlmin:w-1/2 xxlmax:w-full">
         <h2 class="font-bold">{{ article.title }}</h2>
-        <p>por {{ article.author.name }} {{ formatDate(article.year) }}</p>
+        <p class="text-xs">
+          por {{ article.author.name }} {{ formatDate(article.year) }}
+        </p>
         <p class="font-bold text-gray-600 text-sm">
           {{ article.description }}
         </p>
@@ -81,10 +83,6 @@ export default {
 
 <style lang="scss">
 @import '~/assets/css/_colors.scss';
-
-p:nth-child(2) {
-  font-size: 0.75em;
-}
 
 /*.image-wrap {
   min-height: 100%;

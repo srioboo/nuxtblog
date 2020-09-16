@@ -26,16 +26,19 @@
         >
           <li
             v-if="articleYear == tempYear"
-            class="xs:w-full md:w-full px-2 xs:mb-6 md:mb-12 article-card"
+            class="xs:w-full md:w-full px-2 xs:mb-6 md:mb-6 article-card"
           >
             <NuxtLink
               :to="{ name: 'blog-slug', params: { slug: article.slug } }"
               class="flex transition-shadow duration-150 ease-in-out shadow-sm hover:shadow-md xxlmax:flex-col"
             >
-              <div>
+              <h3 class="font-bold">
                 {{ article.title }}
-              </div>
-              <div>{{ formatDate(article.year) }}</div>
+              </h3>
+              <p class="text-xs">{{ formatDate(article.year) }}</p>
+              <p class="font-bold text-gray-600 text-sm">
+                {{ article.description }}
+              </p>
             </NuxtLink>
           </li>
         </ul>
@@ -98,10 +101,9 @@ export default {
 <style lang="scss">
 @import '~/assets/css/_colors.scss';
 h2 {
-  margin: 1.414em 0 0;
-  padding-bottom: 0.5em;
+  margin: 1em 0 1em;
   font-size: 1em;
-  color: #9ba1a6;
-  border-bottom: 1px solid #f2f3f3;
+  color: $grey-semi;
+  border-bottom: 1px solid $grey-light;
 }
 </style>
