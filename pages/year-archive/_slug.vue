@@ -13,7 +13,7 @@
       </h1>
       <div
         v-for="year of years"
-        :key="year.year"
+        :key="year.slug"
         :set="(tempYear = getYear(year.year))"
       >
         <h2>{{ tempYear }}</h2>
