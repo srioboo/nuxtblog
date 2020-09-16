@@ -1,17 +1,15 @@
 ---
-name: 'est'
+name: 'instalar-transmision'
 title: Instalando Transmision en Linux
-year:
-id:
-description:
+year: 2016-06-11
+id: 'instalar-transmision-linux'
+description: Notas de instalación de transmision en Linux
 layout: post
-tags:
-- Linux
-- transmission
-- instalación
+tags: [Linux, transmission, instalación]
 author:
-  name: Salva
+  name: Salrion
 ---
+
 # Instalación de Transmission como cliente bittorrent en Raspberry PI
 Para instalar transmission como nuestro cliente de bt en Linux segiremos los siguientes pasos.
 

@@ -82,6 +82,10 @@ export default {
 <style lang="scss">
 @import '~/assets/css/_colors.scss';
 
+p:nth-child(2) {
+  font-size: 0.75em;
+}
+
 /*.image-wrap {
   min-height: 100%;
   width: 100%;

@@ -1,13 +1,13 @@
 ---
-name:
+name: 'notas-tmux'
 title: Notas Tmux
-year:
+year: 2017-04-28
 id:
-description:
+description: Notas sobre tmux
 layout: post
 tags: [tutorial, chuleta, Tmux]
 author:
-  name: Salva
+  name: Salrion
 ---
 
 Tmux permite crear en la consola nuevos paneles y ventanas de forma que se tiene una configuración "multiconsola" con la que poder ser más productivo.
