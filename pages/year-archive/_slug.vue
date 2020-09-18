@@ -78,8 +78,6 @@ export default {
         console.error(err);
       });
 
-    console.log(years);
-
     return {
       articles,
       years,
