@@ -6,9 +6,9 @@
         Post por tags
       </h1>
 
-      <div v-for="mitag of tags" :key="mitag.tags" style="float: left">
+      <!-- <div v-for="mitag of tags" :key="mitag.tags" style="float: left">
         {{ mitag }}&nbsp;
-      </div>
+      </div> -->
 
       <div v-for="tag of tags" :key="tag.tags" :set="(tempTag = tag.tags)">
         <h2>{{ tag }}</h2>
