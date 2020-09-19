@@ -82,10 +82,12 @@ export default Vue.extend({
   .logo {
     @apply font-bold;
     color: $grey-semi;
+    @apply text-gray-800;
   }
 
   #navmenu {
     @apply font-bold;
+    @apply text-gray-700;
   }
 }
 </style>

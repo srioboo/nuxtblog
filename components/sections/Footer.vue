@@ -49,6 +49,7 @@ export default {
     @media (min-width: $screen-sm) {
       text-align: inherit;
     }
+    @apply text-gray-700;
   }
 
   &__top-page {

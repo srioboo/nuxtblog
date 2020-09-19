@@ -9,19 +9,22 @@
         :src="article.img"
         :alt="article.alt"
         class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover"
+        loading="lazy"
       />
       <img
         v-else
         src="https://via.placeholder.com/150/ffffff/ffffff"
         alt="no image"
         class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover"
+        loading="lazy"
       />
       <div class="p-6 flex flex-col justify-between xxlmin:w-1/2 xxlmax:w-full">
         <h2 class="font-bold">{{ article.title }}</h2>
         <p class="text-xs">
-          por {{ article.author.name }} {{ formatDate(article.year) }}
+          <!-- por {{ article.author.name }} -->
+          {{ formatDate(article.year) }}
         </p>
-        <p class="font-bold text-gray-600 text-sm">
+        <p class="font-bold text-gray-700 text-sm">
           {{ article.description }}
         </p>
       </div>

@@ -13,13 +13,16 @@ export default {
    ** Headers of the page
    */
   head: {
+    htmlAttrs: {
+      lang: 'es',
+    },
     title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
-        hid: 'Blog personal',
-        name: 'Blog personal',
+        hid: 'description',
+        name: 'description',
         content: process.env.npm_package_description || '',
       },
     ],
