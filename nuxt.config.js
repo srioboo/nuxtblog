@@ -92,7 +92,7 @@ export default {
     // extend(config, ctx) {},
   },
   sitemap: {
-    hostname: process.env.BASE_URL,
+    hostname: process.env.BASE_URL || '',
   },
   router: {
     /**
