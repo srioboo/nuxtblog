@@ -94,4 +94,10 @@ export default {
   sitemap: {
     hostname: process.env.BASE_URL,
   },
+  router: {
+    /**
+     * Include trailingSlash to avoid redirection 302 from no slash to slash
+     */
+    trailingSlash: true,
+  },
 };
