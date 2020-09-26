@@ -50,6 +50,12 @@ export default {
     '@nuxtjs/stylelint-module',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: 'UA-179100116-1',
+      },
+    ],
   ],
   /*
    ** Nuxt.js modules
