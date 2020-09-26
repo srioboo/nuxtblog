@@ -4,7 +4,9 @@
       <div class="container footer__info-container">
         <div class="footer__copyright">
           © {{ year }}
-          <span> Salvador. Powered by <a href="www.nuxtjs.org">Nuxt</a></span>
+          <span>
+            Salvador. Powered by <a href="https://www.nuxtjs.org">Nuxt</a></span
+          >
         </div>
         <a href="#top" class="footer__top-page">^</a>
       </div>

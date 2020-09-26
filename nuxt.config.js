@@ -63,6 +63,7 @@ export default {
   modules: [
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
+    '@nuxtjs/sitemap',
   ],
   /*
    ** Axios module configuration
@@ -89,5 +90,8 @@ export default {
      ** You can extend webpack config here
      */
     // extend(config, ctx) {},
+  },
+  sitemap: {
+    hostname: process.env.BASE_URL,
   },
 };
