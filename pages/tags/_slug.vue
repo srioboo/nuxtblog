@@ -100,6 +100,18 @@ export default {
       return new Date(date).toLocaleDateString('es', options);
     },
   },
+  head() {
+    return {
+      title: 'Salrion, post ordenados por tags',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Todos los articulos ordenados por tags o temática',
+        },
+      ],
+    };
+  },
 };
 </script>
 

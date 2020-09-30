@@ -93,6 +93,19 @@ export default {
       return new Date(date).toLocaleDateString('es', options);
     },
   },
+  head() {
+    return {
+      title: 'Salrion, post ordenados por año de creación',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Todos los articulos ordenados por las fechas (años) en las que fueron creados',
+        },
+      ],
+    };
+  },
 };
 </script>
 

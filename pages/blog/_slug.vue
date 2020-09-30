@@ -10,6 +10,7 @@
         v-if="article.img"
         :src="article.img"
         :alt="article.alt"
+        :title="article.title"
         class="absolute h-full w-full object-cover"
       />
       <div class="overlay"></div>
@@ -24,16 +25,17 @@
               ><a href="/" class="underline font-bold"
                 >Todos los artículos</a
               ></span
-            ><br />
+            ><br /><br />
+            <span>Creado el: {{ formatDate(article.year) }}</span>
             <span>Actualizado el: {{ formatDate(article.updatedAt) }}</span>
-            <span>Actualizado el: {{ formatDate(article.year) }}</span>
           </div>
           <!-- <p class="bg-blue-300 font-bolder p-2">Secciones</p> -->
+          <!-- TODO: mejorar y comentar la lista de contenidos Esto es la lista de contenidos
           <ul class="font-bold text-xs leading-9 list-none p-2">
             <li v-for="link of article.toc" :key="link.id">
               <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
             </li>
-          </ul>
+          </ul> -->
         </nav>
       </div>
     </div>
@@ -62,6 +64,18 @@ export default {
       const options = { year: 'numeric', month: 'long', day: 'numeric' };
       return new Date(date).toLocaleDateString('es', options);
     },
+  },
+  head() {
+    return {
+      title: this.article.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.article.description,
+        },
+      ],
+    };
   },
 };
 </script>

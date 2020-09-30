@@ -13,7 +13,8 @@ author:
 ---
 
 # Sublime Text Cheat Sheet
-# SHORCUT
+
+## SHORCUT
 This is a cheat sheet with keyboard shortcuts for Sublime Text. A comma means that all previous keys are no longer held. Add another tab with replace and "(?!^)(?<!>)(?<!>\t)\t(?!\t)" and "\t\t" in regex mode.
 
 ## Backups

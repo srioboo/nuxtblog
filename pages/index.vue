@@ -53,6 +53,11 @@ export default {
       articles,
     };
   },
+  head() {
+    return {
+      title: 'SalrionBlog, blog personal',
+    };
+  },
 };
 </script>
 
