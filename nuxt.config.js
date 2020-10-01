@@ -96,6 +96,7 @@ export default {
     // extend(config, ctx) {},
   },
   sitemap: {
+    xmlNs: 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
     defaults: {
       lastmod: getDate(),
     },
