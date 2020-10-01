@@ -12,8 +12,6 @@ author:
   name: SRN
 ---
 
-# Apuntes-Raspberry-pi
-
 ## Montar un servidor web
 
 http://geekytheory.com/tutorial-raspberry-pi-crear-servidor-web/
@@ -35,7 +33,7 @@ gateway 192.168.1.1
 # iface default inet dhcp
 ```
 
-# Instalar Nginx, PHP5 y SQLite3 en un Raspberry Pi
+## Instalar Nginx, PHP5 y SQLite3 en un Raspberry Pi
 
 http://mentalgrain.com/rpi/installing-nginx-php5-and-sqlite3-on-a-raspberry-pi/
 http://lowpowerlab.com/blog/2013/10/07/raspberrypi-home-automation-gateway-setup/
@@ -329,7 +327,7 @@ tor
 
 ```
 
-# DESCARGA SERIES Y SUBS AUTOMATICA
+## DESCARGA SERIES Y SUBS AUTOMATICA
 
 Con Raspberry Pi +  Pendrive + Transmission + Flexget + ShowRSS + Periscope
 Instalar todo con:
@@ -397,7 +395,7 @@ http://[IPRAPSBERRY]:9091
 sudo service transmission-daemon start
 ```
 
-# SERVIDOR DE ARCHIVOS (OWNCLOUD, BITTORRENT SYNC)
+## SERVIDOR DE ARCHIVOS (OWNCLOUD, BITTORRENT SYNC)
 ## Instalar Bittorrent SYNC
 
 ```bash
@@ -579,7 +577,7 @@ Phew. If you made it this far, congrats. I had fun creating my own personal BitT
 
 If you have found any creative uses for BitTorrent Sync, then share with us on our forums. We’d love to hear about it.
 
-# SERVIDOR DLNA
+## SERVIDOR DLNA
 Comenzamos por instalarlo en nuestra Raspberry:
 
 ```bash
@@ -628,7 +626,7 @@ sudo service minidlna start
 ```
 De ahora en adelante todos nuestros dispositivos verán la red con nombre «Raspi DLNA».
 
-# SERVIDOR NFS @DONE
+## SERVIDOR NFS @DONE
 Para ello, vamos a convertir un disco duro externo en una suerte de NAS (un disco duro en red).
 Hay varios protocolos para compartir ficheros en red: samba, nfs, dlna, upnp, etc.
 

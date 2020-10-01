@@ -10,7 +10,7 @@ author:
   name: Salrion
 ---
 
-# Instalación de Transmission como cliente bittorrent en Raspberry PI
+## Instalación de Transmission como cliente bittorrent en Raspberry PI
 Para instalar transmission como nuestro cliente de bt en Linux segiremos los siguientes pasos.
 
 1. Instalamos el daemon, en este caso lo ejecutaremos en segundo plano en consola

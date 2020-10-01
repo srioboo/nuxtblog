@@ -10,7 +10,6 @@ author:
   name: Salrion
 ---
 
-# Instalación y configuración de Flexget en Raspberry
 Flexget permite realizar tareas automatizadas en linux.
 
 ## Instalación

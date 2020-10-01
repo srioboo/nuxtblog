@@ -12,8 +12,6 @@ author:
   name: Salrion
 ---
 
-# Sublime Text Cheat Sheet
-
 ## SHORCUT
 This is a cheat sheet with keyboard shortcuts for Sublime Text. A comma means that all previous keys are no longer held. Add another tab with replace and "(?!^)(?<!>)(?<!>\t)\t(?!\t)" and "\t\t" in regex mode.
 
@@ -150,7 +148,7 @@ Ctrl + Tab        | Switch to the next tab
 Ctrl + Shft + Tab | Switch to the previous tab
 Shft + F11        | Distra­ction free mode
 
-# Sublime Text / Atom extensiones
+## Sublime Text / Atom extensiones
 
 Sublime Extensión         | Atom Extensión                 | Descripción
 ------------------------- | ------------------------------ | ----------------------------------------------------------------------
@@ -186,11 +184,11 @@ StringEncode              | --                             | decribir
 View In Browser           | --                             | decribir
 --                        | Sublime-Style-Column-Selection | activa Sublime Style Column Selection
 
-## Para Python
+### Para Python
 [https://realpython.com/blog/python/setting-up-sublime-text-3-for-full-stack-python-development/](https://realpython.com/blog/python/setting-up-sublime-text-3-for-full-stack-python-development/)
 
-## Para AngularJS
+### Para AngularJS
 AngularJS
 
-## Para font-end
+### Para font-end
 [http://daker.me/2013/05/5-sublimetext2-packages-to-enhance-your-frontend-development-workflow.html](http://daker.me/2013/05/5-sublimetext2-packages-to-enhance-your-frontend-development-workflow.html)

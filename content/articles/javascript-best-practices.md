@@ -11,7 +11,7 @@ author:
   name: SRN
 ---
 
-# Enlaces:
+## Enlaces:
 
 <http://code.tutsplus.com/tutorials/24-javascript-best-practices-for-beginners--net-5399>
 <http://www.w3schools.com/js/js_best_practices.asp>

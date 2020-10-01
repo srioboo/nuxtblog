@@ -12,7 +12,7 @@ author:
 
 Tmux permite crear en la consola nuevos paneles y ventanas de forma que se tiene una configuración "multiconsola" con la que poder ser más productivo.
 
-# tmux notas
+## tmux notas
 
 **Tecla** | **Acción** | **Memotécnica**
 tmux                       | comenzar a usar

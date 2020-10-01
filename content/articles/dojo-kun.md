@@ -1,6 +1,6 @@
 ---
 name:
-title: Dojo Kun
+title: Dojo Kun - 道場訓 - Preceptos del Dojo
 year: 2017-05-07
 img: https://images.unsplash.com/photo-1492571350019-22de08371fd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80
 alt: Dojo kun
@@ -11,8 +11,6 @@ tags: [chuleta]
 author:
   name: Salrion
 ---
-
-# *Dojo Kun - 道場訓 - Preceptos del Dojo*
 
 一丶 人格完成に努むること。
 Hitotsu, Jinkaku Kansei Ni Tsutomuru Koto.
@@ -67,5 +65,3 @@ Vocabulario
 Kekki: Vigor, ardiente
 Kekki no Yu: sangre ardiente
 Imashimuru: Dejarse llevar
-
-
