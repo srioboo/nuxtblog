@@ -94,10 +94,16 @@ export default {
     // extend(config, ctx) {},
   },
   sitemap: {
+    defaults: {
+      changefreq: 'daily',
+      priority: 1,
+      lastmod: new Date(),
+    },
     hostname: process.env.BASE_URL || 'https://salrion.netlify.app/',
     routes() {
       return getRoutes();
     },
+    gzip: true,
   },
   router: {
     /**
