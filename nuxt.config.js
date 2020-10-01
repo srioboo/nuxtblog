@@ -1,3 +1,5 @@
+import getRoutes from './utils/getRoutes';
+
 export default {
   /*
    ** Nuxt rendering mode
@@ -93,6 +95,9 @@ export default {
   },
   sitemap: {
     hostname: process.env.BASE_URL || 'https://salrion.netlify.app/',
+    routes() {
+      return getRoutes();
+    },
   },
   router: {
     /**
