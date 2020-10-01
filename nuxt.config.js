@@ -1,4 +1,6 @@
 import getRoutes from './utils/getRoutes';
+import getDate from './utils/getDate';
+// import getDate from './utils/getDate';
 
 export default {
   /*
@@ -95,7 +97,7 @@ export default {
   },
   sitemap: {
     defaults: {
-      lastmod: new Date(),
+      lastmod: getDate(),
     },
     hostname: process.env.BASE_URL || 'https://salrion.netlify.app/',
     routes() {
