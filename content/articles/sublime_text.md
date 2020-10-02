@@ -2,7 +2,7 @@
 name: 'test1'
 title: Mis apuntes de Sublime Text
 year: 2016-06-07
-img: https://images.unsplash.com/photo-1512317049220-d3c6fcaf6681?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80
+img: https://images.unsplash.com/photo-1512317049220-d3c6fcaf6681?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&fit=crop
 alt: Sublime Text
 id: 'apuntes-sublime-text'
 description: Apuntes de atajos de teclados de Sublime Text

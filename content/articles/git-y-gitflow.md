@@ -2,7 +2,7 @@
 title: Notas Git y GitFlow
 year: 2020-04-04
 id: 'notas-de-git'
-img: https://images.unsplash.com/photo-1556075798-4825dfaaf498?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80
+img: https://images.unsplash.com/photo-1556075798-4825dfaaf498?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&fit=crop
 alt: Git
 description: Pequeños apuntes y anotaciones sobre Git y GitFlow
 layout: post

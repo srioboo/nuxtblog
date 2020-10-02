@@ -8,10 +8,11 @@
       <!-- <p>{{ article.description }}</p> -->
       <img
         v-if="article.img"
-        :src="article.img"
+        :src="article.img + imgsmall"
         :alt="article.alt"
         :title="article.title"
         class="absolute h-full w-full object-cover"
+        loading="lazy"
       />
       <div class="overlay"></div>
       <div
@@ -58,6 +59,9 @@ export default {
     const article = await $content('articles', params.slug).fetch();
 
     return { article };
+  },
+  data() {
+    return { imgsmall: '&w=1000&q=80&auto=format' };
   },
   methods: {
     formatDate(date) {

@@ -2,7 +2,7 @@
 name: 'notas-vs-code'
 title: Notas VS Code
 year: 2020-04-04
-img: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80
+img: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9
 alt: VSCode
 id: 'notas-vs-code'
 description: Apuntes y notas de VS Code

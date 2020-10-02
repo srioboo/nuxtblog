@@ -6,7 +6,7 @@
     >
       <img
         v-if="article.img"
-        :src="article.img"
+        :src="article.img + imgsmall"
         :alt="article.alt"
         class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover"
         loading="lazy"
@@ -60,6 +60,9 @@ export default {
       type: Object,
       default() {},
     },
+  },
+  data() {
+    return { imgsmall: '&w=310&q=80&auto=format' };
   },
   methods: {
     formatDate(date) {
