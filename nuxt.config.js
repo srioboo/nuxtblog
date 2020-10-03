@@ -66,7 +66,7 @@ export default {
   modules: [
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
-    // '@nuxtjs/sitemap',
+    '@nuxtjs/sitemap',
   ],
   /*
    ** Axios module configuration
