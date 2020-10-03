@@ -1,5 +1,4 @@
 import getRoutes from './utils/getRoutes';
-import getDate from './utils/getDate';
 // import getDate from './utils/getDate';
 
 export default {
@@ -96,15 +95,17 @@ export default {
     // extend(config, ctx) {},
   },
   sitemap: {
-    xmlNs: 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
+    // xmlNs: 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
     defaults: {
-      lastmod: getDate(),
+      // lastmod: getDate(),
+      changefreq: 'monthly',
+      priority: 1,
     },
     hostname: process.env.BASE_URL || 'https://salrion.netlify.app/',
     routes() {
       return getRoutes();
     },
-    gzip: true,
+    // gzip: true,
     generate: true,
   },
   router: {
