@@ -105,6 +105,7 @@ export default {
       return getRoutes();
     },
     gzip: true,
+    generate: true,
   },
   router: {
     /**
