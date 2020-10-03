@@ -1,4 +1,4 @@
-// import getRoutes from './utils/getRoutes';
+import getRoutes from './utils/getRoutes';
 // import getDate from './utils/getDate';
 
 export default {
@@ -94,7 +94,7 @@ export default {
      */
     // extend(config, ctx) {},
   },
-  /* sitemap: {
+  sitemap: {
     // xmlNs: 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
     defaults: {
       // lastmod: getDate(),
@@ -106,8 +106,8 @@ export default {
       return getRoutes();
     },
     // gzip: true,
-    generate: false,
-  }, */
+    generate: true,
+  },
   router: {
     /**
      * Include trailingSlash to avoid redirection 302 from no slash to slash
