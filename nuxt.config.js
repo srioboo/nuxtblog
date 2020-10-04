@@ -1,5 +1,5 @@
-import getRoutes from './utils/getRoutes';
-import getDate from './utils/getDate';
+// import getRoutes from './utils/getRoutes';
+// import getDate from './utils/getDate';
 
 export default {
   /*
@@ -66,7 +66,7 @@ export default {
   modules: [
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
-    '@nuxtjs/sitemap',
+    // '@nuxtjs/sitemap',
   ],
   /*
    ** Axios module configuration
@@ -94,7 +94,7 @@ export default {
      */
     // extend(config, ctx) {},
   },
-  sitemap: {
+  /* sitemap: {
     // xmlNs: 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
     path: '/sitemaps.xml',
     defaults: {
@@ -102,13 +102,12 @@ export default {
       changefreq: 'monthly',
       priority: 1,
     },
-    hostname: 'https://salrion.netlify.app/',
     routes() {
       return getRoutes();
     },
     gzip: true,
     generate: true,
-  },
+  }, */
   router: {
     /**
      * Include trailingSlash to avoid redirection 302 from no slash to slash
