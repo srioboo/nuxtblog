@@ -96,7 +96,7 @@ export default {
   },
   sitemap: {
     // xmlNs: 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
-    path: '/sitemap-blog.xml',
+    path: '/sitemaps.xml',
     defaults: {
       lastmod: getDate(),
       changefreq: 'monthly',
