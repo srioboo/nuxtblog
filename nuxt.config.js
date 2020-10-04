@@ -1,5 +1,5 @@
 import getRoutes from './utils/getRoutes';
-// import getDate from './utils/getDate';
+import getDate from './utils/getDate';
 
 export default {
   /*
@@ -96,22 +96,23 @@ export default {
   },
   sitemap: {
     // xmlNs: 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
+    path: '/sitemap-blog.xml',
     defaults: {
-      // lastmod: getDate(),
+      lastmod: getDate(),
       changefreq: 'monthly',
       priority: 1,
     },
-    hostname: process.env.BASE_URL || 'https://salrion.netlify.app/',
+    hostname: 'https://salrion.netlify.app/',
     routes() {
       return getRoutes();
     },
-    // gzip: true,
+    gzip: true,
     generate: true,
   },
   router: {
     /**
      * Include trailingSlash to avoid redirection 302 from no slash to slash
      */
-    trailingSlash: true,
+    // trailingSlash: true,
   },
 };

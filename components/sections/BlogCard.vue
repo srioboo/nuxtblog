@@ -13,7 +13,7 @@
       />
       <img
         v-else
-        src="https://via.placeholder.com/150/ffffff/ffffff"
+        :src="noimage + imgsmall"
         alt="no image"
         class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover"
         loading="lazy"
@@ -62,7 +62,11 @@ export default {
     },
   },
   data() {
-    return { imgsmall: '&w=310&q=80&auto=format' };
+    return {
+      imgsmall: '&w=310&q=80&auto=format',
+      noimage:
+        'https://images.unsplash.com/photo-1582720937167-fd278a12a193?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9',
+    };
   },
   methods: {
     formatDate(date) {

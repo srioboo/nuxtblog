@@ -5,6 +5,6 @@ export default async () => {
     .fetch();
 
   return files.map(file =>
-    file.path === '/index' ? '/' : 'blog/' + file.slug + '/'
+    file.path === '/index' ? '/' : 'blog/' + file.slug
   );
 };
