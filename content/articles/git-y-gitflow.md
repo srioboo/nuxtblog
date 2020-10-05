@@ -1,10 +1,10 @@
 ---
-title: Notas Git y GitFlow
+title: Notas Git y GitFlow para control de versiones
 year: 2020-04-04
 id: 'notas-de-git'
 img: https://images.unsplash.com/photo-1556075798-4825dfaaf498?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&fit=crop
 alt: Git
-description: Pequeños apuntes y anotaciones sobre Git y GitFlow
+description: Pequeños apuntes y anotaciones sobre Git y GitFlow, uso, comandos principales e inicialización de una de las herramientas de control de versiones más populares.
 layout: post
 tags: [Git]
 author:

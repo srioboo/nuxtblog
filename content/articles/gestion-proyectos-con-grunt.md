@@ -5,7 +5,7 @@ year: 2020-03-14
 img: https://images.unsplash.com/photo-1565109624019-cf28e0cdc1d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9
 alt: grunt
 id: 'grunt'
-description: Apuntes sobre gestión de proyectos y automatización con Grunt
+description: Apuntes sobre gestión de proyectos y automatización con Grunt, inicialización, configuración y algunas de las tareas más conocidas de este gestor.
 layout: post
 tags: [Grunt, Web, Programación]
 author:

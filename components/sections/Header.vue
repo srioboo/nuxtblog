@@ -13,10 +13,10 @@
     <div id="navmenu">
       <ul class="flex">
         <li class="mr-6">
-          <a href="/year-archive/">Posts</a>
+          <a href="/year-archive">Posts</a>
         </li>
         <li class="mr-6">
-          <a href="/tags/">Tags</a>
+          <a href="/tags">Tags</a>
         </li>
       </ul>
     </div>

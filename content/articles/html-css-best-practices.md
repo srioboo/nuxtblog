@@ -1,5 +1,5 @@
 ---
-title: HTML y CSS Buenas prácticas
+title: HTML y CSS, buenas prácticas de uso
 year: 2016-06-06
 img: https://images.unsplash.com/photo-1529071242804-840f9a164b8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9
 alt: article 2

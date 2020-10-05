@@ -5,7 +5,7 @@ year: 2017-05-07
 img: https://images.unsplash.com/photo-1492571350019-22de08371fd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9
 alt: Dojo kun
 id: 'dojokun'
-description: Dojo kun, reglas dojo para practicantes de Karate Shotokan
+description: Dojo kun, reglas dojo para practicantes de Karate Shotokan. Reglas básicas que todo practicante debe tratar de cumplir, tanto dentro como fuera del dojo.
 layout: post
 tags: [chuleta]
 author:
