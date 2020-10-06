@@ -1,11 +1,11 @@
 ---
 name: 'notas-vs-code'
-title: Notas VS Code
+title: VS Code, notas y apuntes del editor de código
 year: 2020-04-04
 img: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9
 alt: VSCode
 id: 'notas-vs-code'
-description: Apuntes y notas de VS Code
+description: Apuntes y notas de VS Code, el editor de código multilenguaje. Atajos de teclado, opciones útiles, extensiones y otras características
 layout: post
 tags: [VS Code]
 author:
