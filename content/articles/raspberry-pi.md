@@ -1,11 +1,11 @@
 ---
 name: 'raspberrypi'
-title: Apuntes de Raspberry Pi
+title: Apuntes de Raspberry Pi, el mini ordenador versátil
 year: 2016-05-22
 img: https://images.unsplash.com/photo-1553406830-4fd6df625354?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&fit=crop
 alt: Raspberry Pi
 id: 'raspberrypi'
-description: Apuntes y notas sobre Rasbperry PI
+description: Apuntes y notas sobre Rasbperry PI, diferentes usos y configuraciones base para configurar diferentes opciones de este mini ordernador.
 layout: post
 tags: [raspberry, linux, configuracion]
 author:

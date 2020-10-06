@@ -1,11 +1,11 @@
 ---
-title: Apuntes de Vim
+title: Apuntes de Vim, el editor multiconsola
 alt: test
 img: https://images.unsplash.com/photo-1571723141898-68dfa1e50431?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9
 year: 2016-06-06
 id: 'apuntes-de-vim'
 description:
-    Apuntes y anotaciones sobre vim
+    Apuntes y anotaciones sobre vim. Atajos de teclados en las diferentes opciones de edición, inserción, modo visual y memotécnica para recordar los atajos.
 layout: post
 tags: [tutorial, chuleta, vim]
 author:

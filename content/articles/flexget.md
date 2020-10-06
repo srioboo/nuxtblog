@@ -3,7 +3,7 @@ name: 'flexget-instalacion-y-configuracion-raspberry-pi'
 title: Instalación y configuración de Flexget en Raspberry
 year: 2016-11-06
 id: 'flexget-instalacion-y-configuracion-raspberry-pi'
-description: flexget, instalación y configuración en Raspberry pi
+description: flexget, instalación y configuración en Raspberry pi para sacar provecho a la automatización de diversas tareas, como uso de Transmision y subtitulos
 layout: post
 tags: [raspberry, Linux, configuracion]
 author:
