@@ -1,9 +1,3 @@
-[[plugins]]
-package = "@netlify/plugin-sitemap"
-
-  [plugins.inputs]
-  buildDir = "dist"
-
 # [[headers]]
   # Define which paths this specific [[headers]] block will cover.
   # for = "/sitemap.xml"
