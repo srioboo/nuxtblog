@@ -106,11 +106,11 @@ export default {
     // xmlNs: 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
     hostname: 'https://salrion.netlify.app/',
     path: '/sitemaps.xml',
-    defaults: {
-      // lastmod: getDate(),
+    /* defaults: {
+      lastmod: getDate(),
       changefreq: 'monthly',
       priority: 1,
-    },
+    }, */
     routes() {
       return getRoutes();
     },
