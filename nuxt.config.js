@@ -67,6 +67,14 @@ export default {
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
     '@nuxtjs/sitemap',
+    // With options
+    [
+      'nuxt-trailingslash-module',
+      {
+        /* module options */
+        methods: ['GET', 'HEAD'],
+      },
+    ],
   ],
   /*
    ** Axios module configuration
