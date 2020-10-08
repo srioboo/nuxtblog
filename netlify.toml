@@ -10,7 +10,7 @@ package = "@netlify/plugin-sitemap"
   # status = 200
   # content-type = "application/xml"
 
-[[hea# ders]]
+# [[headers]]
   # Define which paths this specific [[headers]] block will cover.
   # for = "/*.css"
 
