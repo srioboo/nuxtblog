@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/sitemap"
+  from = "/mysitemap.xml"
   to = "/sitemap.xml"
   status = 200
 
