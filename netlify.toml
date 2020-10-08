@@ -8,6 +8,15 @@
     content-type = "application/xml"
 
 [[redirects]]
+  from = "/sitemap-dos.xml"
+  to = "/sitemap.xml"
+  status = 200
+  [redirects.headers]
+    # X-From = "Netlify"
+    # X-Api-Key = "some-api-key-string"
+    content-type = "application/xml"
+
+[[redirects]]
   from = "/sitemap-uno.xml"
   to = "/sitemap-test.xml"
   status = 200
