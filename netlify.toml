@@ -5,8 +5,8 @@
   [redirects.headers]
     # X-From = "Netlify"
     # X-Api-Key = "some-api-key-string"
-    access-control-allow-origin: *
-    content-type: application/xml
+    access-control-allow-origin = *
+    content-type = application/xml
 
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.
