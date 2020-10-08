@@ -5,7 +5,7 @@
   [redirects.headers]
     # X-From = "Netlify"
     # X-Api-Key = "some-api-key-string"
-    content-type = application/xml
+    content-type = "application/xml"
 
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.
