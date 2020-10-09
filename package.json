@@ -1,7 +1,7 @@
 {
   "name": "salrionblog",
   "version": "1.0.0",
-  "description": "Blog personal, con diferentes apuntes sobre tecnología",
+  "description": "Blog personal, apuntes sobre tecnología, linux, programación, tecnologías, forma de vida. Una pequeño repositorio de cosas de interes.",
   "author": "salrio",
   "private": true,
   "scripts": {

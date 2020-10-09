@@ -1,12 +1,6 @@
 <template>
   <div>
     <Header />
-    <!-- <BlogSection :blogs="blogs" /> -->
-    <!-- <h1>{{ page.title }}</h1>
-    <p>{{ page.description }}</p>
-    <nuxt-content :document="page" />
-    <nuxt-content :document="articles" /> -->
-
     <div class="m-8">
       <h1 class="text-gray-600 border-b border-gray-300 my-5 font-bold">
         Post por año
@@ -101,7 +95,7 @@ export default {
           hid: 'description',
           name: 'description',
           content:
-            'Todos los articulos ordenados por las fechas (años) en las que fueron creados',
+            'Todos los articulos ordenados por la fecha en las que fueron creados, una forma fácil de tener un historial de tus artículos favoritos',
         },
       ],
     };

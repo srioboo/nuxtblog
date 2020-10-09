@@ -6,10 +6,6 @@
         Post por tags
       </h1>
 
-      <!-- <div v-for="mitag of tags" :key="mitag.tags" style="float: left">
-        {{ mitag }}&nbsp;
-      </div> -->
-
       <div v-for="tag of tags" :key="tag.tags" :set="(tempTag = tag.tags)">
         <h2>{{ tag }}</h2>
 
@@ -107,7 +103,8 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Todos los articulos ordenados por tags o temática',
+          content:
+            'Todos los articulos ordenados por tags o temática, una forma fácil de ver artículos de tus temas preferidos. Elije un tema y comienza a leer.',
         },
       ],
     };
