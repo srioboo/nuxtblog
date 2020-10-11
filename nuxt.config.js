@@ -1,5 +1,4 @@
 import getRoutes from './utils/getRoutes';
-// import getDate from './utils/getDate';
 
 export default {
   /*
@@ -11,8 +10,7 @@ export default {
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
    */
-  // target: 'static',
-  target: 'server',
+  target: 'static',
   /*
    ** Headers of the page
    */
@@ -195,19 +193,23 @@ export default {
     // extend(config, ctx) {},
   },
   sitemap: {
+    path: '/sitemap.xml',
+    hostname: process.env.URL,
+    cacheTime: 1000 * 60 * 15,
+    // generate: true,
+    routes() {
+      return getRoutes();
+    },
     // xmlNs: 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
-    hostname: 'https://salrion.netlify.app/',
-    path: '/sitemaps.xml',
+
     /* defaults: {
       lastmod: getDate(),
       changefreq: 'monthly',
       priority: 1,
     }, */
-    routes() {
-      return getRoutes();
-    },
+
     gzip: true,
-    generate: true,
+
     etag: true,
   },
   router: {
