@@ -10,7 +10,8 @@ export default {
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
    */
-  target: 'static',
+  // target: 'static',
+  target: 'server',
   /*
    ** Headers of the page
    */
