@@ -157,7 +157,6 @@ export default {
   modules: [
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
-    '@nuxtjs/sitemap',
     // With options
     [
       'nuxt-trailingslash-module',
@@ -166,6 +165,7 @@ export default {
         methods: ['GET', 'HEAD'],
       },
     ],
+    '@nuxtjs/sitemap',
   ],
   /*
    ** Axios module configuration
@@ -201,16 +201,13 @@ export default {
     routes() {
       return getRoutes();
     },
-    // xmlNs: 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
-
+    xmlNs: 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
     /* defaults: {
       lastmod: getDate(),
       changefreq: 'monthly',
       priority: 1,
     }, */
-
     gzip: true,
-
     etag: true,
   },
   router: {

@@ -6,13 +6,13 @@ export default async () => {
 
   return files.map(file => {
     const url = file.path === '/index' ? '/' : 'blog/' + file.slug;
-    // const updated = file.updatedAt;
+    const updated = file.updatedAt;
 
     return {
       url,
       // changefreq: 'weekly',
       // priority: 1,
-      // lastmodISO: updated,
+      lastmodISO: updated,
     };
   });
 };
