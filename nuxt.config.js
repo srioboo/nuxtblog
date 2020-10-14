@@ -10,8 +10,8 @@ export default {
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
    */
-  // target: 'static',
-  target: 'server',
+  target: 'static',
+  // target: 'server',
   /*
    ** Headers of the page
    */
@@ -207,7 +207,7 @@ export default {
       changefreq: 'monthly',
       priority: 1,
     }, */
-    gzip: true,
+    // gzip: true,
     etag: true,
   },
   router: {
