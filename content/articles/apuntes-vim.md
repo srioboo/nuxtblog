@@ -1,24 +1,26 @@
 ---
-title: Apuntes de Vim, el editor multiconsola
-alt: test
+title: Apuntes de Vim y Neovim, el editor multiconsola
+alt: vim y neovim
 img: https://images.unsplash.com/photo-1571723141898-68dfa1e50431?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9
 year: 2016-06-06
 id: 'apuntes-de-vim'
 description:
-    Apuntes y anotaciones sobre vim. Atajos de teclados en las diferentes opciones de edición, inserción, modo visual y memotécnica para recordar los atajos.
+    Apuntes y anotaciones sobre vim y neovim. Atajos de teclados en las diferentes opciones de edición, inserción, modo visual y memotécnica para recordar los atajos.
 layout: post
 tags: [tutorial, chuleta, vim]
 author:
   name: SRN
 ---
 
-Vim es un editor de consola muy versatil, pero al ser bastante antiguo tiene sus peculiaridades y hacerse con él para emplearlo eficazmente puedes ser bastante tedioso. Sabiendo esto me cree una pequeña chuletas para conocer los atajos de teclado y el funcionamiento básico.
+Vim y neovim son editores de consola muy versatiles, pero al ser bastante antiguo tiene sus peculiaridades, una de ellas es que está diseñado para usarse solamente con el teclado, es más, como los teclados antiguos no poseían las teclas de cursor se usaban otras teclas para moverse entre el texto. Esto hace que para emplearlo eficazmente puedes ser bastante tedioso para un usuario acostumbrado al teclado y al ratón. Sabiendo esto me cree una pequeña chuletas para conocer los atajos de teclado y el funcionamiento básico.
+
+Como ventaja tenemos que al no necesitar mover las manos del teclado mejoramos, en teoría, la velocidad de edicción.
 
 ## Cursor movimiento
 
 **Tecla** | **Acción** | **Memotécnica**
 ---|---|---
-h,j,k,l | moverse izquierda, abajo, arriba, derecha respectivamente | j es como una flecha abajo
+h, j, k, l | moverse izquierda, abajo, arriba, derecha respectivamente | j es como una flecha abajo
 w | saltar al principio de palabra (la puntuación se considera palabra) | word
 W | saltar palabras (los espacios saltan las palabras separate words)   | Word
 e | ir al final de las palabras (la puntuación se considera palabra)    | end
@@ -93,12 +95,23 @@ d | borra el texto marcado | delete
 yy | yank (copy) a line | yank
 2yy | yank 2 lines | 2 yank
 yw | yank word | yank word
-y$ | yank to end of line | yank end
+y$ | yank to end of line | yank $ = end of line
 p | pega (paste) el contenido del clipboard después del cursor | put
 P | pega (paste) antes del cursor | Put
 dd | borra (cut) una linea | delete
-dw | borra (cut) una palabra |delete word
+d$ | borra hasta el final de una línea | delete $ = end of line 
+dw | borra (cut) una palabra | delete word
 x | corta (cut) el caracter actual | x como cortar
+
+**Nota**: es posible combinar un número con el operador de forma que si pulso 4 y luego la d borro 4 caracteres, y también mezclar operadores de movimiento si pulso d para borrar y luego w de palabra borro la palabra completa.
+Ej.- elminar 6 palabra d6w (o 6dw) borra seis palabras
+
+## Moverse entre archivos
+
+**Tecla** | **Acción** | **Memotécnica**
+---|---|---
+gd | ir a la definición | go to definition
+gf | ir a la función | go to function
 
 ## Saliendo
 
