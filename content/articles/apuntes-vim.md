@@ -18,10 +18,7 @@ Vim es un editor de consola muy versatil, pero al ser bastante antiguo tiene sus
 
 **Tecla** | **Acción** | **Memotécnica**
 ---|---|---
-h | moverse izquierda |
-j | moverse abajo |
-k | moversea arriba |
-l | moverse derecha |
+h,j,k,l | moverse izquierda, abajo, arriba, derecha respectivamente | j es como una flecha abajo
 w | saltar al principio de palabra (la puntuación se considera palabra) | word
 W | saltar palabras (los espacios saltan las palabras separate words)   | Word
 e | ir al final de las palabras (la puntuación se considera palabra)    | end
