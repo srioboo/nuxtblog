@@ -1,10 +1,10 @@
 <template>
   <header class="header">
-    <div class="xs:flex lg:hidden  burger" @click="togleMenu()">
+    <!-- <div class="xs:flex lg:hidden  burger" @click="togleMenu()">
       <div class="burger-line"></div>
       <div class="burger-line"></div>
       <div class="burger-line"></div>
-    </div>
+    </div> -->
 
     <div class="logo">
       <a href="/">Salrion</a>

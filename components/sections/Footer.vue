@@ -11,10 +11,13 @@
         <a href="#top" class="footer__top-page">^</a>
       </div>
     </div>
+    <CookieAlert />
   </footer>
 </template>
 <script>
+import CookieAlert from '../CookieAlert.vue';
 export default {
+  components: { CookieAlert },
   computed: {
     year() {
       return new Date().getFullYear();

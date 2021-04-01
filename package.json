@@ -26,7 +26,8 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "nuxt": "^2.14.1",
     "nuxt-trailingslash-module": "^1.1.0",
-    "v-lazy-image": "^1.4.0"
+    "v-lazy-image": "^1.4.0",
+    "vue-gtag": "^1.11.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",
