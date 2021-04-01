@@ -6,15 +6,16 @@
     <div class="text-5xl pb-2 leading-none">🍪</div>
     <div class="lg:mx-8">
       <p>
-        Can I use cookies for analytics? Read
-        <nuxt-link class="text-link" to="/privacy-policy"
-          >the privacy policy</nuxt-link
+        Este sitio utiliza cookies propias y de terceros. Si continúa navegando
+        consideramos que acepta el uso de estas
+        <nuxt-link class="text-link" to="/politica-privacidad"
+          >Ver política</nuxt-link
         >
-        for more information.
+        para más información.
       </p>
     </div>
     <div class="flex justify-center mt-4 lg:mt-0">
-      <div class="button ml-2 md:ml-0" @click="accept">Yes, sure</div>
+      <div class="button ml-2 md:ml-0" @click="accept">Aceptar</div>
       <div class="button md:ml-2" @click="deny">&times;</div>
     </div>
   </div>

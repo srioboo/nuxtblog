@@ -64,20 +64,24 @@ export default {
       ])
       .sortBy('year', 'asc')
       .fetch()
-      .catch(err => {
+      // eslint-disable-next-line prettier/prettier
+      .catch((err) => {
         error({ statusCode: 404, message: 'Page not found' });
         console.error(err);
       });
 
-    const mapTags = articles.map(actualTag => {
+    // eslint-disable-next-line prettier/prettier
+    const mapTags = articles.map((actualTag) => {
       console.log('actualtag: ' + actualTag);
       return actualTag.tags;
     });
 
     const tags = [];
 
-    mapTags.forEach(x => {
-      x.forEach(y => {
+    // eslint-disable-next-line prettier/prettier
+    mapTags.forEach((x) => {
+      // eslint-disable-next-line prettier/prettier
+      x.forEach((y) => {
         if (!tags.includes(y)) {
           tags.push(y);
         }

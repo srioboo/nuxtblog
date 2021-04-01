@@ -15,7 +15,7 @@
   </footer>
 </template>
 <script>
-import CookieAlert from '../CookieAlert.vue';
+import CookieAlert from './CookieAlert.vue';
 export default {
   components: { CookieAlert },
   computed: {
