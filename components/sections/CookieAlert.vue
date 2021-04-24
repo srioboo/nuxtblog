@@ -7,7 +7,7 @@
     <div class="lg:mx-8">
       <p>
         Este sitio utiliza cookies propias y de terceros. Si continúa navegando
-        consideramos que acepta el uso de estas
+        consideramos que acepta el uso de estas.
         <nuxt-link class="text-link" to="/politica-privacidad"
           >Ver política</nuxt-link
         >
@@ -15,8 +15,8 @@
       </p>
     </div>
     <div class="flex justify-center mt-4 lg:mt-0">
-      <div class="button ml-2 md:ml-0" @click="accept">Aceptar</div>
-      <div class="button md:ml-2" @click="deny">&times;</div>
+      <button class="button ml-2 md:ml-0" @click="accept">Aceptar</button>
+      <button class="button md:ml-2" @click="deny">&times;</button>
     </div>
   </div>
 </template>
