@@ -38,7 +38,8 @@ export default {
       .only(['title', 'description', 'img', 'alt', 'year', 'slug', 'author'])
       .sortBy('createdAt', 'asc')
       .fetch()
-      .catch(err => {
+      // eslint-disable-next-line prettier/prettier
+      .catch((err) => {
         error({ statusCode: 404, message: 'Page not found' });
         console.error(err);
       });
@@ -50,6 +51,9 @@ export default {
   head() {
     return {
       title: 'Salrion Blog, blog personal, con apuntes personales',
+      script: [
+        { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
+      ],
     };
   },
 };

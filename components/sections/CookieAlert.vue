@@ -8,9 +8,9 @@
       <p>
         Este sitio utiliza cookies propias y de terceros. Si continúa navegando
         consideramos que acepta el uso de estas.
-        <nuxt-link class="text-link" to="/politica-privacidad"
-          >Ver política</nuxt-link
-        >
+        <nuxt-link class="text-link" to="/politica-privacidad">
+          Ver política
+        </nuxt-link>
         para más información.
       </p>
     </div>
@@ -38,6 +38,7 @@ export default Vue.extend({
   },
   methods: {
     accept() {
+      console.log('SRN - accept');
       if (process.browser) {
         bootstrap().then(() => {
           this.isOpen = false;
@@ -47,12 +48,14 @@ export default Vue.extend({
       }
     },
     deny() {
+      console.log('SRN - deny');
       if (process.browser) {
         this.isOpen = false;
         localStorage.setItem('GDPR:accepted', false);
       }
     },
     getGDPR() {
+      console.log('SRN - getGDPR', process.browser);
       if (process.browser) {
         return localStorage.getItem('GDPR:accepted', true);
       }

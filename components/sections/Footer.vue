@@ -5,19 +5,23 @@
         <div class="footer__copyright">
           © {{ year }}
           <span>
-            Salvador. Powered by <a href="https://www.nuxtjs.org">Nuxt</a></span
-          >
+            Salvador. Powered by <a href="https://www.nuxtjs.org">Nuxt</a>
+          </span>
         </div>
         <a href="#top" class="footer__top-page">^</a>
       </div>
     </div>
-    <CookieAlert />
+    <!-- <CookieAlert /> -->
+    <TheCookieBox />
+    <cookie-consent />
   </footer>
 </template>
 <script>
-import CookieAlert from './CookieAlert.vue';
+// import CookieAlert from './CookieAlert.vue';
+
+import TheCookieBox from '../CookieBox';
 export default {
-  components: { CookieAlert },
+  components: { TheCookieBox },
   computed: {
     year() {
       return new Date().getFullYear();

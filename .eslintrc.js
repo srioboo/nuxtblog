@@ -2,21 +2,20 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    node: true
+    node: true,
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    // parser: '@babel/eslint-parser',
+    requireConfigFile: 'false',
   },
   extends: [
     '@nuxtjs',
     'prettier',
-    'prettier/vue',
     'plugin:prettier/recommended',
-    'plugin:nuxt/recommended'
+    'plugin:nuxt/recommended',
+    'plugin:vue/recommended',
   ],
-  plugins: [
-    'prettier'
-  ],
+  plugins: ['prettier', '@babel'],
   // watch this for explaining why some of this is here
   // https://www.youtube.com/watch?time_continue=239&v=YIvjKId9m2c
   rules: {
@@ -37,5 +36,5 @@ module.exports = {
         ignoreWhenBindingPresent: true,
       },
     ],
-  }
-}
+  },
+};
