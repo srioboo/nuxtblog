@@ -1,12 +1,15 @@
 ---
-title: Apuntes de Vim y Neovim, el editor multiconsola
-alt: vim y neovim
 img: https://images.unsplash.com/photo-1571723141898-68dfa1e50431?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9
-year: 2016-06-06
-id: 'apuntes-de-vim'
-description: Apuntes y anotaciones sobre vim y neovim. Atajos de teclados en las diferentes opciones de edición, inserción, modo visual y memotécnica para recordar los atajos.
+alt: vim y neovim
+layout: post
 author:
   name: SRN
+title: Apuntes de Vim y Neovim, el editor multiconsola
+id: apuntes-de-vim
+year: 2016-06-06
+description: Apuntes y anotaciones sobre vim y neovim. Atajos de teclados en las
+  diferentes opciones de edición, inserción, modo visual y memotécnica para
+  recordar los atajos.
 ---
 
 Vim y neovim son editores de consola muy versatiles, pero al ser bastante antiguo tiene sus peculiaridades, una de ellas es que está diseñado para usarse solamente con el teclado, es más, como los teclados antiguos no poseían las teclas de cursor se usaban otras teclas para moverse entre el texto. Esto hace que para emplearlo eficazmente puedes ser bastante tedioso para un usuario acostumbrado al teclado y al ratón. Sabiendo esto me cree una pequeña chuletas para conocer los atajos de teclado y el funcionamiento básico.
@@ -33,9 +36,9 @@ Como ventaja tenemos que al no necesitar mover las manos del teclado mejoramos, 
 
 | **Tecla** | **Acción**                    | **Memotécnica** |
 | --------- | ----------------------------- | --------------- |
-| gg        | ir al principiod de documento |
-| G         | ir al final del documento     |
-| 4G        | ir a la linea 4               |
+| gg        | ir al principiod de documento ||
+| G         | ir al final del documento     ||
+| 4G        | ir a la linea 4               ||
 
 ## Insertar (Modo) - Insertar/Añadir texto
 
