@@ -5,7 +5,6 @@ img: https://images.unsplash.com/photo-1529071242804-840f9a164b8b?ixlib=rb-1.2.1
 alt: article 2
 description: Buenas prácticas en HTML y CSS, todo lo que se debe hacer para construir una buena estructura de HTML y uno CSS correctos
 layout: post
-tags: [CSS, HTML, código, buenas prácticas]
 author:
   name: SRN
   bio: I am a person.

@@ -6,7 +6,6 @@ id: 'notas de javascript'
 img: https://images.unsplash.com/photo-1568589098025-33a4dab4341f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9
 alt: Javascript
 description: Buenas prácticas en el desarrollo de javascript, como realizar un buen código de javascript, siguiendo unas pautas adecuadas de desarrollo.
-tags: [Javascript]
 author:
   name: SRN
 ---
@@ -36,26 +35,24 @@ Esto reduce mucho el desempeño del script y es además un riesgo de seguridad p
 Tecnicamente, puedes omitir los punto y comas y las llaves. La mayoría de los navegadores interpretarán bien:
 
 ```javascript
-if(someVariableExists)
-   x = false
+if (someVariableExists) x = false;
 ```
 
 Sin embargo si ponemos dos lineas puede pasar lo siguiente:
 
 ```javascript
-if(someVariableExists)
-   x = false
-   anotherFunctionCall();
+if (someVariableExists) x = false;
+anotherFunctionCall();
 
 // Podemos pensar que esto es:
-if(someVariableExists) {
-   x = false;
-   anotherFunctionCall();
+if (someVariableExists) {
+  x = false;
+  anotherFunctionCall();
 }
 
 // Pero en realidad significa
-if(someVariableExists) {
-   x = false;
+if (someVariableExists) {
+  x = false;
 }
 anotherFunctionCall();
 ```
@@ -63,10 +60,10 @@ anotherFunctionCall();
 Aunque la indentación suple a las llaves esto es una mala práctica, solo se puede evitar el uso de llaves con sentencias de una linea. E incluso así esto es debatible.
 
 ```javascript
-if(2 + 2 === 4) return 'nicely done';
+if (2 + 2 === 4) return 'nicely done';
 ```
 
-Considera que  el el futuro puedes necesitar acomodar más comandos y reescribir el código.
+Considera que el el futuro puedes necesitar acomodar más comandos y reescribir el código.
 
 ## Utiliza JS Lint
 
@@ -101,23 +98,22 @@ Cuando ejecutamos un for, podemos hacer que el motor del navegador trabaje menos
 ```javascript
 // Mal
 
-for(var i = 0; i < someArray.length; i++) {
-   var container = document.getElementById('container');
-   container.innerHtml += 'my number: ' + i;
-   console.log(i);
+for (var i = 0; i < someArray.length; i++) {
+  var container = document.getElementById('container');
+  container.innerHtml += 'my number: ' + i;
+  console.log(i);
 }
 
 // Bien
 
 var container = document.getElementById('container');
-for(var i = 0, len = someArray.length; i < len;  i++) {
-   container.innerHtml += 'my number: ' + i;
-   console.log(i);
+for (var i = 0, len = someArray.length; i < len; i++) {
+  container.innerHtml += 'my number: ' + i;
+  console.log(i);
 }
 
 // Observa que de esta forma no se calcula la longitud cada vez
 // (lo cual es ineficiente!!), ni se busca en el documento el 'container' cada vez
-
 ```
 
 ## La forma más rápida de construir una cadena
@@ -165,8 +161,8 @@ Sin comentarios :)
 
 ```javascript
 // Cycle through array and echo out each name.
-for(var i = 0, len = array.length; i < len; i++) {
-   console.log(array[i]);
+for (var i = 0, len = array.length; i < len; i++) {
+  console.log(array[i]);
 }
 ```
 
@@ -176,11 +172,12 @@ Always compensate for when JavaScript is disabled. It might be tempting to think
 
 Have you taken a moment to view your beautiful slider with JavaScript turned off? (Download the Web Developer Toolbar for an easy way to do so.) It might break your site completely. As a rule of thumb, design your site assuming that JavaScript will be disabled. Then, once you've done so, begin to progressively enhance your layout!
 
-##  No pases una cadena a "SetInterval" o "SetTimeOut"
+## No pases una cadena a "SetInterval" o "SetTimeOut"
 
 ```javascript
 setInterval(
- "document.getElementById('container').innerHTML += 'My new number: ' + i", 3000
+  "document.getElementById('container').innerHTML += 'My new number: ' + i",
+  3000,
 );
 ```
 
@@ -196,13 +193,13 @@ Puede parecer una idea...
 
 ```javascript
 with (being.person.man.bodyparts) {
-   arms = true;
-   legs = true;
+  arms = true;
+  legs = true;
 }
 // en lugar de  --
 
 being.person.man.bodyparts.arms = true;
-being.person.man.bodyparts.legs= true;
+being.person.man.bodyparts.legs = true;
 ```
 
 No se comportabien al setear nuevos miembro usa mejor var.
@@ -222,8 +219,8 @@ var o = new Object();
 o.name = 'Jeffrey';
 o.lastName = 'Way';
 o.someFunction = function() {
-   console.log(this.name);
-}
+  console.log(this.name);
+};
 ```
 
 El modo literar es mejor, aún siendo correcto el anterior.
@@ -252,14 +249,14 @@ Igual para los arrays.
 
 ```javascript
 var a = new Array();
-a[0] = "Joe";
+a[0] = 'Joe';
 a[1] = 'Plumber';
 ```
 
 Mejor
 
 ```javascript
-var a = ['Joe','Plumber'];
+var a = ['Joe', 'Plumber'];
 ```
 
 "A common error in JavaScript programs is to use an object when an array is required or an array when an object is required. The rule is simple: when the property names are small sequential integers, you should use an array. Otherwise, use an object." - Douglas Crockford
@@ -276,8 +273,8 @@ Mejor
 
 ```javascript
 var someItem = 'some string',
-    anotherItem = 'another string',
-    oneMoreItem = 'one more string';
+  anotherItem = 'another string',
+  oneMoreItem = 'one more string';
 ```
 
 Simplemte por limpieza de código.
@@ -287,9 +284,9 @@ Simplemte por limpieza de código.
 Aunque la mayoría de los navegadores permiten omitirlo.
 
 ```javascript
-var someItem = 'some string'
+var someItem = 'some string';
 function doSomething() {
-  return 'something'
+  return 'something';
 }
 ```
 
@@ -319,10 +316,10 @@ for(key in object) {
 ¿Una forma rápida de saber cuanto dura una operación.? Necesitas una forma de ver cuanto tarda una operación usa el timer de firebug.
 
 ```javascript
-function TimeTracker(){
- console.time("MyTimer");
- for(x=5000; x > 0; x--){}
- console.timeEnd("MyTimer");
+function TimeTracker() {
+  console.time('MyTimer');
+  for (x = 5000; x > 0; x--) {}
+  console.timeEnd('MyTimer');
 }
 ```
 
@@ -339,10 +336,10 @@ Antes que llamar a una función, es más simple ejecutarla directamene al cargar
 
 ```javascript
 (function doSomething() {
-   return {
-      name: 'jeff',
-      lastName: 'way'
-   };
+  return {
+    name: 'jeff',
+    lastName: 'way',
+  };
 })();
 ```
 

@@ -6,8 +6,6 @@ img: https://images.unsplash.com/photo-1551122102-63cd339bfaab?ixlib=rb-1.2.1&ix
 alt: ruby
 id: 'apuntes-de-ruby'
 description: Apuntes de Ruby, primeros pasos con Ruby, un lenguaje de programación de scripting, sencillo, potente y moderno. Variables, comentarios, tipos y métodos.
-layout: archive
-tags: [Programación, Ruby, Script]
 author:
   name: Salrion
 ---
@@ -36,12 +34,12 @@ mi_string = "Ruby"    	# Y una cadena de texto
 
 ## Matemáticas
 
-- 5 + 5    # Suma (+)
-- 10 - 3   # Resta (-)
-- 4 _ 5    # Multiplicación ( _ )
-- 120 / 6  # División (/)
-- 3**2     # Exponenciación ( ** )
-- 12 % 3   # Módulo (%)
+- 5 + 5 # Suma (+)
+- 10 - 3 # Resta (-)
+- 4 _ 5 # Multiplicación ( _ )
+- 120 / 6 # División (/)
+- 3**2 # Exponenciación ( ** )
+- 12 % 3 # Módulo (%)
 
 ## puts' y 'print'
 
@@ -82,7 +80,7 @@ No necesito signos #.
 
 ## Convenciones para la definición de nombres
 
-A medida que avances en estos cursos vas a encontrar muchos tipos diferentes de variables, pero justo ahora nos estamos ocupando de las variables locales. Por convención, estas variables comienzan con una letra en minúscula, y las palabras están separadas por guiones bajos, como en contador y metodo_experto. Ruby no impedirá que uses otros símbolos, tales como letras mayúsculas, $, o @, al comienzo de tus variables locales; pero por convención, estos símbolos significan cosas distintas, así que es mejor seguir el ejemplo de la comunidad de Ruby y así evitar confusiones.
+A medida que avances en estos cursos vas a encontrar muchos tipos diferentes de variables, pero justo ahora nos estamos ocupando de las variables locales. Por convención, estas variables comienzan con una letra en minúscula, y las palabras están separadas por guiones bajos, como en contador y metodo_experto. Ruby no impedirá que uses otros símbolos, tales como letras mayúsculas, \$, o @, al comienzo de tus variables locales; pero por convención, estos símbolos significan cosas distintas, así que es mejor seguir el ejemplo de la comunidad de Ruby y así evitar confusiones.
 
 ```ruby
 nombre = "salvador"

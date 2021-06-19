@@ -7,7 +7,6 @@ alt: grunt
 id: 'grunt'
 description: Apuntes sobre gestión de proyectos y automatización con Grunt, inicialización, configuración y algunas de las tareas más conocidas de este gestor.
 layout: post
-tags: [Grunt, Web, Programación]
 author:
   name: Salrion
 ---
@@ -22,7 +21,7 @@ Es necesario tener previamente instalaado Nodejs y npm y ejecutar el siguiente c
 npm install -g grunt-cli
 ```
 
-El parámetro *-g* permite que la instalación sea global, con lo que no es necesario instalarlo en cada proyecto.
+El parámetro _-g_ permite que la instalación sea global, con lo que no es necesario instalarlo en cada proyecto.
 
 A continuación se muestra como inicializarlo y algunos comandos útiles:
 
@@ -52,31 +51,31 @@ Son necesarios los siguentes archivos para configurarlo, Gruntfile.js:
 
 ```javascript
 module.exports = function(grunt) {
-
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     concat: {
       options: {
-        separator: ';'
+        separator: ';',
       },
       dist: {
         //src: ['src/**/*.js'],
         src: ['js/*.js'],
-        dest: 'dist/<%= pkg.name %>.js'
-      }
+        dest: 'dist/<%= pkg.name %>.js',
+      },
     },
     uglify: {
       options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+        banner:
+          '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n',
       },
       dist: {
         files: {
-          'dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
-        }
-      }
+          'dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>'],
+        },
+      },
     },
     qunit: {
-      files: ['test/**/*.html']
+      files: ['test/**/*.html'],
     },
     jshint: {
       //files: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js'],
@@ -87,14 +86,14 @@ module.exports = function(grunt) {
           jQuery: true,
           console: true,
           module: true,
-          document: true
-        }
-      }
+          document: true,
+        },
+      },
     },
     watch: {
       files: ['<%= jshint.files %>'],
-      tasks: ['jshint', 'qunit']
-    }
+      tasks: ['jshint', 'qunit'],
+    },
   });
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -106,7 +105,6 @@ module.exports = function(grunt) {
   grunt.registerTask('test', ['jshint', 'qunit']);
 
   grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
-
 };
 ```
 
@@ -142,9 +140,8 @@ Se ejecuta **npm install** para que se instale todo lo necesario, y si ejecutamo
 
 ### Recuerda
 
-* npm se debe ejecutar en el directorio en el que está package.json
-* Generalmente Gruntfile.js y package.json se incluyen en el mismo directorio
-* grunt-init crea e inicia una configuración básica de estos dos archivos de configuración
+- npm se debe ejecutar en el directorio en el que está package.json
+- Generalmente Gruntfile.js y package.json se incluyen en el mismo directorio
+- grunt-init crea e inicia una configuración básica de estos dos archivos de configuración
 
 ### Configurar Grunt para usar tareas en archivos individuales
-

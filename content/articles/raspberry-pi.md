@@ -7,7 +7,6 @@ alt: Raspberry Pi
 id: 'raspberrypi'
 description: Apuntes y notas sobre Rasbperry PI, diferentes usos y configuraciones base para configurar diferentes opciones de este mini ordernador.
 layout: post
-tags: [raspberry, linux, configuracion]
 author:
   name: SRN
 ---
@@ -42,15 +41,15 @@ Nginx funciona bien y es facil de configurar. En adición se puede usar con PHP 
 
 Actualiza los repositorios
 
-* sudo apt-get update; sudo apt-get upgrade
+- sudo apt-get update; sudo apt-get upgrade
 
 Instala Nginx con:
 
-* sudo apt-get install nginx
+- sudo apt-get install nginx
 
 Comprueba que esta instalado correctamente arrancando el servidor e introduciendo en el navegador la direccion de tu Raspberry Pi, http://<address_of_your_rpi>.
 
-* sudo service nginx start
+- sudo service nginx start
 
 Por defecto el servidor busca el contenido en /usr/share/nginx/www. Pero puede interesar cambiarlo a uno más convencional como /var/www. Si no existe crealo:
 
@@ -77,17 +76,17 @@ Pero aún no está usando esa configuración.
 1. sudo service nginx stop
 2. sudo unlink /etc/nginx/sites-enabled/default
 
+1) cd /etc/nginx/sites-enabled/
+2) sudo ln -s /etc/nginx/sites-available/nombre_de_tu_sitio
 
-1. cd /etc/nginx/sites-enabled/
-2. sudo ln -s /etc/nginx/sites-available/nombre_de_tu_sitio
-
-1. sudo service nginx start
+3) sudo service nginx start
 
 Ahora tenemos el servidor sirviendo archivos estáticos desde /var/www. Intenta poner una html en la carpeta y escribe su dirección en el navegador.
 
 ## PHP5
 
 Instalamos PHP5 con:
+
 1. sudo apt-get install php5-fpm php-apc php5-common php5-cli
 
 Para configurar Nginx para usar PHP5. Ve al archivo creado en el paso anterior y añade.
@@ -117,7 +116,7 @@ Compureba que todo funciona creando un archivo php con este contenido.
 ?>
 ```
 
-Si el archivo se llama test.php abre en navegador en http://<address_of_your_rpi>/test.php  y parece la información de php
+Si el archivo se llama test.php abre en navegador en http://<address_of_your_rpi>/test.php y parece la información de php
 
 ## SQLite3
 
@@ -240,7 +239,6 @@ Hay difernecia entre SQLite3 y SQLite2!. El código de abajo comprobara que esta
 
 ```
 
-
 ## Instalar VNC server @TESTEAR
 
 ```bash
@@ -248,7 +246,9 @@ sudo apt-get install tightvncserver
 tightvncserver
 vncserver :1 -geometry 1024x768 -depth 24
 ```
+
 Para que VNC se inicie al encender. Agregar estas líneas antes de "exit 0" en el archivo /etc/rc.local
+
 ```bash
 echo "Iniciando VNC Server"
 su -c 'tightvncserver' root
@@ -283,6 +283,7 @@ Fuente. Para hacer streaming del contenido del Raspberry Pi a dispositivos en nu
 ```bash
 sudo apt-get install minidlna
 ```
+
 Editar /etc/minidlna.conf para ubicaciones de multimedia.
 
 ```bash
@@ -303,6 +304,7 @@ Fuente. Para trabajar con pistas de subtítulos, audio y video de archivos MKV.
 sudo apt-get install mkvtoolnix mkvtoolnix-gui
 
 ## SCRIPT AUTOSTART?? (@TEST @MEJORAR)
+
 Finalmente, crear un archivo ejecutable con este contenido en el escritorio para ejecutar al iniciar. Son comandos para iniciar servicios y compartir portapapeles por VNC.
 
 ```bash
@@ -329,7 +331,7 @@ tor
 
 ## DESCARGA SERIES Y SUBS AUTOMATICA
 
-Con Raspberry Pi +  Pendrive + Transmission + Flexget + ShowRSS + Periscope
+Con Raspberry Pi + Pendrive + Transmission + Flexget + ShowRSS + Periscope
 Instalar todo con:
 
 ```bash
@@ -362,6 +364,7 @@ Configurar los siguientes puntos en settings.json
 ```
 
 Asignamos los premisos adecuados:
+
 ```bash
 sudo nano /etc/init.d/transmission-daemon
 // cabmiar USER=mi_usuario
@@ -377,11 +380,13 @@ sudo nano /etc/systemd/system/multi-user.target.wants/transmission-daemon.servic
 ```
 
 Luego recargamos el systemctl
+
 ```bash
 sudo systemctl daemon-reload
 ```
 
 Y por ultimo
+
 ```bash
 sudo mkdir -p /home/mi_usuario/.config/transmission-daemon/
 sudo ln -s /etc/transmission-daemon/settings.json /home/mi_usuario/.config/transmission-daemon/
@@ -396,6 +401,7 @@ sudo service transmission-daemon start
 ```
 
 ## SERVIDOR DE ARCHIVOS (OWNCLOUD, BITTORRENT SYNC)
+
 ## Instalar Bittorrent SYNC
 
 ```bash
@@ -501,6 +507,7 @@ sudo mount /dev/sda
 ```
 
 ## Configurar Owncloud @TEST @Mejorar
+
 Como suele ser un lio en linux el usuario Petrockblog de GITHUB lo simplifico, creando un script para instalar y actualizar Owncloud. Haz lo siguiente:
 
 ```bash
@@ -527,6 +534,7 @@ sudo ./owncloudpie_setup.sh
 desde http://[Your IP Address]/owncloud se configura. Importante pulsar en "avanzado" y configurar la carpta de datos a /media/SYNC
 
 ## Combinar BitTorrent Sync y Owncloud @TEST @Mejorar
+
 First we need to clear up a few file permissions. Add sync to the www-data group:
 
 ```bash
@@ -568,7 +576,6 @@ iface wlan0 inet static
 iface default inet dhcp
 ```
 
-
 Finally, you’ll need to forward a port so that owncloud can be accessed from outside networks. I just forwarded port 80 for the IP address of my RasPi. In this example, my IP address when using wifi is 192.168.1.22. The procedure for forwarding ports is different for every router. If I grab my real IP address from a site such as this one, I can now access Owncloud and my Sync files from anywhere by going to [MyRealIpAddress]/owncloud (where the IP address is what you find from the website I linked to). You can also set up Owncloud with an Android or iOS client for mobile access.
 
 owncloud2
@@ -578,6 +585,7 @@ Phew. If you made it this far, congrats. I had fun creating my own personal BitT
 If you have found any creative uses for BitTorrent Sync, then share with us on our forums. We’d love to hear about it.
 
 ## SERVIDOR DLNA
+
 Comenzamos por instalarlo en nuestra Raspberry:
 
 ```bash
@@ -609,24 +617,29 @@ Como verás, está comentado. Lo que debemos hacer es eliminar el # del principi
 ```bash
 friendly_name=Raspi DLNA
 ```
+
 Además, queremos asegurarnos de que el servidor indexe automáticamente los archivos nuevos que se vayan descargando. Habilitamos esta opción aplicando en la configuración:
 
 ```bash
 inotify=yes
 ```
+
 Guardamos el archivo. Lo que debemos hacer ahora es iniciar miniDLNA cada vez que se reinicie la Raspberry. Para ello ejecutamos:
 
 ```bash
 sudo update-rc.d minidlna defaults
 ```
+
 Y finalmente reiniciamos el servicio:
 
 ```bash
 sudo service minidlna start
 ```
+
 De ahora en adelante todos nuestros dispositivos verán la red con nombre «Raspi DLNA».
 
 ## SERVIDOR NFS @DONE
+
 Para ello, vamos a convertir un disco duro externo en una suerte de NAS (un disco duro en red).
 Hay varios protocolos para compartir ficheros en red: samba, nfs, dlna, upnp, etc.
 
@@ -669,9 +682,10 @@ Ojo con poner un ‘asterisco’, ya que también nos compartiría con las ipv6,
 Lógicamente, si queremos configurar manualmente lo que compartir con cada cliente, podemos hacerlo.
 
 '(rw,insecure)', las opciones:
+
 - rw con opción de lectura y escritura.
 - insecure es la que permite que el cliente que se conecte al servidor nfs NO sea root.
-¿Y por qué tengo insecure? Porque es la única manera de compartir con XBMC, desde el cual me conectaré con la TV del salón y podré ver lo que haya en el disco duro. Pero eso ya se verá más adelante.
+  ¿Y por qué tengo insecure? Porque es la única manera de compartir con XBMC, desde el cual me conectaré con la TV del salón y podré ver lo que haya en el disco duro. Pero eso ya se verá más adelante.
 
 Hay más opciones de configuración, y recomiendo revisarlas en el manual o googleando un poco.
 

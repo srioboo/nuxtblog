@@ -6,7 +6,6 @@ alt: Javascript
 id: 'apuntes-javascript-i-variables-y-tipos'
 description: Primera parte del los apuntes de javascript "Javascript variables y tipos", uso de las variables en javascript y tipos de variables, constantes, templates y literales
 layout: post
-tags: [Javascript,Programación, Web]
 author:
   name: SRN
 ---
@@ -25,10 +24,10 @@ Para asignar variables usaremos let, let depende del scope:
 let nombre = 'Salva';
 
 function miNombreCompleto() {
-    let nombre = 'Pedro'; // esto no es válido ya que se ha definido antes, se producirá un error
-    let apellido = 'Apell';
+  let nombre = 'Pedro'; // esto no es válido ya que se ha definido antes, se producirá un error
+  let apellido = 'Apell';
 
-    return nombre + ' ' + apellido;
+  return nombre + ' ' + apellido;
 }
 
 miNombreCompleto();
@@ -40,10 +39,10 @@ Sin embargo podremos redefinirlo dentro de la función, o de lo contrario usar o
 let nombre = 'Salva';
 
 function miNombreCompleto() {
-    nombre = 'Pedro'; // esto no es válido ya que se ha definido antes
-    let apellido = 'Apell';
+  nombre = 'Pedro'; // esto no es válido ya que se ha definido antes
+  let apellido = 'Apell';
 
-    return nombre + ' ' + apellido;
+  return nombre + ' ' + apellido;
 }
 
 miNombreCompleto();
@@ -58,10 +57,10 @@ También podemos usar var, pero var es la vesión antigua, y el scope no le afec
 var nombre = 'Salva';
 
 function miNombreCompleto() {
-    var nombre = 'Pedro'; // esto es válido
-    var apellido = 'Apell';
+  var nombre = 'Pedro'; // esto es válido
+  var apellido = 'Apell';
 
-    return nombre + ' ' + apellido;
+  return nombre + ' ' + apellido;
 }
 
 miNombreCompleto();
@@ -78,19 +77,19 @@ Se pueden usar variables con variables insertadas y saltos de lineas usando una 
 const variable1 = '<b>variable1</b> \t';
 const variable2 = '<b>variable2</b>';
 
-let miCadena = `Esto es una cadena con variables dentro ${variable1} y esto seguiría con diferentes ${variable2}`
+let miCadena = `Esto es una cadena con variables dentro ${variable1} y esto seguiría con diferentes ${variable2}`;
 
 console.log(miCadena);
 
 // Aquí podemos usar saltos de linea, de forma que estos se verían al imprimirlos en la web
-let miCadenaConSaltos = String.raw `Esto es una cadena con variables
+let miCadenaConSaltos = String.raw`Esto es una cadena con variables
  dentro, como: ${variable1} y esto seguiría
  con diferentes variables, como ${variable2}. En esta podemos usar \t sin que afecte a nada porque tenemos String.raw puesto `;
 
- console.log(miCadenaConSaltos);
+console.log(miCadenaConSaltos);
 ```
 
-Las variables se insertan con la notación ${mi_variable}, en estas podemos usar \t para hacer tabulaciones y otras opciones, etc. Si ponemos String.raw delaten estos valores (\t) se mostrarán tal cual.
+Las variables se insertan con la notación \${mi_variable}, en estas podemos usar \t para hacer tabulaciones y otras opciones, etc. Si ponemos String.raw delaten estos valores (\t) se mostrarán tal cual.
 
 ## Destructing sintax
 
@@ -107,21 +106,16 @@ var genero = persona[3];
 console.log('tipo 1:' + nombre, apellidos, edad, genero);
 
 // O de una forma más sencilla:
-var[nombre, apellidos, edad, genero] = persona;
+var [nombre, apellidos, edad, genero] = persona;
 
 console.log('tipo 2:' + nombre, apellidos, edad, genero);
 
 // si no sabemos el número exacto de valores del array podemos poner al final ...mivariable, que contendrá el resto de valores, sino
 // mostrará un undefined
 let personaAux = ['Salva', 'Apell', '45', 'hombre', '1', '2'];
-var[nombre,
-    apellidos,
-    edad,
-    genero,
-    ...otros] = personaAux;
+var [nombre, apellidos, edad, genero, ...otros] = personaAux;
 
 console.log('tipo 3:' + nombre, apellidos, edad, genero, otros);
-
 ```
 
 También puedo hacerlo con clases:
@@ -191,10 +185,13 @@ Con los números tenemos varias opciones también:
 let numero = 1;
 console.log('Esto es true porque es un integer:' + Number.isInteger(numero));
 
-console.log('Esto es true porque es un integer dentro del rango de valores correcto de integer para Javascript:' + Number.isSafeInteger(numero));
+console.log(
+  'Esto es true porque es un integer dentro del rango de valores correcto de integer para Javascript:' +
+    Number.isSafeInteger(numero),
+);
 ```
 
 ## Recursos para aprender más
 
-* [MDN web docs de Mozilla](https://developer.mozilla.org)
-* [W3Schools](https://www.w3schools.com/js/)
+- [MDN web docs de Mozilla](https://developer.mozilla.org)
+- [W3Schools](https://www.w3schools.com/js/)

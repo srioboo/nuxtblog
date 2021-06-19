@@ -5,7 +5,6 @@ year: 2016-11-06
 id: 'flexget-instalacion-y-configuracion-raspberry-pi'
 description: flexget, instalación y configuración en Raspberry pi para sacar provecho a la automatización de diversas tareas, como uso de Transmision y subtitulos
 layout: post
-tags: [raspberry, Linux, configuracion]
 author:
   name: Salrion
 ---
@@ -13,6 +12,7 @@ author:
 Flexget permite realizar tareas automatizadas en linux.
 
 ## Instalación
+
 Se debe usar el instalador de paquetes de python:
 
 ```bash
@@ -21,6 +21,7 @@ sudo pip install flexget
 ```
 
 ## Configurar flexget
+
 Para ello hay que editar:
 
 ```bash
@@ -69,12 +70,12 @@ tasks:
     find:
       path:
         - /mnt/usb/Descargas/Flexget
-      regexp:  '.*\.(mp4|mkv|avi)$'
+      regexp: '.*\.(mp4|mkv|avi)$'
       recursive: yes
     accept_all: yes
     regexp:
       reject:
-       - '.*[sS]ample.*'
+        - '.*[sS]ample.*'
     periscope:
       languages:
         - es
@@ -92,7 +93,7 @@ tasks:
     all_series:
       parse_only: yes
     move:
-      to:  /mnt/usb/Series//
+      to: /mnt/usb/Series//
       filename: ' -  - '
       clean_source: 100
       along:
@@ -125,6 +126,7 @@ Una vez configurado, lo probamos:
 ```bash
 flexget execute
 ```
+
 Y para su ejecución cada cierto tiempo:
 
 ```bash
@@ -137,19 +139,19 @@ crontab -e
 Recomiendo que el disco duro externo esté en EXT4, el rendimiento frente a NTFS es muy grande, y evita que el Tranmissión de errores de “timeout” que puede provocar que el Flexget no lleve bien la cuenta de que capítulos ha descargado y descargue varias veces el mismo.
 
 ## Nota:
+
 Actualmente estoy usando la siguiente configuración:
 
 ```yaml
 templates:
   tv:
-
-#    manipulate:
-#      - title: &the
-#          replace:
-#            regexp: '^The\W'
-#            format: ''
-#      - filename: *the
-#      - series_name: *the
+    #    manipulate:
+    #      - title: &the
+    #          replace:
+    #            regexp: '^The\W'
+    #            format: ''
+    #      - filename: *the
+    #      - series_name: *the
 
     private_torrents: no
 
@@ -158,50 +160,50 @@ templates:
         tv:
           exact: yes
           propers: 3 days
-#          quality: 720p+
+          #          quality: 720p+
           set:
             path: /media/16GB/series/{{series_name}}
       tv:
         - Arrow
-#        - Castle (2009)
-#        - Cosmos A Spacetime
-#        - Dark Matter
-#        - Defiance
+        #        - Castle (2009)
+        #        - Cosmos A Spacetime
+        #        - Dark Matter
+        #        - Defiance
         - Doctor Who (2005)
-#        - Extant
-#        - Falling Skies
-#        - Galavant
-#        - Game of Thrones
-#        - Gotham
-#        - Humans
-#        - Killjoys
-#        - Lost Girl
-#        - Marvel's Agent Carter
-#        - Marvel's Agents of S.H.I.E.L.D.
-#        - Marvel's Daredevil
-#        - Once Upon a Time (2011)
-#        - Orphan Black
-#        - Penny Dreadful
-#        - Person of Interest
-#        - Scorpion
-#        - Sherlock
-#        - Sleepy Hollow
-#        - Teen Wolf
-#        - The 100
-#        - The Big Bang Theory
-#        - The Blacklist
+        #        - Extant
+        #        - Falling Skies
+        #        - Galavant
+        #        - Game of Thrones
+        #        - Gotham
+        #        - Humans
+        #        - Killjoys
+        #        - Lost Girl
+        #        - Marvel's Agent Carter
+        #        - Marvel's Agents of S.H.I.E.L.D.
+        #        - Marvel's Daredevil
+        #        - Once Upon a Time (2011)
+        #        - Orphan Black
+        #        - Penny Dreadful
+        #        - Person of Interest
+        #        - Scorpion
+        #        - Sherlock
+        #        - Sleepy Hollow
+        #        - Teen Wolf
+        #        - The 100
+        #        - The Big Bang Theory
+        #        - The Blacklist
         - The Flash
-#        - The Librarians (US)
-#        - Ultimate Spider Man
-#        - Dexter
-#        - Fringe
-#        - Game of Thrones
-#        - Mad Men
-#        - MythBusters
-#        - The Office
-#        - Real Time with Bill Maher
-#        - South Park
-#        - True Blood
+    #        - The Librarians (US)
+    #        - Ultimate Spider Man
+    #        - Dexter
+    #        - Fringe
+    #        - Game of Thrones
+    #        - Mad Men
+    #        - MythBusters
+    #        - The Office
+    #        - Real Time with Bill Maher
+    #        - South Park
+    #        - True Blood
 
     transmission:
       enabled: yes
@@ -217,60 +219,59 @@ tasks:
     rss: http://showrss.info/rss.php?user_id=17159&hd=null&proper=null
     template: tv
 
-#  showrss-720:
-#    priority: 2
-#    rss: http://showrss.info/rss.php?user_id=17159&hd=1&proper=null
-#    template: tv
+  #  showrss-720:
+  #    priority: 2
+  #    rss: http://showrss.info/rss.php?user_id=17159&hd=1&proper=null
+  #    template: tv
 
-#  ezrss.it:
-#    priority: 2
-#    rss: http://ezrss.it/feed/
-#    template: tv
+  #  ezrss.it:
+  #    priority: 2
+  #    rss: http://ezrss.it/feed/
+  #    template: tv
 
-#  thepiratebay.org-tv:
-#    priority: 3
-#    rss: http://rss.thepiratebay.org/208
-#    template: tv
-#    verify_ssl_certificates: no
+  #  thepiratebay.org-tv:
+  #    priority: 3
+  #    rss: http://rss.thepiratebay.org/208
+  #    template: tv
+  #    verify_ssl_certificates: no
 
-#  kat.ph-tv:
-#    priority: 4
-#    rss: http://kat.ph/tv/?rss=1
-#    template: tv
+  #  kat.ph-tv:
+  #    priority: 4
+  #    rss: http://kat.ph/tv/?rss=1
+  #    template: tv
 
-#  extratorrent.com-tv:
-#    priority: 5
-#    rss: http://extratorrent.com/rss.xml?cid=8
-#    template: tv
+  #  extratorrent.com-tv:
+  #    priority: 5
+  #    rss: http://extratorrent.com/rss.xml?cid=8
+  #    template: tv
 
-#  torrentz.eu-tv:
-#    priority: 6
-#    rss: http://torrentz.eu/feed
-#    template: tv
+  #  torrentz.eu-tv:
+  #    priority: 6
+  #    rss: http://torrentz.eu/feed
+  #    template: tv
 
-#  showrss.karmorra.info-tv:
-#    priority: 7
-#    rss: http://showrss.karmorra.info/feeds/all.rss
-#    template: tv
+  #  showrss.karmorra.info-tv:
+  #    priority: 7
+  #    rss: http://showrss.karmorra.info/feeds/all.rss
+  #    template: tv
 
   subtitles:
-     priority: 4
-     disable: builtins
-     filesystem:
-       path:
-         - /media/16GB/series/
-       regexp:  '.*\.(mp4|mkv|avi)$'
-       recursive: yes
-     accept_all: yes
-     regexp:
-       reject:
+    priority: 4
+    disable: builtins
+    filesystem:
+      path:
+        - /media/16GB/series/
+      regexp: '.*\.(mp4|mkv|avi)$'
+      recursive: yes
+    accept_all: yes
+    regexp:
+      reject:
         - '.*[sS]ample.*'
-     periscope:
-       languages:
-         - en
-         - es
-       alternatives:
-         - es
-       overwrite: no
-
+    periscope:
+      languages:
+        - en
+        - es
+      alternatives:
+        - es
+      overwrite: no
 ```

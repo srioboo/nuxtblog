@@ -22,11 +22,7 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Image', name: 'img', widget: 'string', required: false }
       - { label: 'Image alt', name: 'alt', widget: 'string', required: false }
-      - label: 'Layout'
-        name: 'layout'
-        widget: 'list'
-        allow_add: false
-        default: [archive]
+      - { label: 'Layout', name: 'layout', widget: 'string', default: archive }
       - label: 'Tags'
         name: 'tags'
         widget: 'list'
