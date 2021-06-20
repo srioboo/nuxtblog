@@ -19,6 +19,14 @@ GitFlow es una forma de usar Git de forma que muchas de las acciones que se hace
 
 
 
+## GitFlow init
+
+Para inicializar gitflow vamos a la carpeta del proyecto y lanzamos el comando
+
+```shell
+git flow init
+```
+
 ## Comandos GitFlow
 
 [Git Flow CheatSheet](https://danielkummer.github.io/git-flow-cheatsheet/index.es_ES.html)
