@@ -19,7 +19,7 @@ GitFlow es una forma de usar Git de forma que muchas de las acciones que se hace
 
 
 
-## Comando GitFlow
+## Comandos GitFlow
 
 [Git Flow CheatSheet](https://danielkummer.github.io/git-flow-cheatsheet/index.es_ES.html)
 
