@@ -12,8 +12,8 @@ description: Dojo kun, reglas dojo para practicantes de Karate Shotokan. Reglas
   básicas que todo practicante debe tratar de cumplir, tanto dentro como fuera
   del dojo.
 ---
-一丶 人格完成に努むること。<br>
-Hitotsu, Jinkaku Kansei Ni Tsutomuru Koto. <br><br>
+**一丶 人格完成に努むること。**
+*Hitotsu, Jinkaku Kansei Ni Tsutomuru Koto.* <br>
 Lo primero, esforzarse por la perfección del carácter. <br>
 Buscar la perfección del carácter <br>
 
@@ -25,12 +25,12 @@ Tsutomuru: Trabajo, esfuerzo
 
 <br><br>
 
-一丶 誠の道を守ること。<br>
-Hitotsu, MaKoto No Michi O Mamoru Koto.<br><br>
+**一丶 誠の道を守ること。**
+*Hitotsu, MaKoto No Michi O Mamoru Koto.*<br>
 Lo primero, defender los caminos de la verdad.<br>
 Ser leal y sincero<br>
 
-Vocabulario
+Vocabulario:
 
 Makoto: Verdad<br>
 Michi: Carretera o camino<br>
@@ -38,34 +38,38 @@ Mamoru: Proteger
 
 <br><br>
 
-一丶努力の精神を養うこと。
-Hitotsu, Doryoku No Seichin O Yashinau Koto.<br><br>
+**一丶努力の精神を養うこと。**
+*Hitotsu, Doryoku No Seichin O Yashinau Koto.*<br>
 Lo primero, fomentar el espíritu del esfuerzo.<br>
 Poner el máximo esfuerzo y constancia<br>
 
-Vocabulario
+Vocabulario:
 
-Doryoku: Esfuerzo
-Seichin: Espiritu
-Yashinau: Cultivar o fomentar
+Doryoku: Esfuerzo<br>
+Seichin: Espiritu<br>
+Yashinau: Cultivar o fomentar<br>
 
-一丶礼儀を重んずること。
-Hitotsu, Reigi O Omonzuru Koto.
-Lo primero, honrar los principios de etiqueta.
-Respeto a los demás
+<br><br>
 
-Vocabulario
+**一丶礼儀を重んずること。**
+*Hitotsu, Reigi O Omonzuru Koto.*<br>
+Lo primero, honrar los principios de etiqueta.<br>
+Respeto a los demás<br>
 
-Reigi: Cortesia o etiqueta
-Omonzuru: Honor, Honrar
+Vocabulario:
 
-一丶血気の勇を戒むること。
-Hitotsu, Kekki No Yu O Imashimuru Koto.
-Lo primero, guardarse contra el valor impetuoso.
-Autocontrol, reprimir la violencia
+Reigi: Cortesia o etiqueta<br>
+Omonzuru: Honor, Honrar<br>
 
-Vocabulario
+<br><br>
 
-Kekki: Vigor, ardiente
-Kekki no Yu: sangre ardiente
-Imashimuru: Dejarse llevar
+**一丶血気の勇を戒むること。**
+*Hitotsu, Kekki No Yu O Imashimuru Koto.*<br>
+Lo primero, guardarse contra el valor impetuoso.<br>
+Autocontrol, reprimir la violencia<br>
+
+Vocabulario:
+
+Kekki: Vigor, ardiente<br>
+Kekki no Yu: sangre ardiente<br>
+Imashimuru: Dejarse llevar<br>
