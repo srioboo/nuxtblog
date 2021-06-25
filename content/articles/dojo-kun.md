@@ -12,8 +12,6 @@ description: Dojo kun, reglas dojo para practicantes de Karate Shotokan. Reglas
   básicas que todo practicante debe tratar de cumplir, tanto dentro como fuera
   del dojo.
 ---
-
-
 \| 一丶 人格完成に努むること。|
 | Hitotsu, Jinkaku Kansei Ni Tsutomuru Koto. |
 | Lo primero, esforzarse por la perfección del carácter. |
@@ -23,7 +21,7 @@ Vocabulario:
 
 Jinkaku: Personalidad<br>
 Kansei: Completar, finalizar `<br>`
-Tsutomuru: Trabajo, esfuerzo
+`<p>`Tsutomuru: Trabajo, esfuerzo`</p>`
 
 
 
