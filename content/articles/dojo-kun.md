@@ -12,21 +12,25 @@ description: Dojo kun, reglas dojo para practicantes de Karate Shotokan. Reglas
   básicas que todo practicante debe tratar de cumplir, tanto dentro como fuera
   del dojo.
 ---
+
+
 \| 一丶 人格完成に努むること。|
 | Hitotsu, Jinkaku Kansei Ni Tsutomuru Koto. |
 | Lo primero, esforzarse por la perfección del carácter. |
 | Buscar la perfección del carácter |
 
-Vocabulario
+Vocabulario:
 
-Jinkaku: Personalidad
-Kansei: Completar, finalizar
+Jinkaku: Personalidad<br>
+Kansei: Completar, finalizar `<br>`
 Tsutomuru: Trabajo, esfuerzo
 
-一丶 誠の道を守ること。
-Hitotsu, MaKoto No Michi O Mamoru Koto.
-Lo primero, defender los caminos de la verdad.
-Ser leal y sincero
+
+
+\| 一丶 誠の道を守ること。|
+|Hitotsu, MaKoto No Michi O Mamoru Koto. |
+| Lo primero, defender los caminos de la verdad. |
+| Ser leal y sincero |
 
 Vocabulario
 
@@ -34,10 +38,14 @@ Makoto: Verdad
 Michi: Carretera o camino
 Mamoru: Proteger
 
-一丶努力の精神を養うこと。
-Hitotsu, Doryoku No Seichin O Yashinau Koto.
-Lo primero, fomentar el espíritu del esfuerzo.
-Poner el máximo esfuerzo y constancia
+
+
+
+
+\| 一丶努力の精神を養うこと。|
+| Hitotsu, Doryoku No Seichin O Yashinau Koto. |
+| Lo primero, fomentar el espíritu del esfuerzo. |
+| Poner el máximo esfuerzo y constancia |
 
 Vocabulario
 
@@ -45,7 +53,7 @@ Doryoku: Esfuerzo
 Seichin: Espiritu
 Yashinau: Cultivar o fomentar
 
-一丶礼儀を重んずること。
+\| 一丶礼儀を重んずること。
 Hitotsu, Reigi O Omonzuru Koto.
 Lo primero, honrar los principios de etiqueta.
 Respeto a los demás
