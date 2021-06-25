@@ -23,7 +23,7 @@ Jinkaku: Personalidad<br>
 Kansei: Completar, finalizar<br>
 Tsutomuru: Trabajo, esfuerzo
 
-<br><br>
+<br>
 
 **一丶 誠の道を守ること。**
 *Hitotsu, MaKoto No Michi O Mamoru Koto.*<br>
@@ -36,20 +36,24 @@ Makoto: Verdad<br>
 Michi: Carretera o camino<br>
 Mamoru: Proteger
 
-<br><br>
+<br>
 
 **一丶努力の精神を養うこと。**
 *Hitotsu, Doryoku No Seichin O Yashinau Koto.*<br>
 Lo primero, fomentar el espíritu del esfuerzo.<br>
 Poner el máximo esfuerzo y constancia<br>
 
-Vocabulario:
+\| Vocabulario | |
 
-Doryoku: Esfuerzo<br>
-Seichin: Espiritu<br>
-Yashinau: Cultivar o fomentar<br>
+\========================
 
-<br><br>
+\| Doryoku | Esfuerzo |
+
+\| Seichin   | Espiritu |
+
+\| Yashinau | Cultivar o fomentar |
+
+<br>
 
 **一丶礼儀を重んずること。**
 *Hitotsu, Reigi O Omonzuru Koto.*<br>
@@ -61,7 +65,7 @@ Vocabulario:
 Reigi: Cortesia o etiqueta<br>
 Omonzuru: Honor, Honrar<br>
 
-<br><br>
+<br>
 
 **一丶血気の勇を戒むること。**
 *Hitotsu, Kekki No Yu O Imashimuru Koto.*<br>
