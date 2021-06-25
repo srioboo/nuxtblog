@@ -12,38 +12,36 @@ description: Dojo kun, reglas dojo para practicantes de Karate Shotokan. Reglas
   básicas que todo practicante debe tratar de cumplir, tanto dentro como fuera
   del dojo.
 ---
-\| 一丶 人格完成に努むること。|
-| Hitotsu, Jinkaku Kansei Ni Tsutomuru Koto. |
-| Lo primero, esforzarse por la perfección del carácter. |
-| Buscar la perfección del carácter |
+一丶 人格完成に努むること。<br>
+Hitotsu, Jinkaku Kansei Ni Tsutomuru Koto. <br><br>
+Lo primero, esforzarse por la perfección del carácter. <br>
+Buscar la perfección del carácter <br>
 
 Vocabulario:
 
 Jinkaku: Personalidad<br>
-Kansei: Completar, finalizar `<br>`
-`<p>`Tsutomuru: Trabajo, esfuerzo`</p>`
+Kansei: Completar, finalizar<br>
+Tsutomuru: Trabajo, esfuerzo
 
+<br><br>
 
-
-\| 一丶 誠の道を守ること。|
-|Hitotsu, MaKoto No Michi O Mamoru Koto. |
-| Lo primero, defender los caminos de la verdad. |
-| Ser leal y sincero |
+一丶 誠の道を守ること。<br>
+Hitotsu, MaKoto No Michi O Mamoru Koto.<br><br>
+Lo primero, defender los caminos de la verdad.<br>
+Ser leal y sincero<br>
 
 Vocabulario
 
-Makoto: Verdad
-Michi: Carretera o camino
+Makoto: Verdad<br>
+Michi: Carretera o camino<br>
 Mamoru: Proteger
 
+<br><br>
 
-
-
-
-\| 一丶努力の精神を養うこと。|
-| Hitotsu, Doryoku No Seichin O Yashinau Koto. |
-| Lo primero, fomentar el espíritu del esfuerzo. |
-| Poner el máximo esfuerzo y constancia |
+一丶努力の精神を養うこと。
+Hitotsu, Doryoku No Seichin O Yashinau Koto.<br><br>
+Lo primero, fomentar el espíritu del esfuerzo.<br>
+Poner el máximo esfuerzo y constancia<br>
 
 Vocabulario
 
