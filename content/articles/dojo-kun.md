@@ -49,7 +49,7 @@ Doryoku: Esfuerzo
 Seichin: Espiritu
 Yashinau: Cultivar o fomentar
 
-\| 一丶礼儀を重んずること。
+一丶礼儀を重んずること。
 Hitotsu, Reigi O Omonzuru Koto.
 Lo primero, honrar los principios de etiqueta.
 Respeto a los demás
