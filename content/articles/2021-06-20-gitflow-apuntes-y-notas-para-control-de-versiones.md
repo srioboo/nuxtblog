@@ -44,7 +44,7 @@ git flow init
 | git flow hotfix start VERSION \[BASENAME] | crear un fix                          |                                               |
 | git flow hotfix finish VERSION            | Finalizar un fix                      |                                               |
 
-<br/>
+
 ### Initializar
 
 | gitflow         | git                                            |
@@ -53,14 +53,14 @@ git flow init
 | &nbsp;          | `git commit --allow-empty -m "Initial commit"` |
 | &nbsp;          | `git checkout -b develop master`               |
 
-<br/>
+
 ### Conectar al repositorio remoto
 
 | gitflow | git                                                     |
 | ------- | ------------------------------------------------------- |
 | *N/A*   | `git remote add origin git@github.com:MYACCOUNT/MYREPO` |
 
-<br/>
+
 ### Features
 
 #### Crear una rama de feature
@@ -69,7 +69,7 @@ git flow init
 | ---------------------------------- | ------------------------------------------- |
 | `git flow feature start MYFEATURE` | `git checkout -b feature/MYFEATURE develop` |
 
-<br/>
+
 #### Publicar una rama feature
 
 | gitflow                              | git                                 |
@@ -77,7 +77,7 @@ git flow init
 | `git flow feature publish MYFEATURE` | `git checkout feature/MYFEATURE`    |
 | &nbsp;                               | `git push origin feature/MYFEATURE` |
 
-<br/>
+
 #### Obtener lo último de la rama feature
 
 | gitflow                                  | git                                          |
@@ -85,7 +85,7 @@ git flow init
 | `git flow feature pull origin MYFEATURE` | `git checkout feature/MYFEATURE`             |
 | &nbsp;                                   | `git pull --rebase origin feature/MYFEATURE` |
 
-<br/>
+
 #### Finalizar una rame feature
 
 | gitflow                             | git                                   |
@@ -94,7 +94,7 @@ git flow init
 | &nbsp;                              | `git merge --no-ff feature/MYFEATURE` |
 | &nbsp;                              | `git branch -d feature/MYFEATURE`     |
 
-<br/>
+
 #### Publicar la rama feature mergeada
 
 | gitflow | git                                                |
@@ -102,7 +102,7 @@ git flow init
 | *N/A*   | `git push origin develop`                          |
 | &nbsp;  | `git push origin :feature/MYFEATURE` *(if pushed)* |
 
-<br/>
+
 ### Releases
 
 #### Crear una rama release
@@ -111,7 +111,7 @@ git flow init
 | ------------------------------ | --------------------------------------- |
 | `git flow release start 1.2.0` | `git checkout -b release/1.2.0 develop` |
 
-<br/>
+
 #### Publicar una rama release
 
 | gitflow                          | git                             |
@@ -119,7 +119,7 @@ git flow init
 | `git flow release publish 1.2.0` | `git checkout release/1.2.0`    |
 | &nbsp;                           | `git push origin release/1.2.0` |
 
-<br/>
+
 #### Obtener los últimos cambios de una rama release
 
 | gitflow | git                                      |
@@ -127,7 +127,7 @@ git flow init
 | *N/A*   | `git checkout release/1.2.0`             |
 | &nbsp;  | `git pull --rebase origin release/1.2.0` |
 
-<br/>
+
 #### Finalizar una rama release
 
 | gitflow                         | git                               |
@@ -139,7 +139,7 @@ git flow init
 | &nbsp;                          | `git merge --no-ff release/1.2.0` |
 | &nbsp;                          | `git branch -d release/1.2.0`     |
 
-<br/>
+
 #### Publicar una rama release mergeada
 
 | gitflow | git                                            |
@@ -149,7 +149,7 @@ git flow init
 | &nbsp;  | `git push origin --tags`                       |
 | &nbsp;  | `git push origin :release/1.2.0` *(if pushed)* |
 
-<br/>
+
 ### Hotfixes
 
 #### Crear una rama hotfix
@@ -158,7 +158,7 @@ git flow init
 | -------------------------------------- | --------------------------------------- |
 | `git flow hotfix start 1.2.1 [commit]` | `git checkout -b hotfix/1.2.1 [commit]` |
 
-<br/>
+
 #### Finalizar una rama hotfix
 
 | gitflow                        | git                              |
@@ -170,7 +170,7 @@ git flow init
 | &nbsp;                         | `git merge --no-ff hotfix/1.2.1` |
 | &nbsp;                         | `git branch -d hotfix/1.2.1`     |
 
-<br/>
+<br>
 #### Publicar la rama hotfix mergeada
 
 | gitflow | git                                           |
