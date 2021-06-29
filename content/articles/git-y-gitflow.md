@@ -1,13 +1,15 @@
 ---
-title: Notas Git y GitFlow para control de versiones
-year: 2020-04-04
-id: 'notas-de-git'
 img: https://images.unsplash.com/photo-1556075798-4825dfaaf498?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&fit=crop
 alt: Git
-description: Pequeños apuntes y anotaciones sobre Git y GitFlow, uso, comandos principales e inicialización de una de las herramientas de control de versiones más populares.
 layout: post
 author:
   name: SRN
+title: Notas Git y GitFlow para control de versiones
+id: notas-de-git
+year: 2020-04-04
+description: Pequeños apuntes y anotaciones sobre Git y GitFlow, uso, comandos
+  principales e inicialización de una de las herramientas de control de
+  versiones más populares.
 ---
 
 Git permite a grupos de personas trabajar en los mismos documentos o código al mismo tiempo sin pisarse unos a otros. Al igual que CVS o Subversion es un control de versiones aunque en este caso es distribuido permitiendo que cada usuario tenga una copia local del repositorio.
@@ -28,9 +30,9 @@ Git permite a grupos de personas trabajar en los mismos documentos o código al 
 | -------------------------- | --------------------------------------------- | ------------------------------------------------------------------ |
 | git status                 | indica el estado actual del proyecto          | muy útil para saber que hay pendiente                              |
 | git add \<archivo\>        | añade un archivo al indice                    | es necesario añadir al indice es slimilar al añadir a subversion   |
-| git add .                  | añade todos los archivos                      |
+| git add .                  | añade todos los archivos                      | |
 | git commit -m "mi mensaje" | realizar el commiteo o compromiso del archivo | es igual que commit en svn, solo que se añade al repositorio local |
-| git log                    | muestra el hitorial de commit realizado       |
+| git log                    | muestra el hitorial de commit realizado       | |
 
 ## Compartir un repositorio
 
