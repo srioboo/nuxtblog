@@ -17,11 +17,11 @@ description: Dojo kun, reglas dojo para practicantes de Karate Shotokan. Reglas
 Lo primero, esforzarse por la perfección del carácter. <br>
 Buscar la perfección del carácter <br>
 
-Vocabulario:
-
-Jinkaku: Personalidad<br>
-Kansei: Completar, finalizar<br>
-Tsutomuru: Trabajo, esfuerzo
+| Vocabulario | |
+|-------------|--|
+| Jinkaku | Personalidad |
+| Kansei  | Completar, finalizar |
+| Tsutomuru | Trabajo, esfuerzo |
 
 <br>
 
@@ -30,11 +30,11 @@ Tsutomuru: Trabajo, esfuerzo
 Lo primero, defender los caminos de la verdad.<br>
 Ser leal y sincero<br>
 
-Vocabulario:
-
-Makoto: Verdad<br>
-Michi: Carretera o camino<br>
-Mamoru: Proteger
+| Vocabulario | |
+|-------------|--|
+| **Makoto** | Verdad |
+| **Michi**  | Carretera o camino |
+| **Mamoru** | Proteger |
 
 <br>
 
@@ -44,9 +44,9 @@ Lo primero, fomentar el espíritu del esfuerzo.<br>
 Poner el máximo esfuerzo y constancia<br>
 
 | Vocabulario | |
-|-------------|--|
-| **Doryoku** | Esfuerzo |
-| **Seichin**   | Espiritu |
+|------------- |--|
+| **Doryoku**  | Esfuerzo |
+| **Seichin**  | Espiritu |
 | **Yashinau** | Cultivar o fomentar |
 
 <br>
@@ -56,10 +56,10 @@ Poner el máximo esfuerzo y constancia<br>
 Lo primero, honrar los principios de etiqueta.<br>
 Respeto a los demás<br>
 
-Vocabulario:
-
-Reigi: Cortesia o etiqueta<br>
-Omonzuru: Honor, Honrar<br>
+| Vocabulario | |
+|-------------|--|
+| **Reigi**    | Cortesia o etiqueta |
+| **Omonzuru** | Honor, Honrar |
 
 <br>
 
@@ -68,8 +68,8 @@ Omonzuru: Honor, Honrar<br>
 Lo primero, guardarse contra el valor impetuoso.<br>
 Autocontrol, reprimir la violencia<br>
 
-Vocabulario:
-
-Kekki: Vigor, ardiente<br>
-Kekki no Yu: sangre ardiente<br>
-Imashimuru: Dejarse llevar<br>
+| Vocabulario | |
+|-------------|--|
+| **Kekki**       | Vigor, ardiente |
+| **Kekki no Yu** | sangre ardiente |
+| **Imashimuru**  | Dejarse llevar |
