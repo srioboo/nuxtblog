@@ -43,15 +43,11 @@ Mamoru: Proteger
 Lo primero, fomentar el espíritu del esfuerzo.<br>
 Poner el máximo esfuerzo y constancia<br>
 
-\| Vocabulario | |
-
-\========================
-
-\| Doryoku | Esfuerzo |
-
-\| Seichin   | Espiritu |
-
-\| Yashinau | Cultivar o fomentar |
+| Vocabulario | |
+|-------------|--|
+| **Doryoku** | Esfuerzo |
+| **Seichin**   | Espiritu |
+| **Yashinau** | Cultivar o fomentar |
 
 <br>
 
