@@ -171,6 +171,7 @@ git flow init
 | &nbsp;                         | `git branch -d hotfix/1.2.1`     |
 
 <br>
+
 #### Publicar la rama hotfix mergeada
 
 | gitflow | git                                           |
