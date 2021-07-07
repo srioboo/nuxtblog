@@ -1,14 +1,15 @@
 ---
-name: 'notas-vs-code'
-title: VS Code, notas y apuntes del editor de código
-year: 2020-04-04
 img: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9
 alt: VSCode
-id: 'notas-vs-code'
-description: Apuntes y notas de VS Code, el editor de código multilenguaje. Atajos de teclado, opciones útiles, extensiones y otras características
 layout: post
 author:
   name: SRN
+name: notas-vs-code
+title: VS Code, notas y apuntes del editor de código
+id: notas-vs-code
+year: 2020-04-04
+description: Apuntes y notas de VS Code, el editor de código multilenguaje.
+  Atajos de teclado, opciones útiles, extensiones y otras características
 ---
 
 VS Code es un editor de código multiplataforma que permite multitud de lenguajes y alta configuración, es bastante últil para Angular, Vue o React y fue creado por Microsoft
@@ -27,6 +28,10 @@ VS Code es un editor de código multiplataforma que permite multitud de lenguaje
 | ctrl+j                         | muestra u oculta la consola             | hay que crear antes la consola                                                   |
 | ctrl+shift+`| abre el terminal |
 | ctrl+B                         | muestra/oculta la barra lateral de menú |                                                                                  |
+
+Si tenemos abierta la consola y desde esta linea de comandos escribimos:
+"code ." --> abre una nueva ventana en el directorio actual
+"code . -r" --> recarga la ventana actual
 
 Más atajos en:
 
