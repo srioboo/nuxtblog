@@ -53,41 +53,62 @@ export default Vue.extend({
 @import '~/assets/css/_colors.scss';
 
 .header {
-  @apply flex;
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 3px;
+  color: $grey-semi;
+
+  /*@apply flex;
   @apply items-center;
   @apply justify-between;
   @apply flex-wrap;
   @apply p-3;
-  @apply text-gray-500;
-  @apply border-gray-500;
-  @apply border-b;
+  @apply text-gray-500;*/
+
+  /*@apply border-gray-500;
+  @apply border-b;*/
+
   height: $he-header;
 
   .burger {
     //@apply flex;
-    @apply flex-wrap;
+    flex-wrap: wrap;
+    justify-content: justify-around;
+    width: 10px;
+    height: 8px;
+    align-items: center;
+    align-self: center;
+    /*
     @apply justify-around;
     @apply self-center;
     @apply items-center;
     @apply w-10;
-    @apply h-8;
+    @apply h-8;*/
 
     .burger-line {
-      @apply bg-gray-500;
+      background-color: $grey-semi;
+      height: 1px;
+      width: 1px;
+      /*@apply bg-gray-500;
       @apply h-1;
-      @apply w-8;
+      @apply w-8;*/
     }
   }
 
   .logo {
-    @apply font-bold;
+    font-weight: bold;
+    //@apply font-bold;
     color: $grey-semi;
-    @apply text-gray-800;
+    //@apply text-gray-800;
   }
 
   #navmenu {
-    @apply font-bold;
-    @apply text-gray-700;
+    font-weight: bold;
+    color: $grey-dark;
+    /*@apply font-bold;
+    @apply text-gray-700;*/
   }
 }
 </style>

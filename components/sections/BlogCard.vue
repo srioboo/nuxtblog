@@ -2,13 +2,13 @@
   <div class="blog">
     <NuxtLink
       :to="{ name: 'blog-slug', params: { slug: article.slug } }"
-      class="flex transition-shadow duration-150 ease-in-out shadow-sm hover:shadow-md xxlmax:flex-col"
+      class="blog__link"
     >
       <img
         v-if="article.img"
         :src="article.img + imgsmall"
         :alt="article.alt"
-        class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover"
+        class="blog__img"
         loading="lazy"
       />
       <img
@@ -19,7 +19,9 @@
         loading="lazy"
       />
       <div class="p-6 flex flex-col justify-between xxlmin:w-1/2 xxlmax:w-full">
-        <h2 class="font-bold">{{ article.title }}</h2>
+        <h2 class="font-bold">
+          {{ article.title }}
+        </h2>
         <p class="text-xs">
           <!-- por {{ article.author.name }} -->
           {{ formatDate(article.year) }}
@@ -92,7 +94,47 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~/assets/css/_colors.scss';
+@import '~/assets/css/_base.scss';
+
+.blog__link {
+  display: flex;
+  transition-property: box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+  &:hover {
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  @include xxl {
+    flex-direction: column;
+  }
+
+  /*transition-shadow
+        duration-150
+        ease-in-out
+        shadow-sm
+        hover:shadow-md
+        xxlmax:flex-col*/
+
+  .blog__img {
+    /*h-48 xxlmin:w-1/2 xxlmax:w-full object-cover*/
+    height: 12rem;
+    @include xxl {
+      min-width: 50%;
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+}
 
 /*.image-wrap {
   min-height: 100%;
