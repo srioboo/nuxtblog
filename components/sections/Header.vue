@@ -1,21 +1,21 @@
 <template>
   <header class="header">
-    <!-- <div class="xs:flex lg:hidden  burger" @click="togleMenu()">
+    <!-- <div class="xs:flex lg:hidden  header__burger" @click="togleMenu()">
       <div class="burger-line"></div>
       <div class="burger-line"></div>
       <div class="burger-line"></div>
     </div> -->
 
-    <div class="logo">
+    <div class="header__logo">
       <a href="/">Salrion</a>
     </div>
 
-    <div id="navmenu">
-      <ul class="flex">
-        <li class="mr-6">
+    <div id="navmenu" class="header__navmenu">
+      <ul>
+        <li>
           <a href="/year-archive">Posts</a>
         </li>
-        <li class="mr-6">
+        <li>
           <a href="/tags">Tags</a>
         </li>
       </ul>
@@ -50,7 +50,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/css/_colors.scss';
+@import '~/assets/css/_base.scss';
 
 .header {
   display: flex;
@@ -59,6 +59,7 @@ export default Vue.extend({
   flex-wrap: wrap;
   padding: 3px;
   color: $grey-semi;
+  border-bottom: 1px solid $grey-semi;
 
   /*@apply flex;
   @apply items-center;
@@ -72,7 +73,7 @@ export default Vue.extend({
 
   height: $he-header;
 
-  .burger {
+  .header__burger {
     //@apply flex;
     flex-wrap: wrap;
     justify-content: justify-around;
@@ -97,18 +98,35 @@ export default Vue.extend({
     }
   }
 
-  .logo {
+  .header__logo {
     font-weight: bold;
     //@apply font-bold;
     color: $grey-semi;
     //@apply text-gray-800;
+    a {
+      text-decoration: none;
+    }
   }
 
-  #navmenu {
+  .header__navmenu {
     font-weight: bold;
     color: $grey-dark;
     /*@apply font-bold;
     @apply text-gray-700;*/
+
+    ul {
+      display: flex;
+      list-style: none;
+      li {
+        margin-right: 1.5rem;
+        a {
+          text-decoration: none;
+          color: $grey-dark;
+          &:hover {
+          }
+        }
+      }
+    }
   }
 }
 </style>
