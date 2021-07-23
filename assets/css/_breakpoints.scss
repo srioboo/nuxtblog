@@ -1,0 +1,48 @@
+/* variable puntos de ruptura */
+$screen-sm-min: 640px;
+$screen-md-min: 768px;
+$screen-lg-min: 1024px;
+$screen-xl-min: 1280px;
+$screen-xxl-min: 1536px;
+
+/** mixins */
+
+// Small devices
+// @media (min-width: $screen-sm-min) { }
+@mixin sm {
+	@media (min-width: #{$screen-sm-min}) {
+			@content;
+	}
+}
+
+// Medium devices
+// @media (min-width: $screen-md-min) { }
+@mixin md {
+	@media (min-width: #{$screen-md-min}) {
+			@content;
+	}
+}
+
+// Large devices
+// @media (min-width: $screen-lg-min) { }
+@mixin lg {
+	@media (min-width: #{$screen-lg-min}) {
+			@content;
+	}
+}
+
+// Extra large devices
+// @media (min-width: $screen-xl-min) {  }
+@mixin xl {
+	@media (min-width: #{$screen-xl-min}) {
+			@content;
+	}
+}
+
+// Extra Extra large devices
+// @media (min-width: $screen-xxl-min) { }
+@mixin xxl {
+	@media (min-width: #{$screen-xxl-min}) {
+			@content;
+	}
+}
