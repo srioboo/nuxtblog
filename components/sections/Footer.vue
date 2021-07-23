@@ -31,7 +31,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~/assets/css/_colors.scss';
+@import '~/assets/css/_base.scss';
 
 .footer {
   &__info {
@@ -47,7 +47,7 @@ export default {
     width: 100%;
     flex-direction: column;
 
-    @media (min-width: $screen-sm) {
+    @include sm {
       flex-direction: row;
     }
   }
@@ -55,10 +55,10 @@ export default {
   &__copyright {
     text-align: center;
     color: $grey;
-    @media (min-width: $screen-sm) {
+    @include sm {
       text-align: inherit;
     }
-    @apply text-gray-700;
+    color: $grey-dark;
   }
 
   &__top-page {
@@ -70,7 +70,7 @@ export default {
     -moz-transition: 1s;
     transition: 1s;
 
-    @media (min-width: $screen-sm) {
+    @include sm {
       text-align: right;
     }
   }

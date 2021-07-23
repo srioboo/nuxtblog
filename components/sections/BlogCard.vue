@@ -2,29 +2,31 @@
   <div class="blog">
     <NuxtLink
       :to="{ name: 'blog-slug', params: { slug: article.slug } }"
-      class="flex transition-shadow duration-150 ease-in-out shadow-sm hover:shadow-md xxlmax:flex-col"
+      class="blog__link"
     >
       <img
         v-if="article.img"
         :src="article.img + imgsmall"
         :alt="article.alt"
-        class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover"
+        class="blog__img"
         loading="lazy"
       />
       <img
         v-else
         :src="noimage + imgsmall"
         alt="no image"
-        class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover"
+        class="blog__img"
         loading="lazy"
       />
-      <div class="p-6 flex flex-col justify-between xxlmin:w-1/2 xxlmax:w-full">
-        <h2 class="font-bold">{{ article.title }}</h2>
-        <p class="text-xs">
+      <div class="blog__content">
+        <h2 class="blog__title">
+          {{ article.title }}
+        </h2>
+        <p class="blog__content__year">
           <!-- por {{ article.author.name }} -->
           {{ formatDate(article.year) }}
         </p>
-        <p class="font-bold text-gray-700 text-sm">
+        <p class="blog__content__description">
           {{ article.description }}
         </p>
       </div>
@@ -92,12 +94,86 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~/assets/css/_colors.scss';
+@import '~/assets/css/_base.scss';
 
-/*.image-wrap {
-  min-height: 100%;
+.blog {
+  a {
+    text-decoration: none;
+  }
+}
+
+.blog__link {
+  display: flex;
+  flex-direction: column;
+  transition-property: box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+  &:hover {
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  @include xxl {
+    flex-direction: column;
+  }
+
+  /*transition-shadow
+        duration-150
+        ease-in-out
+        shadow-sm
+        hover:shadow-md
+        xxlmax:flex-col*/
+
+  .blog__img {
+    /*h-48 xxlmin:w-1/2 xxlmax:w-full object-cover*/
+    height: 12rem;
+    width: 100%;
+    object-fit: cover;
+    max-width: 100%;
+    @include xxl {
+      min-width: 50%;
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.blog__content {
+  //p-6 flex flex-col justify-between xxlmin:w-1/2 xxlmax:w-full
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
-}*/
+  @include xxl {
+    width: 50%;
+  }
+
+  .blog__title {
+    font-weight: bold;
+  }
+
+  .blog__content__year {
+    //text-xs
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+  .blog__content__description {
+    //font-bold text-gray-700 text-sm
+    font-weight: bold;
+    color: $grey-dark;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
 
 // lazy image inicio
 .v-lazy-image {
@@ -115,44 +191,4 @@ export default {
   filter: blur(0);
 }
 // lazy image fin
-
-/*.cardThumbnail {
-  transition: all ease 0.75s;
-  opacity: 0.7;
-  &[lazy='loaded'] {
-    opacity: 1;
-  }
-}*/
-/*.blog {
-  margin-bottom: 2em;
-  width: 45vw;
-  margin: 10px;
-
-  @media (min-width: $screen-sm) {
-    padding-bottom: 0;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  &:hover {
-    .blog__title {
-      color: $grey-dark;
-    }
-  }
-
-  &__title {
-    font-family: 'Tiempos Headline', Arial, sans-serif;
-    color: $primary;
-    padding-top: 1rem;
-    font-size: 1.1rem;
-    transition: color 0.3s;
-  }
-
-  &__description {
-    margin: 0;
-    color: $grey-semi-dark;
-  }
-}*/
 </style>

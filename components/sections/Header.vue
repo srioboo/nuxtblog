@@ -1,21 +1,21 @@
 <template>
   <header class="header">
-    <!-- <div class="xs:flex lg:hidden  burger" @click="togleMenu()">
+    <!-- <div class="xs:flex lg:hidden  header__burger" @click="togleMenu()">
       <div class="burger-line"></div>
       <div class="burger-line"></div>
       <div class="burger-line"></div>
     </div> -->
 
-    <div class="logo">
+    <div class="header__logo">
       <a href="/">Salrion</a>
     </div>
 
-    <div id="navmenu">
-      <ul class="flex">
-        <li class="mr-6">
+    <div id="navmenu" class="header__navmenu">
+      <ul>
+        <li>
           <a href="/year-archive">Posts</a>
         </li>
-        <li class="mr-6">
+        <li>
           <a href="/tags">Tags</a>
         </li>
       </ul>
@@ -50,44 +50,84 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/css/_colors.scss';
+@import '~/assets/css/_base.scss';
 
 .header {
-  @apply flex;
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0.75rem;
+  color: $grey-semi;
+  border-bottom: 1px solid $grey-semi;
+  align-items: center;
+
+  /*@apply flex;
   @apply items-center;
   @apply justify-between;
   @apply flex-wrap;
   @apply p-3;
-  @apply text-gray-500;
-  @apply border-gray-500;
-  @apply border-b;
+  @apply text-gray-500;*/
+
+  /*@apply border-gray-500;
+  @apply border-b;*/
+
   height: $he-header;
 
-  .burger {
+  .header__burger {
     //@apply flex;
-    @apply flex-wrap;
+    flex-wrap: wrap;
+    justify-content: justify-around;
+    width: 10px;
+    height: 8px;
+    align-items: center;
+    align-self: center;
+    /*
     @apply justify-around;
     @apply self-center;
     @apply items-center;
     @apply w-10;
-    @apply h-8;
+    @apply h-8;*/
 
     .burger-line {
-      @apply bg-gray-500;
+      background-color: $grey-semi;
+      height: 1px;
+      width: 1px;
+      /*@apply bg-gray-500;
       @apply h-1;
-      @apply w-8;
+      @apply w-8;*/
     }
   }
 
-  .logo {
-    @apply font-bold;
+  .header__logo {
+    font-weight: bold;
+    //@apply font-bold;
     color: $grey-semi;
-    @apply text-gray-800;
+    //@apply text-gray-800;
+    a {
+      text-decoration: none;
+    }
   }
 
-  #navmenu {
-    @apply font-bold;
-    @apply text-gray-700;
+  .header__navmenu {
+    font-weight: bold;
+    color: $grey-dark;
+    /*@apply font-bold;
+    @apply text-gray-700;*/
+
+    ul {
+      display: flex;
+      list-style: none;
+      li {
+        margin-right: 1.5rem;
+        a {
+          text-decoration: none;
+          color: $grey-dark;
+          &:hover {
+          }
+        }
+      }
+    }
   }
 }
 </style>
