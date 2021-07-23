@@ -57,9 +57,10 @@ export default Vue.extend({
   justify-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 3px;
+  padding: 0.75rem;
   color: $grey-semi;
   border-bottom: 1px solid $grey-semi;
+  align-items: center;
 
   /*@apply flex;
   @apply items-center;

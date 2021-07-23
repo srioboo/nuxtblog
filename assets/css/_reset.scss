@@ -16,6 +16,17 @@
 	box-sizing: border-box;
 }
 
+a {
+	color: inherit;
+	text-decoration: inherit;
+	background-color: transparent;
+}
+
+:after, :before {
+	box-sizing: border-box;
+	border: 0 solid #e2e8f0;
+}
+
 ul, ol {
 	margin: 0;
 	padding: 0;
