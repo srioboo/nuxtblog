@@ -10,8 +10,8 @@ export default {
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
    */
-  target: 'static',
-  // target: 'server',
+  // target: 'static',
+  target: 'server',
   /*
    ** Headers of the page
    */
@@ -161,13 +161,13 @@ export default {
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
     // With options
-    [
+    /* [
       'nuxt-trailingslash-module',
       {
-        /* module options */
+        // module options
         methods: ['GET', 'HEAD'],
       },
-    ],
+    ], */
     '@nuxtjs/sitemap',
   ],
   /*
