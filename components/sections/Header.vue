@@ -15,9 +15,9 @@
         <li>
           <a href="/year-archive">Posts</a>
         </li>
-        <li>
+        <!-- <li>
           <a href="/tags">Tags</a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </header>

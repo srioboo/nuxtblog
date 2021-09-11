@@ -1,8 +1,8 @@
 <template>
   <div>
     <Header />
-    <div class="m-8">
-      <h1 class="text-gray-600 border-b border-gray-300 my-5 font-bold">
+    <div class="container">
+      <h1 class="container__header">
         Post por año
       </h1>
       <div
@@ -15,22 +15,21 @@
         <ul
           v-for="article of articles"
           :key="article.slug"
-          class="flex flex-wrap"
+          class="container__list"
           :set="(articleYear = getYear(article.year))"
         >
-          <li
-            v-if="articleYear == tempYear"
-            class="xs:w-full md:w-full px-2 xs:mb-6 md:mb-6 article-card"
-          >
+          <li v-if="articleYear == tempYear" class="container__item">
             <NuxtLink
               :to="{ name: 'blog-slug', params: { slug: article.slug } }"
-              class="flex transition-shadow duration-150 ease-in-out shadow-sm hover:shadow-md xxlmax:flex-col"
+              class="container__link"
             >
-              <h3 class="font-bold">
+              <h3 class="link__title">
                 {{ article.title }}
               </h3>
-              <p class="text-xs">{{ formatDate(article.year) }}</p>
-              <p class="font-bold text-gray-600 text-sm">
+              <p class="link__year">
+                {{ formatDate(article.year) }}
+              </p>
+              <p class="link__description">
                 {{ article.description }}
               </p>
             </NuxtLink>
@@ -57,7 +56,8 @@ export default {
       .only(['title', 'description', 'img', 'alt', 'year', 'slug', 'author'])
       .sortBy('year', 'asc')
       .fetch()
-      .catch(err => {
+      // eslint-disable-next-line prettier/prettier
+      .catch((err) => {
         error({ statusCode: 404, message: 'Page not found' });
         console.error(err);
       });
@@ -67,7 +67,8 @@ export default {
       .without(['path', 'extension'])
       .sortBy('year', 'asc')
       .fetch()
-      .catch(err => {
+      // eslint-disable-next-line prettier/prettier
+      .catch((err) => {
         error({ statusCode: 404, message: 'Page not found' });
         console.error(err);
       });
@@ -76,16 +77,6 @@ export default {
       articles,
       years,
     };
-  },
-  methods: {
-    formatDate(date) {
-      const options = { year: 'numeric', month: 'long', day: 'numeric' };
-      return new Date(date).toLocaleDateString('es', options);
-    },
-    getYear(date) {
-      const options = { year: 'numeric' };
-      return new Date(date).toLocaleDateString('es', options);
-    },
   },
   head() {
     return {
@@ -100,15 +91,84 @@ export default {
       ],
     };
   },
+  methods: {
+    formatDate(date) {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      return new Date(date).toLocaleDateString('es', options);
+    },
+    getYear(date) {
+      const options = { year: 'numeric' };
+      return new Date(date).toLocaleDateString('es', options);
+    },
+  },
 };
 </script>
 
 <style lang="scss">
 @import '~/assets/css/_colors.scss';
+@import '~/assets/css/_breakpoints.scss';
 h2 {
   margin: 1em 0 1em;
   font-size: 1em;
   color: $grey-semi;
   border-bottom: 1px solid $grey-light;
+}
+
+.container {
+  margin: 2rem;
+
+  .container__header {
+    font-weight: bold;
+    color: $grey-dark;
+    border-bottom-width: 1px;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .container__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    .container__item {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      @include sm {
+        width: 100%;
+        margin-bottom: 1.25rem;
+      }
+      @include md {
+        width: 100%;
+        margin-bottom: 1.25rem;
+      }
+
+      .container__link {
+        display: flex;
+        flex-direction: column;
+        transition-property: box-shadow;
+        transition-duration: 150ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        &:hover {
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+            0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .link__title {
+          font-weight: bold;
+        }
+        .link__year {
+          // font-size: 12px;
+          font-size: 0.75rem;
+          line-height: 1rem;
+        }
+        .link__description {
+          font-weight: bold;
+          color: $grey-dark;
+          // font-size: 14px;
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+        }
+      }
+    }
+  }
 }
 </style>
