@@ -5,7 +5,9 @@ layout: post
 author:
   name: Salrion
 name: null
-title: Dojo Kun - 道場訓 - Preceptos del Dojo
+title: "Life: Dojo Kun - 道場訓 - Preceptos del Dojo"
+tags:
+  - life
 id: dojokun
 year: 2017-05-07
 description: Dojo kun, reglas dojo para practicantes de Karate Shotokan. Reglas
