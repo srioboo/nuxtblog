@@ -6,14 +6,14 @@
     >
       <img
         v-if="article.img"
-        :src="article.img + imgsmall"
+        :src="transformImg(article.img)"
         :alt="article.alt"
         class="blog__img"
         loading="lazy"
       />
       <img
         v-else
-        :src="noimage + imgsmall"
+        :src="transformImg(noimage)"
         alt="no image"
         class="blog__img"
         loading="lazy"
@@ -65,15 +65,19 @@ export default {
   },
   data() {
     return {
-      imgsmall: '&w=310&q=80&auto=format',
+      imgsmall: 'w_810,q_90,f_auto',
       noimage:
-        'https://images.unsplash.com/photo-1582720937167-fd278a12a193?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9',
+        'https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/glacier.jpg',
     };
   },
   methods: {
     formatDate(date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' };
       return new Date(date).toLocaleDateString('es', options);
+    },
+    transformImg(img) {
+      const timg = img.replace('{{trans}}', this.imgsmall);
+      return timg;
     },
   },
   /* async asyncData({ $content, params, error }) {

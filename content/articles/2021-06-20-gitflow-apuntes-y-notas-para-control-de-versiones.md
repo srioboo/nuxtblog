@@ -1,5 +1,5 @@
 ---
-img: https://images.unsplash.com/photo-1556075798-4825dfaaf498?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&fit=crop
+img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/git.jpg
 alt: GitFlow
 layout: post
 author:

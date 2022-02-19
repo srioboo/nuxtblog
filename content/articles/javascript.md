@@ -1,7 +1,7 @@
 ---
 title: Apuntes de Javascript I - Variables y Tipos
 year: 2020-10-10
-img: https://images.unsplash.com/photo-1519091915001-f72a15a88b04?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9
+img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/coffee-yellow.jpg
 alt: Javascript
 id: 'apuntes-javascript-i-variables-y-tipos'
 description: Primera parte del los apuntes de javascript "Javascript variables y tipos", uso de las variables en javascript y tipos de variables, constantes, templates y literales
