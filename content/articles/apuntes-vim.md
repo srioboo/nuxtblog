@@ -1,5 +1,5 @@
 ---
-img: https://images.unsplash.com/photo-1571723141898-68dfa1e50431?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9
+img: https://res.cloudinary.com/salrion/images/{{trans}}/salrionblog/rock/apuntes-de-vim.jpg
 alt: vim y neovim
 layout: post
 author:

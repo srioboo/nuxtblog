@@ -2,7 +2,7 @@
 name: 'test1'
 title: Mis apuntes de Sublime Text, el editor de código multilenguajes
 year: 2016-06-07
-img: https://images.unsplash.com/photo-1512317049220-d3c6fcaf6681?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&fit=crop
+img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/menu-bar.jpg
 alt: Sublime Text
 id: 'apuntes-sublime-text'
 description: Apuntes de atajos de teclados de Sublime Text, configuración, extensiones, todo para sacar provecho a este editor ligero y potente

@@ -1,5 +1,5 @@
 ---
-img: https://images.unsplash.com/photo-1492571350019-22de08371fd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9
+img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/torii.jpg
 alt: Dojo kun
 layout: post
 author:

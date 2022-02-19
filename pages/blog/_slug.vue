@@ -6,7 +6,7 @@
         <!-- <p>{{ article.description }}</p> -->
         <img
           v-if="article.img"
-          :src="article.img + imgfull"
+          :src="transformImg(article.img)"
           :alt="article.alt"
           :title="article.title"
           class="article__img"
@@ -14,7 +14,7 @@
         />
         <img
           v-else
-          :src="noimage + imgfull"
+          :src="transformImg(noimage)"
           alt="no image"
           class="article__img"
           loading="lazy"
@@ -67,9 +67,9 @@ export default {
   },
   data() {
     return {
-      imgfull: '&w=1000&q=80&auto=format',
+      imgfull: 'w_1000,q_90,f_auto',
       noimage:
-        'https://images.unsplash.com/photo-1582720937167-fd278a12a193?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9',
+        'https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/glacier.jpg',
     };
   },
   head() {
@@ -88,6 +88,10 @@ export default {
     formatDate(date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' };
       return new Date(date).toLocaleDateString('es', options);
+    },
+    transformImg(img) {
+      const timg = img.replace('{{trans}}', this.imgfull);
+      return timg;
     },
   },
 };
