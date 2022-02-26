@@ -1,10 +1,10 @@
 ---
+title: "Git: control de versiones"
 img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/git.jpg
 alt: Git
 layout: post
 author:
   name: SRN
-title: "Git: control de versiones"
 id: notas-de-git
 year: 2020-04-04
 description: Pequeños apuntes y anotaciones sobre Git y GitFlow, uso, comandos
@@ -23,7 +23,28 @@ Git permite a grupos de personas trabajar en los mismos documentos o código al 
 | git config --global color.ui auto              | indica uso de color en la salida de datos |                                                                            |
 | git config --global alias.co checkout          | crea un alias a un comando                | en este caso co sustituye al comando checkout git co realizará un checkout |
 
-## Uso de git
+## Consultar estado y logs
+
+Consultar el estado de los archivos, si no se han añadido, si estan en el espacio de stage, etc.
+
+```bash
+$ git status
+```
+
+Consultar en log
+
+```bash
+# log normal
+git log
+
+# log en una linea
+$ git log --oneline
+
+# log en una linea y con un solo nivel
+$ git log --oneline --first-parent
+```
+
+## Incluir archivos en git, commit y subirlos al servidor
 
 | **Comando**                | **Acción**                                    | **Notas**                                                          |
 | -------------------------- | --------------------------------------------- | ------------------------------------------------------------------ |
@@ -31,7 +52,14 @@ Git permite a grupos de personas trabajar en los mismos documentos o código al 
 | git add <archivo>          | añade un archivo al indice                    | es necesario añadir al indice es slimilar al añadir a subversion   |
 | git add .                  | añade todos los archivos                      |                                                                    |
 | git commit -m "mi mensaje" | realizar el commiteo o compromiso del archivo | es igual que commit en svn, solo que se añade al repositorio local |
-| git log                    | muestra el hitorial de commit realizado       |                                                                    |
+
+
+
+Para subirlos a un directorio remoto se usa push
+
+```bash
+$ git push
+```
 
 ## Compartir un repositorio
 
