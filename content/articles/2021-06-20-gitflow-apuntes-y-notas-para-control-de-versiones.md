@@ -1,14 +1,14 @@
 ---
+title: "GitFlow: apuntes y notas para control de versiones"
+year: 2021-06-20T11:05:43.921Z
 img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/git.jpg
 alt: GitFlow
 layout: post
 author:
   name: SRN
-title: "GitFlow: apuntes y notas para control de versiones"
 tags:
   - GitFlow
 id: notas-de-git
-year: 2021-06-20T11:05:43.921Z
 description: GitFlow, apuntes y anotaciones sobre uso, comandos principales e
   inicialización de una de las herramientas de control de versiones más
   populares.
@@ -44,7 +44,6 @@ git flow init
 | git flow hotfix start VERSION \[BASENAME] | crear un fix                          |                                               |
 | git flow hotfix finish VERSION            | Finalizar un fix                      |                                               |
 
-
 ### Initializar
 
 | gitflow         | git                                            |
@@ -53,13 +52,11 @@ git flow init
 | &nbsp;          | `git commit --allow-empty -m "Initial commit"` |
 | &nbsp;          | `git checkout -b develop master`               |
 
-
 ### Conectar al repositorio remoto
 
 | gitflow | git                                                     |
 | ------- | ------------------------------------------------------- |
 | *N/A*   | `git remote add origin git@github.com:MYACCOUNT/MYREPO` |
-
 
 ### Features
 
@@ -69,7 +66,6 @@ git flow init
 | ---------------------------------- | ------------------------------------------- |
 | `git flow feature start MYFEATURE` | `git checkout -b feature/MYFEATURE develop` |
 
-
 #### Publicar una rama feature
 
 | gitflow                              | git                                 |
@@ -77,14 +73,12 @@ git flow init
 | `git flow feature publish MYFEATURE` | `git checkout feature/MYFEATURE`    |
 | &nbsp;                               | `git push origin feature/MYFEATURE` |
 
-
 #### Obtener lo último de la rama feature
 
 | gitflow                                  | git                                          |
 | ---------------------------------------- | -------------------------------------------- |
 | `git flow feature pull origin MYFEATURE` | `git checkout feature/MYFEATURE`             |
 | &nbsp;                                   | `git pull --rebase origin feature/MYFEATURE` |
-
 
 #### Finalizar una rame feature
 
@@ -94,14 +88,12 @@ git flow init
 | &nbsp;                              | `git merge --no-ff feature/MYFEATURE` |
 | &nbsp;                              | `git branch -d feature/MYFEATURE`     |
 
-
 #### Publicar la rama feature mergeada
 
 | gitflow | git                                                |
 | ------- | -------------------------------------------------- |
 | *N/A*   | `git push origin develop`                          |
 | &nbsp;  | `git push origin :feature/MYFEATURE` *(if pushed)* |
-
 
 ### Releases
 
@@ -111,7 +103,6 @@ git flow init
 | ------------------------------ | --------------------------------------- |
 | `git flow release start 1.2.0` | `git checkout -b release/1.2.0 develop` |
 
-
 #### Publicar una rama release
 
 | gitflow                          | git                             |
@@ -119,14 +110,12 @@ git flow init
 | `git flow release publish 1.2.0` | `git checkout release/1.2.0`    |
 | &nbsp;                           | `git push origin release/1.2.0` |
 
-
 #### Obtener los últimos cambios de una rama release
 
 | gitflow | git                                      |
 | ------- | ---------------------------------------- |
 | *N/A*   | `git checkout release/1.2.0`             |
 | &nbsp;  | `git pull --rebase origin release/1.2.0` |
-
 
 #### Finalizar una rama release
 
@@ -139,7 +128,6 @@ git flow init
 | &nbsp;                          | `git merge --no-ff release/1.2.0` |
 | &nbsp;                          | `git branch -d release/1.2.0`     |
 
-
 #### Publicar una rama release mergeada
 
 | gitflow | git                                            |
@@ -149,7 +137,6 @@ git flow init
 | &nbsp;  | `git push origin --tags`                       |
 | &nbsp;  | `git push origin :release/1.2.0` *(if pushed)* |
 
-
 ### Hotfixes
 
 #### Crear una rama hotfix
@@ -157,7 +144,6 @@ git flow init
 | gitflow                                | git                                     |
 | -------------------------------------- | --------------------------------------- |
 | `git flow hotfix start 1.2.1 [commit]` | `git checkout -b hotfix/1.2.1 [commit]` |
-
 
 #### Finalizar una rama hotfix
 
