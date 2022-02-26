@@ -55,9 +55,8 @@ $ git log --oneline --first-parent
 
 
 
-Para subirlos a un directorio remoto se usa push
-
 ```bash
+# Para subirlos a un directorio remoto se usa push
 $ git push
 ```
 
@@ -71,12 +70,21 @@ Para empezar a compartir los cambios con otros es necesario sincronizar con el r
 | git push                      | subimos los cambios al repositorio remoto                           |                                                                |
 
 ```bash
-git remote add origin https://github.com/githubuser/MiRepositorio.git
-git push -u origin master
+# Añadir un repositorio remoto
+$ git remote add origin https://github.com/githubuser/MiRepositorio.git
+
+# Para enviar un commit al master
+$ git push -u origin master
+
+# Una vez seteado se puede hacer con
+$ git push
 ```
 
 ## git stash
-
+```bash
+# Añadir una serie de cambios a un stash para usarlos luego se hace con
+$ git stash
+```
 *TODO:* completar la documentación
 
 ## git reset
@@ -90,9 +98,9 @@ git push -u origin master
 ## Utiles
 
 ```bash
-//Guardar las credenciales localmente
+# Guardar las credenciales localmente
 $ git config credential.helper store
 
-// o Globalmente
+# Guardar las credenciales Globalmente
 $ git config --global credential.helper store
 ```
