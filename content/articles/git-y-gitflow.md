@@ -28,7 +28,7 @@ Git permite a grupos de personas trabajar en los mismos documentos o código al 
 Consultar el estado de los archivos, si no se han añadido, si estan en el espacio de stage, etc.
 
 ```bash
-$ git status
+git status
 ```
 
 Consultar en log
@@ -38,10 +38,10 @@ Consultar en log
 git log
 
 # log en una linea
-$ git log --oneline
+git log --oneline
 
 # log en una linea y con un solo nivel
-$ git log --oneline --first-parent
+git log --oneline --first-parent
 ```
 
 ## Incluir/excluir archivos en git, commit y subirlos al servidor
@@ -56,26 +56,26 @@ $ git log --oneline --first-parent
 
 ```bash
 # Para subirlos a un directorio remoto se usa push
-$ git push
+git push
 ```
 
 ## Consultar y cambiar de rama
 
 ```bash
 # Consultar ramas
-$ git branch
+git branch
 
 # Crea una rama con el nombre dado
 git branch nombre_rama
 
 # Cambiar a una rama 
-$ git switch
+git switch
 
 # Checkout una rama creada
-$ git checkout
+git checkout
 
 # Checkout y con creacion de rama
-$ git checkout -b nombre_rama
+git checkout -b nombre_rama
 ```
 
 ## Compartir un repositorio
@@ -89,13 +89,13 @@ Para empezar a compartir los cambios con otros es necesario sincronizar con el r
 
 ```bash
 # Añadir un repositorio remoto
-$ git remote add origin https://github.com/githubuser/MiRepositorio.git
+git remote add origin https://github.com/githubuser/MiRepositorio.git
 
 # Para enviar un commit al master
-$ git push -u origin master
+git push -u origin master
 
 # Una vez seteado se puede hacer con
-$ git push
+git push
 ```
 
 ## git stash
@@ -128,8 +128,8 @@ git merge <branch>
 
 ```bash
 # Guardar las credenciales localmente
-$ git config credential.helper store
+git config credential.helper store
 
 # Guardar las credenciales Globalmente
-$ git config --global credential.helper store
+git config --global credential.helper store
 ```
