@@ -44,25 +44,29 @@ $ git log --oneline
 $ git log --oneline --first-parent
 ```
 
-## Incluir archivos en git, commit y subirlos al servidor
+## Incluir/excluir archivos en git, commit y subirlos al servidor
 
-| **Comando**                | **Acción**                                    | **Notas**                                                          |
-| -------------------------- | --------------------------------------------- | ------------------------------------------------------------------ |
-| git status                 | indica el estado actual del proyecto          | muy útil para saber que hay pendiente                              |
-| git add <archivo>          | añade un archivo al indice                    | es necesario añadir al indice es slimilar al añadir a subversion   |
-| git add .                  | añade todos los archivos                      |                                                                    |
-| git commit -m "mi mensaje" | realizar el commiteo o compromiso del archivo | es igual que commit en svn, solo que se añade al repositorio local |
+| **Comando**                | **Acción**                                                 | **Notas**                                                          |
+| -------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------ |
+| git status                 | indica el estado actual del proyecto                       | muy útil para saber que hay pendiente                              |
+| git add <archivo>          | añade un archivo al indice                                 | es necesario añadir al indice es similar al añadir a subversion    |
+| git add .                  | añade todos los archivos a stage                           |                                                                    |
+| git reset <archivo>        | quita el archivo de la zona de stg manteniendo los cambios |                                                                    |
+| git commit -m "mi mensaje" | realizar el commiteo o compromiso del archivo              | es igual que commit en svn, solo que se añade al repositorio local |
 
 ```bash
 # Para subirlos a un directorio remoto se usa push
 $ git push
 ```
 
-## Consultar y cambar de rama
+## Consultar y cambiar de rama
 
 ```bash
 # Consultar ramas
 $ git branch
+
+# Crea una rama con el nombre dado
+git branch nombre_rama
 
 # Cambiar a una rama 
 $ git switch
@@ -72,7 +76,6 @@ $ git checkout
 
 # Checkout y con creacion de rama
 $ git checkout -b nombre_rama
-
 ```
 
 ## Compartir un repositorio
@@ -100,17 +103,26 @@ $ git push
 ```bash
 # Añadir una serie de cambios a un stash para usarlos luego se hace con
 $ git stash
+
+# lista los archivos que están en el stag
+git stash list
+
+git stash pop
+
+git stash drop
 ```
 
 *TODO:* completar la documentación
 
-## git reset
+## Combina ramas
 
-*TODO:* completar la documentación
+\# mergea la rama indicada con la rama actual
 
-## git merge
+git merge <branch>
 
-*TODO:* completar la documentación
+\# Otra opcion pero en lugar de hacer un merge hace un rebase
+
+git merge <branch>
 
 ## Utiles
 
