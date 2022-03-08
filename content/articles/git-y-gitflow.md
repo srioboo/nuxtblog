@@ -53,11 +53,26 @@ $ git log --oneline --first-parent
 | git add .                  | añade todos los archivos                      |                                                                    |
 | git commit -m "mi mensaje" | realizar el commiteo o compromiso del archivo | es igual que commit en svn, solo que se añade al repositorio local |
 
-
-
 ```bash
 # Para subirlos a un directorio remoto se usa push
 $ git push
+```
+
+## Consultar y cambar de rama
+
+```bash
+# Consultar ramas
+$ git branch
+
+# Cambiar a una rama 
+$ git switch
+
+# Checkout una rama creada
+$ git checkout
+
+# Checkout y con creacion de rama
+$ git checkout -b nombre_rama
+
 ```
 
 ## Compartir un repositorio
@@ -81,10 +96,12 @@ $ git push
 ```
 
 ## git stash
+
 ```bash
 # Añadir una serie de cambios a un stash para usarlos luego se hace con
 $ git stash
 ```
+
 *TODO:* completar la documentación
 
 ## git reset
