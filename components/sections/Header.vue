@@ -7,7 +7,7 @@
     </div> -->
 
     <div class="header__logo">
-      <a href="/">Salrion</a>
+      <a href="/">Inicio</a>
     </div>
 
     <div id="navmenu" class="header__navmenu">
