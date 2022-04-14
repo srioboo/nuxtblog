@@ -1,5 +1,5 @@
 ---
-title: "GitFlow: apuntes y notas para control de versiones"
+title: "Git: GitFlow, apuntes y notas para control de versiones"
 year: 2021-06-20T11:05:43.921Z
 img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/git.jpg
 alt: GitFlow

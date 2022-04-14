@@ -1,6 +1,6 @@
 ---
 name: 'raspberrypi'
-title: Apuntes de Raspberry Pi, el mini ordenador versátil
+title: 'Raspberry Pi: el mini ordenador versátil'
 year: 2016-05-22
 img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/raspberry-pi.jpg
 alt: Raspberry Pi

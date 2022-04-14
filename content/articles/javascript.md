@@ -1,5 +1,5 @@
 ---
-title: Apuntes de Javascript I - Variables y Tipos
+title: 'Javascript: I - Variables y Tipos'
 year: 2020-10-10
 img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/coffee-yellow.jpg
 alt: Javascript

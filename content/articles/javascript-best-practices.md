@@ -1,5 +1,5 @@
 ---
-title: Javascript buenas prácticas de uso
+title: 'Javascript: buenas prácticas de uso'
 year: 2016-06-18
 layout: post
 id: 'notas de javascript'

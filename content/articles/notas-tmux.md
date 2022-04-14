@@ -1,6 +1,6 @@
 ---
 name: 'notas-tmux'
-title: Notas Tmux, gestor multiventana para consola
+title: 'Tmux: gestor multiventana para consola'
 year: 2017-04-28
 id:
 description: Notas sobre tmux, gestión de pestañas, paneles, configuración, atajos de teclados y otras características. Herramienta de productividad para la consola.

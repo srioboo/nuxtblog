@@ -4,7 +4,7 @@ alt: vim y neovim
 layout: post
 author:
   name: SRN
-title: Apuntes de Vim y Neovim, el editor multiconsola
+title: 'Vim: Apuntes de Vim y Neovim, el editor multiconsola'
 id: apuntes-de-vim
 year: 2016-06-06
 description: Apuntes y anotaciones sobre vim y neovim. Atajos de teclados en las

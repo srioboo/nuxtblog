@@ -1,6 +1,6 @@
 ---
 name: 'test1'
-title: Mis apuntes de Sublime Text, el editor de código multilenguajes
+title: 'Sublime Text: el editor de código multilenguajes'
 year: 2016-06-07
 img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/menu-bar.jpg
 alt: Sublime Text

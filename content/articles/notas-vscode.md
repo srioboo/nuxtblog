@@ -5,7 +5,7 @@ layout: post
 author:
   name: SRN
 name: notas-vs-code
-title: VS Code, notas y apuntes del editor de código
+title: 'VS Code: notas y apuntes del editor de código'
 id: notas-vs-code
 year: 2020-04-04
 description: Apuntes y notas de VS Code, el editor de código multilenguaje.

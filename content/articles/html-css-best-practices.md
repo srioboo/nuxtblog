@@ -1,5 +1,5 @@
 ---
-title: HTML y CSS, buenas prácticas de uso
+title: 'HTML y CSS: buenas prácticas de uso'
 year: 2016-06-06
 img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/notes.jpg
 alt: article 2

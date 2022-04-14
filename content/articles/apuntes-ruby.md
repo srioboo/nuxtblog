@@ -1,6 +1,6 @@
 ---
 name: 'apuntes-de-ruby'
-title: Apuntes de Ruby, lenguaje de programación de scripting
+title: 'Ruby: lenguaje de programación de scripting'
 year: 2015-12-12
 img: https://res.cloudinary.com/salrion/images/{{trans}}/salrionblog/ruby/apuntes-de-ruby.jpg
 alt: ruby
@@ -8,7 +8,7 @@ layout: post
 author:
   name: Salrion
 name: apuntes-de-ruby
-title: "Apuntes: Ruby, lenguaje de programación de scripting"
+title: "Ruby: Apuntes del lenguaje de programación de scripting"
 tags:
   - apuntes
 id: apuntes-de-ruby

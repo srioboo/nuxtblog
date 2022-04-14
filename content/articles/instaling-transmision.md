@@ -1,6 +1,6 @@
 ---
 name: 'instalar-transmision'
-title: Instalando Transmision en Linux
+title: 'Transmision: Instalación en Linux'
 year: 2016-06-11
 id: 'instalar-transmision-linux'
 description: Notas de instalación de transmision en Linux, herramienta de descarga de torrents, tanto en formato cli, como web y configuración base
