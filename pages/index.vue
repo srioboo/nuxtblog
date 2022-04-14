@@ -34,7 +34,7 @@ export default {
   async asyncData({ $content, params, error }) {
     const articles = await $content('articles', params.slug)
       .only(['title', 'description', 'img', 'alt', 'year', 'slug', 'author'])
-      .sortBy('createdAt', 'asc')
+      .sortBy('title', 'asc')
       .fetch()
       // eslint-disable-next-line prettier/prettier
       .catch((err) => {
