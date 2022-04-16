@@ -13,6 +13,9 @@
     <div id="navmenu" class="header__navmenu">
       <ul>
         <li>
+          <Search />
+        </li>
+        <li>
           <a href="/year-archive">Posts</a>
         </li>
         <!-- <li>
@@ -25,8 +28,12 @@
 
 <script>
 import Vue from 'vue';
+import Search from '~/components/sections/Search.vue';
 
 export default Vue.extend({
+  components: {
+    Search,
+  },
   name: 'Header',
   props: {
     // msg: String,
