@@ -57,6 +57,7 @@ export default {
     padding: 5px;
     border: 1px solid black;
     background-color: white;
+    z-index: 2;
     li {
       list-style: none;
       border-bottom: 1px solid grey;
