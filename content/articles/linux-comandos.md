@@ -13,30 +13,30 @@ description: Tabla con los comandos más útiles en Linux/Unix para usar en el t
 
 ## Directorios
 
-| comando             | parámetro | resumen                              |     |
+| comando             | parámetro | resumen                              |   **ejemplo**  |
 | :------------------ | :-------- | :----------------------------------- | :-- |
-| **cd {directorio}** |           | ir al directorio                     |     |
-| **ls**              |           | listar directorio                    |     |
-|                     | -a        | mostrar también ocultos              |     |
-|                     | -l        | formato largo                        |     |
-|                     | -t        | mostrar fecha                        |     |
-|                     | -r        | al revés                             |     |
-|                     | -ltr      | combinación de parámetros            |     |
-| **du**              |           | tamaños archivos de un directorio    |     |
-|                     | -c        | muestra tamaño total de los archivos |     |
+| **cd directorio** |           | ir al directorio                     | cd /home/usuario    |
+| **ls**              |           | listar directorio                    | ls    |
+|                     | -a        | mostrar también ocultos              | ls -a    |
+|                     | -l        | formato largo                        | ls -l    |
+|                     | -t        | mostrar fecha                        |  ls -t   |
+|                     | -r        | al revés                             | ls -r    |
+|                     | -ltr      | combinación de parámetros            |  ls -ltr   |
+| **du**              |           | tamaños archivos de un directorio    |  du /home/usuario   |
+|                     | -c        | muestra tamaño total de los archivos | du -c /home/usuario    |
 
 ## Archivos
 
 | comando                 | parámetro | resumen                             | ejemplo                   |
 | :---------------------- | :-------- | :---------------------------------- | :------------------------ |
-| **cat {a1> {a2}**       |           | concatena archivos                  | cat arc1.txt arc2.txt     |
-| **cat {a1> {a2} > {r}** |           | manda concatenación a archivo       | cat a1.txt a2.txt > r.txt |
-| **cat {arc1}**          |           | muestra el contenido                | cat arc1.txt              |
+| **cat a1 > a2**       |           | concatena archivos                  | cat arc1.txt arc2.txt     |
+| **cat a1> a2 > r** |           | manda concatenación a archivo       | cat a1.txt a2.txt > r.txt |
+| **cat arc1**          |           | muestra el contenido                | cat arc1.txt              |
 
 ## Búsqueda en archivos
 | comando               | parámetro | resumen                             | ejemplo                  |
 |:--------------------- |:--------- |:----------------------------------- |:------------------------ |
-| **grep {text} {arc}** |           | busca texto en archivos             | grep hola arc1.txt       |
+| **grep text arc** |           | busca texto en archivos             | grep hola arc1.txt       |
 |                       | -c        | cuenta la lineas con coincidencias  | grep hola arc1.txt -c    |
 |                       | -n        | muestra el número de linea          | grep hola arc1.txt -n    |
 |                       | -v        | muestra las lineas que no coinciden | grep hola arc1.txt -v    |
@@ -117,21 +117,22 @@ cat TarjetaAmigos_temp.csv | awk -F, 'a[$1$2$3$4]++{print $0}'
 >http://www.sromero.org/wiki/linux/aplicaciones/uso_de_awk
 
 ## Otros
+
 - **duf** como df pero gráfico ncurses
 - **btop** como htop o top pero más visual
 - **neofetch** información del sistema
-- **sed** TODO
+- **sed** puede búscar, reemplazar, insertar y borrar. Lo más común es buscar y reemplazar. Permite editar archivos sin abrirlos.
 - **curl** curl -sS -k -u $SPI_CREDS -X GET $JOBSTATUS_UR
 
-
-
 ## Diferencias entre archivos
-- [ ] diff
-	- [ ] solo diferencias: diff -c fileone filetwo
-	- [ ] https://geekland.eu/comparar-directorios-y-archivos-comando-diff-linux/
-	- [ ] 
-diff -y '/home/joan/Escritorio/Ver las diferencias entre 2 directorios o 2 ficheros/arc
 
+- diff
+	-  solo diferencias: diff -c fileone filetwo
+	- https://geekland.eu/comparar-directorios-y-archivos-comando-diff-linux/
+	- diff -y '/home/joan/Escritorio/
+ 
+Ver las diferencias entre 2 directorios o 2 ficheros/arc
 diff a.csv b.csv --suppress-common-lines -y --color
 
- diff -u a.csv b.csv | grep -E "^\\+" > new.csv
+Con un grep
+diff -u a.csv b.csv | grep -E "^\\+" > new.csv
