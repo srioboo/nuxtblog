@@ -40,12 +40,15 @@ http://lowpowerlab.com/blog/2013/10/07/raspberrypi-home-automation-gateway-setup
 Nginx funciona bien y es facil de configurar. En adición se puede usar con PHP y SQLite.
 
 Actualiza los repositorios
-
-- sudo apt-get update; sudo apt-get upgrade
+```sh
+sudo apt-get update && sudo apt-get upgrade
+```
 
 Instala Nginx con:
+```sh
+sudo apt-get install nginx
+```
 
-- sudo apt-get install nginx
 
 Comprueba que esta instalado correctamente arrancando el servidor e introduciendo en el navegador la direccion de tu Raspberry Pi, http://<address_of_your_rpi>.
 
@@ -54,7 +57,7 @@ Comprueba que esta instalado correctamente arrancando el servidor e introduciend
 Por defecto el servidor busca el contenido en /usr/share/nginx/www. Pero puede interesar cambiarlo a uno más convencional como /var/www. Si no existe crealo:
 
 1. sudo mkdir /var/www
-2. sudo chown pi /var/www #dar permisos al usuario pi.
+2. sudo chown pi /var/www # dar permisos al usuario pi.
 
 El servidor no está configurado para buscar en esta carpeta. Necesitas crear una configuración para un sitio nuevo en la carpeta de sites-available.
 
@@ -86,12 +89,14 @@ Ahora tenemos el servidor sirviendo archivos estáticos desde /var/www. Intenta 
 ## PHP5
 
 Instalamos PHP5 con:
+```sh
+sudo apt-get install php5-fpm php-apc php5-common php5-cli
+```
 
-1. sudo apt-get install php5-fpm php-apc php5-common php5-cli
 
 Para configurar Nginx para usar PHP5. Ve al archivo creado en el paso anterior y añade.
 
-```bash
+```sh
 server {
         listen 80;
         root /var/www;
@@ -105,8 +110,9 @@ server {
 ```
 
 Guarda y reiniciarnginx.
-
-1. sudo service nginx restart
+```sh
+sudo service nginx restart
+```
 
 Compureba que todo funciona creando un archivo php con este contenido.
 
@@ -121,8 +127,9 @@ Si el archivo se llama test.php abre en navegador en http://<address_of_your_rpi
 ## SQLite3
 
 Instalar el SQLite3 y su modulo PHP5 con:
-
-1. sudo apt-get install sqlite3 php5-sqlite
+```sh
+sudo apt-get install sqlite3 php5-sqlite
+```
 
 Hay difernecia entre SQLite3 y SQLite2!. El código de abajo comprobara que esta funcionando con php.
 
@@ -506,7 +513,7 @@ sudo umount /dev/sda
 sudo mount /dev/sda
 ```
 
-## Configurar Owncloud @TEST @Mejorar
+## Configurar Owncloud #TEST #Mejorar
 
 Como suele ser un lio en linux el usuario Petrockblog de GITHUB lo simplifico, creando un script para instalar y actualizar Owncloud. Haz lo siguiente:
 

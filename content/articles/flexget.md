@@ -15,7 +15,7 @@ Flexget permite realizar tareas automatizadas en linux.
 
 Se debe usar el instalador de paquetes de python:
 
-```bash
+```sh
 sudo apt-get install transmission-daemon python-pip
 sudo pip install flexget
 ```
@@ -24,7 +24,7 @@ sudo pip install flexget
 
 Para ello hay que editar:
 
-```bash
+```sh
 nano .flexget/config.yml
 
 # o bien si prefieres vim
