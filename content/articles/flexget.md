@@ -9,6 +9,8 @@ author:
   name: Salrion
 ---
 
+up:: [Home](http://salrion.netlify.app)
+
 Flexget permite realizar tareas automatizadas en linux.
 
 ## Instalación
