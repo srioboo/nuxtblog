@@ -1,7 +1,7 @@
 import Vue from 'vue';
-import VueGtag from 'vue-gtag';
+//import VueGtag from 'vue-gtag';
 
-export default ({ app }) => {
+/*export default ({ app }) => {
   const getGDPR = localStorage.getItem('GDPR:accepted');
 
   Vue.use(
@@ -16,4 +16,5 @@ export default ({ app }) => {
     // eslint-disable-next-line prettier/prettier
     app.router,
   );
-};
+  
+};*/

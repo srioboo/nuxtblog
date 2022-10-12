@@ -1,13 +1,32 @@
+<script setup>
+const blog = defineProps(['article']);
+
+const imgsmall = 'w_810,q_90,f_auto';
+const noimage =
+  'https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/glacier.jpg';
+
+function transformImg(img) {
+  const timg = img.replace('{{trans}}', imgsmall);
+  return timg;
+}
+
+function formatDate(date) {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  return new Date(date).toLocaleDateString('es', options);
+}
+</script>
+
 <template>
   <div class="blog">
+    {{ blog.article.imgsmall }}
     <NuxtLink
-      :to="{ name: 'blog-slug', params: { slug: article.slug } }"
+      :to="{ name: 'blog-slug', params: { slug: blog.article.slug } }"
       class="blog__link"
     >
       <img
-        v-if="article.img"
-        :src="transformImg(article.img)"
-        :alt="article.alt"
+        v-if="blog.article.img"
+        :src="transformImg(blog.article.img)"
+        :alt="blog.article.alt"
         class="blog__img"
         loading="lazy"
       />
@@ -20,82 +39,18 @@
       />
       <div class="blog__content">
         <h2 class="blog__title">
-          {{ article.title }}
+          {{ blog.article.title }}
         </h2>
         <p class="blog__content__year">
-          <!-- por {{ article.author.name }} -->
           {{ formatDate(article.year) }}
         </p>
         <p class="blog__content__description">
-          {{ article.description }}
+          {{ blog.article.description }}
         </p>
       </div>
     </NuxtLink>
   </div>
 </template>
-
-<!-- <script lang="js">
-// import Vlazyimage from 'v-lazy-image';
-
-export default {
-  components:{
-  //  Vlazyimage,
-  },
-  props: {
-    blog: {
-      type: Object,
-      default: () => {},
-    }
-  }
-}
-</script> -->
-
-<script>
-// import Logo from '~/components/Logo.vue';
-
-export default {
-  components: {
-    // Logo,
-  },
-  props: {
-    article: {
-      type: Object,
-      default() {},
-    },
-  },
-  data() {
-    return {
-      imgsmall: 'w_810,q_90,f_auto',
-      noimage:
-        'https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/glacier.jpg',
-    };
-  },
-  methods: {
-    formatDate(date) {
-      const options = { year: 'numeric', month: 'long', day: 'numeric' };
-      return new Date(date).toLocaleDateString('es', options);
-    },
-    transformImg(img) {
-      const timg = img.replace('{{trans}}', this.imgsmall);
-      return timg;
-    },
-  },
-  /* async asyncData({ $content, params, error }) {
-    const articles = await $content('articles', params.slug)
-      .only(['title', 'description', 'img', 'alt', 'year', 'slug', 'author'])
-      .sortBy('createdAt', 'asc')
-      .fetch()
-      .catch(err => {
-        error({ statusCode: 404, message: 'Page not found' });
-        console.error(err);
-      });
-
-    return {
-      articles,
-    };
-  }, */
-};
-</script>
 
 <style lang="scss">
 @import '~/assets/css/_base.scss';
@@ -129,15 +84,7 @@ export default {
     flex-direction: column;
   }
 
-  /*transition-shadow
-        duration-150
-        ease-in-out
-        shadow-sm
-        hover:shadow-md
-        xxlmax:flex-col*/
-
   .blog__img {
-    /*h-48 xxlmin:w-1/2 xxlmax:w-full object-cover*/
     height: 12rem;
     width: 100%;
     object-fit: cover;
@@ -151,7 +98,6 @@ export default {
 }
 
 .blog__content {
-  //p-6 flex flex-col justify-between xxlmin:w-1/2 xxlmax:w-full
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -166,12 +112,10 @@ export default {
   }
 
   .blog__content__year {
-    //text-xs
     font-size: 0.75rem;
     line-height: 1rem;
   }
   .blog__content__description {
-    //font-bold text-gray-700 text-sm
     font-weight: bold;
     color: $grey-dark;
     font-size: 0.875rem;

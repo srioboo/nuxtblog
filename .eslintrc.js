@@ -9,7 +9,7 @@ module.exports = {
     requireConfigFile: 'false',
   },
   extends: [
-    '@nuxtjs',
+    '@nuxt',
     'prettier',
     'plugin:prettier/recommended',
     'plugin:nuxt/recommended',
