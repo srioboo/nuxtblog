@@ -20,7 +20,7 @@ function formatDate(date) {
   <div class="blog">
     {{ blog.article.imgsmall }}
     <NuxtLink
-      :to="{ name: 'blog-slug', params: { slug: blog.article.slug } }"
+      :to="{ name: 'blog-slug', params: { slug: blog.article.id } }"
       class="blog__link"
     >
       <img
@@ -66,7 +66,6 @@ function formatDate(date) {
   flex-direction: column;
   transition-property: box-shadow;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
   transition-duration: 150ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
