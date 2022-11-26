@@ -9,7 +9,7 @@
   "devDependencies": {
     "eslint": "^8.21.0",
     "@nuxt/content": "^2.1.0",
-    "nuxt": "^3.0.0-rc.10",
+    "nuxt": "^3.0.0",
     "prettier": "^2.7.1",
     "sass": "^1.54.3",
     "stylelint": "^14.9.1",
