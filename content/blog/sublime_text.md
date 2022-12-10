@@ -1,7 +1,8 @@
 ---
 name: 'test1'
 title: 'Sublime Text: el editor de código multilenguajes'
-year: 2016-06-07
+year: 2016
+date: 2016-06-07
 img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/menu-bar.jpg
 alt: Sublime Text
 id: 'apuntes-sublime-text'

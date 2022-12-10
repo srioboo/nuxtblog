@@ -1,6 +1,7 @@
 ---
 title: 'Javascript: buenas prácticas de uso'
-year: 2016-06-18
+year: 2016
+date: 2016-06-18
 layout: post
 id: 'notas de javascript'
 img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/coffee-grey.jpg
@@ -177,7 +178,7 @@ Have you taken a moment to view your beautiful slider with JavaScript turned off
 ```javascript
 setInterval(
   "document.getElementById('container').innerHTML += 'My new number: ' + i",
-  3000,
+  3000
 );
 ```
 
@@ -218,7 +219,7 @@ Hay muchas formas de crear objetos en Javascript. Por ejemplo con el contructor 
 var o = new Object();
 o.name = 'Jeffrey';
 o.lastName = 'Way';
-o.someFunction = function() {
+o.someFunction = function () {
   console.log(this.name);
 };
 ```

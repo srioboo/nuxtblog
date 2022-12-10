@@ -1,7 +1,8 @@
 ---
 name: 'notas-tmux'
 title: 'Tmux: gestor multiventana para consola'
-year: 2017-04-28
+year: 2017
+date: 2017-04-28
 id:
 description: Notas sobre tmux, gestión de pestañas, paneles, configuración, atajos de teclados y otras características. Herramienta de productividad para la consola.
 layout: post
@@ -13,7 +14,7 @@ Tmux permite crear en la consola nuevos paneles y ventanas de forma que se tiene
 
 ## tmux notas
 
-| **Tecla**                   | **Acción**                            | **Memotécnica** | 
+| **Tecla**                   | **Acción**                            | **Memotécnica** |
 | --------------------------- | ------------------------------------- | --------------- |
 | tmux                        | comenzar a usar                       |                 |
 | tmux new -s myname          | comenzar a usar con nombre de session |                 |

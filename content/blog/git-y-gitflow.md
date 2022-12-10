@@ -1,21 +1,24 @@
 ---
-title: "Git: control de versiones"
+title: 'Git: control de versiones'
 img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/git.jpg
 alt: Git
 layout: post
 author:
   name: SRN
 id: notas-de-git
-year: 2020-04-04
+year: 2020
+date: 2020-04-04
 description: Pequeños apuntes y anotaciones sobre Git y GitFlow, uso, comandos
   principales e inicialización de una de las herramientas de control de
   versiones más populares.
 ---
+
 Git permite a grupos de personas trabajar en los mismos documentos o código al mismo tiempo sin pisarse unos a otros. Al igual que CVS o Subversion es un control de versiones aunque en este caso es distribuido permitiendo que cada usuario tenga una copia local del repositorio.
 
 ## Configuración e incialización
 
 Para inicialicar un nuevo directorio para funcionar con git.
+
 ```bash
 # crear un directorio
 mkdir mi_directorio
@@ -27,29 +30,35 @@ cd mi_directorio
 git init
 ```
 
-Para asignar un usuario global y un email para el usuario 
+Para asignar un usuario global y un email para el usuario
+
 ```bash
 git config --global user.name usuario@mail.net
 
-git config --global user.email usuario@mail.net  
+git config --global user.email usuario@mail.net
 ```
+
 Si queremos que sea en un usuario local
+
 ```bash
 git config --local user.name usuario@mail.net
 
-git config --local user.email usuario@mail.net  
+git config --local user.email usuario@mail.net
 ```
+
 Para incluir en la configuración de sistema usaremos --system
 
 También podemos añadir ciertos alias para simplificar la escritura de comandos.
+
 ```bash
-git config --global alias.co checkout  
+git config --global alias.co checkout
 ```
+
 O configurar colores en la salida de datos
+
 ```bash
 git config --global color.ui auto
 ```
-
 
 ## Consultar estado y logs
 
@@ -75,30 +84,39 @@ git log --oneline --first-parent
 ## Incluir/excluir archivos en git, commit y subirlos al servidor
 
 Tras crear un archivo hay que añadirlo al indice para su seguimiento, para ello
+
 ```bash
 git add archivo.ext
 ```
+
 Esto añade el archivo al área de Staging
 
 Si queremos añadir todos los archivos del directorio actual
+
 ```bash
 git add .
 ```
+
 Si queremos sacar el archivo del área de staging
+
 ```bash
 git reset mi_archivo
 ```
 
 Una vez que los cambios se han concluido añadimos a git y al log con un mensaje
+
 ```bash
-git commit -m "mi mensaje" 
+git commit -m "mi mensaje"
 ```
+
 Pero esto solo lo agrega localmente, si queremos subir los cambios a un servidor necesitamos hacer un push
+
 ```bash
 git push
 ```
 
 Tambien podemos ver diferencias entre los archivos
+
 ```bash
 # Para ver las diferencias de un archivo con lo que hay en stage
 git diff
@@ -120,7 +138,7 @@ git branch -r
 # Crea una rama con el nombre dado
 git branch nombre_rama
 
-# Cambiar a una rama 
+# Cambiar a una rama
 git switch
 
 # Checkout una rama creada
@@ -131,6 +149,7 @@ git checkout -b nombre_rama
 ```
 
 Checkout nos permite también quitar los cambios de un archivo usando
+
 ```bash
 git checkout -- archivo.ext
 
@@ -143,9 +162,8 @@ git checkout -- .
 Para empezar a compartir los cambios con otros es necesario sincronizar con el repositorio remoto.
 
 | **Comando**                   | **Acción**                                                          | **Notas**                                                      |
-|-------------------------------|---------------------------------------------------------------------|----------------------------------------------------------------|
+| ----------------------------- | ------------------------------------------------------------------- | -------------------------------------------------------------- |
 | git remote add <nombre> <url> | añadimos un nuevo repositorio con un nombre a la url de un servidor | con esto añadimos al local la dirección del repositorio remoto |
-                                
 
 ```bash
 # Añadir un repositorio remoto
@@ -235,7 +253,9 @@ git log --stat -M
 ## .gitignore e ignorar patrones
 
 Si queremos ignorar ciertos archivos, podemos crear un archivo gitignore
+
 ```bash
 touch .gitignore
 ```
+
 Se edita el archivo y se añaden los archivos a ignorar

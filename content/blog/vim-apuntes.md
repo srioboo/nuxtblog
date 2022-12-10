@@ -6,7 +6,8 @@ author:
   name: SRN
 title: 'Vim: Apuntes de Vim y Neovim, el editor multiconsola'
 id: apuntes-de-vim
-year: 2016-06-06
+year: 2016
+date: 2016-06-06
 description: Apuntes y anotaciones sobre vim y neovim. Atajos de teclados en las
   diferentes opciones de edición, inserción, modo visual y memotécnica para
   recordar los atajos.
@@ -36,9 +37,9 @@ Como ventaja tenemos que al no necesitar mover las manos del teclado mejoramos, 
 
 | **Tecla** | **Acción**                    | **Memotécnica** |
 | --------- | ----------------------------- | --------------- |
-| gg        | ir al principiod de documento ||
-| G         | ir al final del documento     ||
-| 4G        | ir a la linea 4               ||
+| gg        | ir al principiod de documento |                 |
+| G         | ir al final del documento     |                 |
+| 4G        | ir a la linea 4               |                 |
 
 ## Insertar (Modo) - Insertar/Añadir texto
 

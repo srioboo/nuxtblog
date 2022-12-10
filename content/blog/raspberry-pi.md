@@ -1,7 +1,8 @@
 ---
 name: 'raspberrypi'
 title: 'Raspberry Pi: el mini ordenador versátil'
-year: 2016-05-22
+year: 2016
+date: 2016-05-22
 img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/raspberry-pi.jpg
 alt: Raspberry Pi
 id: 'raspberrypi'
@@ -40,15 +41,16 @@ http://lowpowerlab.com/blog/2013/10/07/raspberrypi-home-automation-gateway-setup
 Nginx funciona bien y es facil de configurar. En adición se puede usar con PHP y SQLite.
 
 Actualiza los repositorios
+
 ```sh
 sudo apt-get update && sudo apt-get upgrade
 ```
 
 Instala Nginx con:
+
 ```sh
 sudo apt-get install nginx
 ```
-
 
 Comprueba que esta instalado correctamente arrancando el servidor e introduciendo en el navegador la direccion de tu Raspberry Pi, http://<address_of_your_rpi>.
 
@@ -89,10 +91,10 @@ Ahora tenemos el servidor sirviendo archivos estáticos desde /var/www. Intenta 
 ## PHP5
 
 Instalamos PHP5 con:
+
 ```sh
 sudo apt-get install php5-fpm php-apc php5-common php5-cli
 ```
-
 
 Para configurar Nginx para usar PHP5. Ve al archivo creado en el paso anterior y añade.
 
@@ -110,6 +112,7 @@ server {
 ```
 
 Guarda y reiniciarnginx.
+
 ```sh
 sudo service nginx restart
 ```
@@ -127,6 +130,7 @@ Si el archivo se llama test.php abre en navegador en http://<address_of_your_rpi
 ## SQLite3
 
 Instalar el SQLite3 y su modulo PHP5 con:
+
 ```sh
 sudo apt-get install sqlite3 php5-sqlite
 ```

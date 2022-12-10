@@ -1,6 +1,7 @@
 ---
 title: 'HTML y CSS: buenas prácticas de uso'
-year: 2016-06-06
+year: 2016
+date: 2016-06-06
 img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/notes.jpg
 alt: article 2
 description: Buenas prácticas en HTML y CSS, todo lo que se debe hacer para construir una buena estructura de HTML y uno CSS correctos
@@ -36,7 +37,7 @@ Hace años era una práctica común poner comandos JS directamente en el interio
 Ni que decir tiene que no se debe hacer nunca esto. Lo mejor es pasar el código a un JS externo y usar un "addEventListener/attachEvent" para escuchar el evento o usar un framework como JQuery.
 
 ```javascript
-$('a#moreInfo').click(function() {
+$('a#moreInfo').click(function () {
   alert('Quieres más información?');
 });
 ```

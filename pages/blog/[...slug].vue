@@ -26,8 +26,7 @@ const noimage =
   'https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/glacier.jpg';
 
 function transformImg(img) {
-  const timg = img.replace('{{trans}}', imgsmall);
-  return timg;
+  return img.replace('{{trans}}', imgsmall);
 }
 
 function formatDate(date) {
@@ -90,7 +89,7 @@ function formatDate(date) {
   --bg-opacity: 0.95;
 }
 
-text-menu {
+.text-menu {
   color: $grey;
 }
 
@@ -172,7 +171,7 @@ article {
     }
 
     .nav__wrapper {
-      porsition: absolute; // absolute
+      position: absolute; // absolute
       // text-menu
       top: 8rem; // top-30
       left: 8rem; // left-30

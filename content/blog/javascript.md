@@ -1,6 +1,7 @@
 ---
 title: 'Javascript: I - Variables y Tipos'
-year: 2020-10-10
+year: 2020
+date: 2020-10-10
 img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/coffee-yellow.jpg
 alt: Javascript
 id: 'apuntes-javascript-i-variables-y-tipos'
@@ -187,7 +188,7 @@ console.log('Esto es true porque es un integer:' + Number.isInteger(numero));
 
 console.log(
   'Esto es true porque es un integer dentro del rango de valores correcto de integer para Javascript:' +
-    Number.isSafeInteger(numero),
+    Number.isSafeInteger(numero)
 );
 ```
 

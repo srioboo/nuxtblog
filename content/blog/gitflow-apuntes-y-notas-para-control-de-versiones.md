@@ -1,6 +1,7 @@
 ---
-title: "Git: GitFlow, apuntes y notas para control de versiones"
-year: 2021-06-20T11:05:43.921Z
+title: 'Git: GitFlow, apuntes y notas para control de versiones'
+year: 2021
+date: 2021-06-20
 img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/git.jpg
 alt: GitFlow
 layout: post
@@ -13,6 +14,7 @@ description: GitFlow, apuntes y anotaciones sobre uso, comandos principales e
   inicialización de una de las herramientas de control de versiones más
   populares.
 ---
+
 # GitFlow
 
 GitFlow es una forma de usar Git de forma que muchas de las acciones que se hacen en la gestión de ramas queden automatizadas.
@@ -56,7 +58,7 @@ git flow init
 
 | gitflow | git                                                     |
 | ------- | ------------------------------------------------------- |
-| *N/A*   | `git remote add origin git@github.com:MYACCOUNT/MYREPO` |
+| _N/A_   | `git remote add origin git@github.com:MYACCOUNT/MYREPO` |
 
 ### Features
 
@@ -92,8 +94,8 @@ git flow init
 
 | gitflow | git                                                |
 | ------- | -------------------------------------------------- |
-| *N/A*   | `git push origin develop`                          |
-| &nbsp;  | `git push origin :feature/MYFEATURE` *(if pushed)* |
+| _N/A_   | `git push origin develop`                          |
+| &nbsp;  | `git push origin :feature/MYFEATURE` _(if pushed)_ |
 
 ### Releases
 
@@ -114,7 +116,7 @@ git flow init
 
 | gitflow | git                                      |
 | ------- | ---------------------------------------- |
-| *N/A*   | `git checkout release/1.2.0`             |
+| _N/A_   | `git checkout release/1.2.0`             |
 | &nbsp;  | `git pull --rebase origin release/1.2.0` |
 
 #### Finalizar una rama release
@@ -132,10 +134,10 @@ git flow init
 
 | gitflow | git                                            |
 | ------- | ---------------------------------------------- |
-| *N/A*   | `git push origin master`                       |
+| _N/A_   | `git push origin master`                       |
 | &nbsp;  | `git push origin develop`                      |
 | &nbsp;  | `git push origin --tags`                       |
-| &nbsp;  | `git push origin :release/1.2.0` *(if pushed)* |
+| &nbsp;  | `git push origin :release/1.2.0` _(if pushed)_ |
 
 ### Hotfixes
 
@@ -162,7 +164,7 @@ git flow init
 
 | gitflow | git                                           |
 | ------- | --------------------------------------------- |
-| *N/A*   | `git push origin master`                      |
+| _N/A_   | `git push origin master`                      |
 | &nbsp;  | `git push origin develop`                     |
 | &nbsp;  | `git push origin --tags`                      |
-| &nbsp;  | `git push origin :hotfix/1.2.1` *(if pushed)* |
+| &nbsp;  | `git push origin :hotfix/1.2.1` _(if pushed)_ |

@@ -5,9 +5,10 @@ layout: post
 author:
   name: Salrion
 name: gestion-proyectos-grunt
-title: "Grunt: Gestión de proyectos"
+title: 'Grunt: Gestión de proyectos'
 id: grunt
-year: 2020-03-14
+year: 2020
+date: 2020-03-14
 description: Apuntes sobre gestión de proyectos y automatización con Grunt,
   inicialización, configuración y algunas de las tareas más conocidas de este
   gestor.
@@ -52,7 +53,7 @@ git clone https://github.com/gruntjs/grunt-init-gruntfile.git ~/.grunt-init/grun
 Son necesarios los siguentes archivos para configurarlo, Gruntfile.js:
 
 ```javascript
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     concat: {
