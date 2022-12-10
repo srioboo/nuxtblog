@@ -1,4 +1,8 @@
 {
+  "name": "salrionblog",
+  "version": "1.5.0",
+  "description": "Blog personal, apuntes sobre tecnología, linux, programación, tecnologías, forma de vida. Una pequeño repositorio de cosas de interes.",
+  "author": "salrio",
   "private": true,
   "scripts": {
     "build": "nuxt build",
