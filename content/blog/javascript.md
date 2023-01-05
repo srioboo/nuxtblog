@@ -1,14 +1,14 @@
 ---
+id: 'apuntes-javascript-i-variables-y-tipos'
 title: 'Javascript: I - Variables y Tipos'
-year: 2020
-date: 2020-10-10
 img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/coffee-yellow.jpg
 alt: Javascript
-id: 'apuntes-javascript-i-variables-y-tipos'
-description: Primera parte del los apuntes de javascript "Javascript variables y tipos", uso de las variables en javascript y tipos de variables, constantes, templates y literales
 layout: post
 author:
   name: SRN
+date: 2020-10-10
+year: 2020
+description: Primera parte del los apuntes de javascript "Javascript variables y tipos", uso de las variables en javascript y tipos de variables, constantes, templates y literales
 ---
 
 ## Variables y constantes
@@ -188,7 +188,7 @@ console.log('Esto es true porque es un integer:' + Number.isInteger(numero));
 
 console.log(
   'Esto es true porque es un integer dentro del rango de valores correcto de integer para Javascript:' +
-    Number.isSafeInteger(numero)
+    Number.isSafeInteger(numero),
 );
 ```
 

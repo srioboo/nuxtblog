@@ -1,14 +1,15 @@
 ---
+id: html-css-best-practices
 title: 'HTML y CSS: buenas prácticas de uso'
-year: 2016
-date: 2016-06-06
 img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/notes.jpg
 alt: article 2
-description: Buenas prácticas en HTML y CSS, todo lo que se debe hacer para construir una buena estructura de HTML y uno CSS correctos
 layout: post
 author:
   name: SRN
   bio: I am a person.
+date: 2016-06-06
+year: 2016
+description: Buenas prácticas en HTML y CSS, todo lo que se debe hacer para construir una buena estructura de HTML y uno CSS correctos
 ---
 
 ## Nunca uses estilos inline

@@ -1,15 +1,15 @@
 ---
-name: 'raspberrypi'
+id: 'raspberrypi'
 title: 'Raspberry Pi: el mini ordenador versátil'
-year: 2016
-date: 2016-05-22
+name: 'raspberrypi'
 img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/raspberry-pi.jpg
 alt: Raspberry Pi
-id: 'raspberrypi'
-description: Apuntes y notas sobre Rasbperry PI, diferentes usos y configuraciones base para configurar diferentes opciones de este mini ordernador.
 layout: post
 author:
   name: SRN
+date: 2016-05-22
+year: 2016
+description: Apuntes y notas sobre Rasbperry PI, diferentes usos y configuraciones base para configurar diferentes opciones de este mini ordernador.
 ---
 
 ## Montar un servidor web

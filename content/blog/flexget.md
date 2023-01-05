@@ -1,13 +1,13 @@
 ---
-name: 'flexget-instalacion-y-configuracion-raspberry-pi'
-title: 'Flexget: Instalación y configuración en Raspberry'
-year: 2016
-date: 2016-11-06
 id: 'flexget-instalacion-y-configuracion-raspberry-pi'
-description: flexget, instalación y configuración en Raspberry pi para sacar provecho a la automatización de diversas tareas, como uso de Transmision y subtitulos
+title: 'Flexget: Instalación y configuración en Raspberry'
+name: 'flexget-instalacion-y-configuracion-raspberry-pi'
 layout: post
 author:
   name: Salrion
+date: 2016-11-06
+year: 2016
+description: flexget, instalación y configuración en Raspberry pi para sacar provecho a la automatización de diversas tareas, como uso de Transmision y subtitulos
 ---
 
 up:: [Home](http://salrion.netlify.app)

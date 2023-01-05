@@ -1,14 +1,14 @@
 ---
+id: grunt
+title: "Grunt: Gestión de proyectos"
+name: gestion-proyectos-grunt
 img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/grunt.jpg
 alt: grunt
 layout: post
 author:
   name: Salrion
-name: gestion-proyectos-grunt
-title: 'Grunt: Gestión de proyectos'
-id: grunt
-year: 2020
 date: 2020-03-14
+year: 2020
 description: Apuntes sobre gestión de proyectos y automatización con Grunt,
   inicialización, configuración y algunas de las tareas más conocidas de este
   gestor.

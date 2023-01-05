@@ -3,7 +3,18 @@ export default defineNuxtConfig({
   modules: ['@nuxt/content'],
   content: {
     highlight: {
-      theme: 'github-light',
+      preload: [
+        'html',
+        'shell',
+      ],
+      theme: {
+        // Default theme (same as single string)
+        default: 'github-light',
+        // Theme used if `html.dark`
+        dark: 'github-dark',
+        // Theme used if `html.sepia`
+        sepia: 'monokai'
+      }
     },
   },
   app: {

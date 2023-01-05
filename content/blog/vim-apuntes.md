@@ -1,13 +1,13 @@
 ---
+id: apuntes-de-vim
+title: 'Vim: Apuntes de Vim y Neovim, el editor multiconsola'
 img: https://res.cloudinary.com/salrion/images/{{trans}}/salrionblog/rock/apuntes-de-vim.jpg
 alt: vim y neovim
 layout: post
 author:
   name: SRN
-title: 'Vim: Apuntes de Vim y Neovim, el editor multiconsola'
-id: apuntes-de-vim
-year: 2016
 date: 2016-06-06
+year: 2016
 description: Apuntes y anotaciones sobre vim y neovim. Atajos de teclados en las
   diferentes opciones de edición, inserción, modo visual y memotécnica para
   recordar los atajos.

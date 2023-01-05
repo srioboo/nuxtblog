@@ -1,15 +1,15 @@
 ---
-title: 'Git: GitFlow, apuntes y notas para control de versiones'
-year: 2021
-date: 2021-06-20
+id: notas-de-git
+title: "Git: GitFlow, apuntes y notas para control de versiones"
 img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/git.jpg
 alt: GitFlow
 layout: post
 author:
   name: SRN
+date: 2021-06-20
+year: 2021
 tags:
-  - GitFlow
-id: notas-de-git
+- GitFlow
 description: GitFlow, apuntes y anotaciones sobre uso, comandos principales e
   inicialización de una de las herramientas de control de versiones más
   populares.
