@@ -6,7 +6,7 @@
 
     <div id="navmenu" class="header__navmenu">
       <ul>
-        <li><SectionsSearch /></li>
+        <!-- <li><SectionsSearch /></li> -->
         <li>
           <a href="/year-archive">Posts</a>
         </li>

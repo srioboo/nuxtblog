@@ -14,11 +14,26 @@ const { data: article } = await useAsyncData('home', () =>
 
 useHead({
   title: article.title + 'My App',
-  meta: [{ name: 'description', content: 'My amazing site.' }],
+  // meta: [{ name: 'description', content: 'My amazing site.' }],
+  meta: [
+    { charset: 'utf-8' },
+    {
+      name: 'viewport',
+      content: 'width=device-width,initial-scale=1.0,minimum-scale=1.0',
+    },
+    {
+      hid: 'description',
+      name: 'description',
+      content: 'Blog personal, apuntes sobre tecnología, linux, programación, tecnologías, forma de vida. Una pequeño repositorio de cosas de interes.',
+    },
+  ],
   bodyAttrs: {
-    class: 'test',
+    // class: 'test',
   },
-  script: [{ children: "console.log('Hello world')" }],
+  htmlAttrs: {
+    lang: 'es',
+  },
+  // script: [{ children: "console.log('Hello world')" }],
 });
 
 const imgsmall = 'w_810,q_90,f_auto';

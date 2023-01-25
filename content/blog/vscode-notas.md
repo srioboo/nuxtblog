@@ -1,12 +1,12 @@
 ---
+id: notas-vs-code
+name: notas-vs-code
+title: 'VS Code: notas y apuntes del editor de código'
 img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/macbook.jpg
 alt: VSCode
 layout: post
 author:
   name: SRN
-name: notas-vs-code
-title: 'VS Code: notas y apuntes del editor de código'
-id: notas-vs-code
 date: 2020-04-04
 year: 2020
 description: Apuntes y notas de VS Code, el editor de código multilenguaje.

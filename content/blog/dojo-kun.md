@@ -1,19 +1,18 @@
 ---
+id: dojokun
+title: "Life: Dojo Kun - 道場訓 - Preceptos del Dojo"
 img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/torii.jpg
 alt: Dojo kun
 layout: post
 author:
   name: Salrion
-name: null
-title: 'Life: Dojo Kun - 道場訓 - Preceptos del Dojo'
-tags:
-  - life
-id: dojokun
-year: 2017
 date: 2017-05-07
+year: 2017
 description: Dojo kun, reglas dojo para practicantes de Karate Shotokan. Reglas
   básicas que todo practicante debe tratar de cumplir, tanto dentro como fuera
   del dojo.
+tags:
+  - life
 ---
 
 **一丶 人格完成に努むること。**

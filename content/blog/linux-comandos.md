@@ -82,8 +82,7 @@ Se puede usar el teclado para navegar, buscar, etc de forma similar a como se ha
 ## Screen
 
 Screen permite tener una sesión de "reserva" en caso de que estando trabajando en una máquina tengas que desconectar y volver a conectar.
-Para crear una sessión
-
+Para crear una sesión
 ```
 screen
 ```
@@ -128,7 +127,8 @@ esto da como resultado las 4 columnas duplicadas:
 cat TarjetaAmigos_temp.csv | awk -F, 'a[$1$2$3$4]++{print $0}'
 ```
 
-> [!INFO] >http://www.sromero.org/wiki/linux/aplicaciones/uso_de_awk
+>[!INFO]
+>http://www.sromero.org/wiki/linux/aplicaciones/uso_de_awk
 
 ## Otros
 

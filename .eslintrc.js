@@ -5,17 +5,17 @@ module.exports = {
     node: true,
   },
   parserOptions: {
-    // parser: '@babel/eslint-parser',
-    requireConfigFile: 'false',
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    parser: '@typescript-eslint/parser',
   },
   extends: [
-    '@nuxt',
-    'prettier',
-    'plugin:prettier/recommended',
+    'plugin:@typescript-eslint/recommended',
     'plugin:nuxt/recommended',
-    'plugin:vue/recommended',
+    'plugin:vue/vue3-recommended',
+    'plugin:prettier/recommended',
   ],
-  plugins: ['prettier', '@babel'],
+  plugins: ['@typescript-eslint'],
   // watch this for explaining why some of this is here
   // https://www.youtube.com/watch?time_continue=239&v=YIvjKId9m2c
   rules: {

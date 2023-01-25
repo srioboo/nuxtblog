@@ -1,9 +1,12 @@
-<script setup>
-const { data: articles } = await useAsyncData('equal', () =>
-  queryContent('blog')
-    //.where({ layout: { $eq: 'post' } })
-    .find()
-);
+<script lang="ts" setup>
+import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types';
+
+const query: QueryBuilderParams = {
+  path: '/blog',
+  // where: { layout: 'post' },
+  //limit: 5,
+  // sort: { date: -1 },
+};
 </script>
 
 <template>
@@ -12,13 +15,11 @@ const { data: articles } = await useAsyncData('equal', () =>
     <div class="main">
       <h1 class="h1">Entradas recientes</h1>
       <ul class="container">
-        <li
-          v-for="article of articles"
-          :key="article.slug"
-          class="article-card"
-        >
-          <SectionsBlogCard :article="article" />
-        </li>
+        <ContentList v-slot="{ list }" :query="query">
+          <li v-for="article in list" :key="article._path" class="article-card">
+            <SectionsBlogCard :article="article" />
+          </li>
+        </ContentList>
       </ul>
     </div>
 
