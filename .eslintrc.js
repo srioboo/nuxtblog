@@ -9,7 +9,7 @@ module.exports = {
     requireConfigFile: 'false',
   },
   extends: [
-    '@nuxtjs',
+    '@nuxt',
     'prettier',
     'plugin:prettier/recommended',
     'plugin:nuxt/recommended',
@@ -22,14 +22,6 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     quotes: [2, 'single', { avoidEscape: true, allowTemplateLiterals: true }],
-    'prettier/prettier': [
-      'error',
-      {
-        trailingComma: 'es5',
-        singleQuote: true,
-        printWidth: 80,
-      },
-    ],
     'vue/no-unused-components': [
       'error',
       {

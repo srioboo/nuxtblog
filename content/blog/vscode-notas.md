@@ -7,7 +7,8 @@ author:
 name: notas-vs-code
 title: 'VS Code: notas y apuntes del editor de código'
 id: notas-vs-code
-year: 2020-04-04
+date: 2020-04-04
+year: 2020
 description: Apuntes y notas de VS Code, el editor de código multilenguaje.
   Atajos de teclado, opciones útiles, extensiones y otras características
 ---
@@ -22,12 +23,12 @@ VS Code es un editor de código multiplataforma que permite multitud de lenguaje
 
 ## Atajos útiles
 
-| **Atajo**                      | **Acción**                              | **Notas**                                                                        |
-| ------------------------------ | --------------------------------------- | -------------------------------------------------------------------------------- |
-| ctrl+shift+P                   | consola de comandos                     | puedes escribir la acción para llegar a un comando, por ejemplo 'abrir terminal' |
-| ctrl+j                         | muestra u oculta la consola             | hay que crear antes la consola                                                   |
-| ctrl+shift+`| abre el terminal |
-| ctrl+B                         | muestra/oculta la barra lateral de menú |                                                                                  |
+| **Atajo**    | **Acción**                              | **Notas**                                                                        |
+| ------------ | --------------------------------------- | -------------------------------------------------------------------------------- |
+| ctrl+shift+P | consola de comandos                     | puedes escribir la acción para llegar a un comando, por ejemplo 'abrir terminal' |
+| ctrl+j       | muestra u oculta la consola             | hay que crear antes la consola                                                   |
+| ctrl+shift+` | abre el terminal                        |
+| ctrl+B       | muestra/oculta la barra lateral de menú |                                                                                  |
 
 Si tenemos abierta la consola y desde esta linea de comandos escribimos:
 "code ." --> abre una nueva ventana en el directorio actual

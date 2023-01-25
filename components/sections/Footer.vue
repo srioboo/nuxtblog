@@ -11,17 +11,11 @@
         <a href="#top" class="footer__top-page">^</a>
       </div>
     </div>
-    <!-- <CookieAlert /> -->
-    <TheCookieBox />
-    <cookie-consent />
+    <!-- CookieAlert  -->
   </footer>
 </template>
 <script>
-// import CookieAlert from './CookieAlert.vue';
-
-import TheCookieBox from '../CookieBox';
 export default {
-  components: { TheCookieBox },
   computed: {
     year() {
       return new Date().getFullYear();

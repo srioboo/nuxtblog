@@ -1,9 +1,45 @@
+<script setup>
+const { path } = useRoute();
+
+console.log(path);
+
+const { data: article } = await useAsyncData('home', () =>
+  queryContent()
+    .where({
+      id: path.replace('/blog/', ''),
+      //id: `${route.params.slug}[0]`,
+    })
+    .findOne()
+);
+
+useHead({
+  title: article.title + 'My App',
+  meta: [{ name: 'description', content: 'My amazing site.' }],
+  bodyAttrs: {
+    class: 'test',
+  },
+  script: [{ children: "console.log('Hello world')" }],
+});
+
+const imgsmall = 'w_810,q_90,f_auto';
+const noimage =
+  'https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/glacier.jpg';
+
+function transformImg(img) {
+  return img.replace('{{trans}}', imgsmall);
+}
+
+function formatDate(date) {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  return new Date(date).toLocaleDateString('es', options);
+}
+</script>
+
 <template>
-  <div>
-    <Header />
+  <SectionsHeader />
+  <main>
     <article class="article">
       <div class="article__content">
-        <!-- <p>{{ article.description }}</p> -->
         <img
           v-if="article.img"
           :src="transformImg(article.img)"
@@ -22,14 +58,6 @@
         <div class="overlay" />
         <div class="nav__wrapper">
           <nav class="nav">
-            <!-- <p class="bg-blue-300 font-bolder p-2">Secciones</p> -->
-            <!-- TODO: mejorar y comentar la lista de contenidos Esto es la lista de contenidos
-          <ul class="font-bold text-xs leading-9 list-none p-2">
-            <li v-for="link of article.toc" :key="link.id">
-              <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
-            </li>
-          </ul> -->
-            <!-- <div class="text-xs ml-2">tags:</div> -->
             <div v-for="tag in article.tags" :key="tag" class="nav__tag">
               {{ tag }}
             </div>
@@ -47,55 +75,12 @@
             Actualizado: {{ formatDate(article.updatedAt) }}
           </span>
         </p>
-
-        <nuxt-content :document="article" />
+        <ContentDoc :path="article._path" />
       </div>
     </article>
-  </div>
+  </main>
+  <SectionsFooter />
 </template>
-
-<script>
-import Header from '~/components/sections/Header.vue';
-export default {
-  components: {
-    Header,
-  },
-  async asyncData({ $content, params }) {
-    const article = await $content('articles', params.slug).fetch();
-
-    return { article };
-  },
-  data() {
-    return {
-      imgfull: 'w_1000,q_90,f_auto',
-      noimage:
-        'https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/glacier.jpg',
-    };
-  },
-  head() {
-    return {
-      title: this.article.title,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.article.description,
-        },
-      ],
-    };
-  },
-  methods: {
-    formatDate(date) {
-      const options = { year: 'numeric', month: 'long', day: 'numeric' };
-      return new Date(date).toLocaleDateString('es', options);
-    },
-    transformImg(img) {
-      const timg = img.replace('{{trans}}', this.imgfull);
-      return timg;
-    },
-  },
-};
-</script>
 
 <style lang="scss">
 @import '~/assets/css/_base';
@@ -104,7 +89,7 @@ export default {
   --bg-opacity: 0.95;
 }
 
-text-menu {
+.text-menu {
   color: $grey;
 }
 
@@ -186,7 +171,7 @@ article {
     }
 
     .nav__wrapper {
-      porsition: absolute; // absolute
+      position: absolute; // absolute
       // text-menu
       top: 8rem; // top-30
       left: 8rem; // left-30

@@ -9,18 +9,11 @@ const { data: articles } = await useAsyncData('equal', () =>
 <template>
   <div>
     <SectionsHeader />
-    <div class="main">
-      <h1 class="h1">Entradas recientes</h1>
-      <ul class="container">
-        <li
-          v-for="article of articles"
-          :key="article.slug"
-          class="article-card"
-        >
-          <SectionsBlogCard :article="article" />
-        </li>
-      </ul>
-    </div>
+    <ul class="container">
+      <li v-for="article of articles" :key="article.id" class="article-card">
+        <SectionsBlogCard :article="article" />
+      </li>
+    </ul>
 
     <SectionsFooter />
   </div>
