@@ -42,6 +42,11 @@ export default defineNuxtConfig({
         { name: 'twitter:site', content: '@salrio74' },
         { property: 'og:type', content: 'profile' },
         // { property: 'og:updated_time', content: builtAt },
+        {
+          name: 'google-site-verification',
+          //content: 'v2YiH432XnpeHIXOMIS1ftKaZzZhYIrmHT7Cukx8BFg',
+          content: process.env.GOOGLE_SITE_VERIFICATION,
+        },
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
