@@ -12,13 +12,23 @@ const { data: articles } = await useAsyncData('home', () =>
 useHead({
   title: 'Salrion, post ordenados por año de creación',
   meta: [
+    { charset: 'utf-8' },
     {
-      hid: 'description',
+      name: 'viewport',
+      content: 'width=device-width,initial-scale=1.0,minimum-scale=1.0',
+    },
+    {
       name: 'description',
       content:
-        'Todos los articulos ordenados por la fecha en las que fueron creados, una forma fácil de tener un historial de tus artículos favoritos',
+        'Todos los artículos ordenados por la fecha en las que fueron creados, una forma fácil de tener un historial de tus artículos favoritos',
     },
   ],
+  bodyAttrs: {
+    // class: 'base',
+  },
+  htmlAttrs: {
+    lang: 'es',
+  },
 });
 
 function transformImg(img) {

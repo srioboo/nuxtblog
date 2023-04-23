@@ -27,7 +27,6 @@ export default defineNuxtConfig({
           content: 'width=device-width,initial-scale=1.0,minimum-scale=1.0',
         },
         {
-          hid: 'description',
           name: 'description',
           content: process.env.npm_package_description || '',
         },

@@ -7,10 +7,10 @@ author:
   name: Salrion
 date: 2016-11-06
 year: 2016
-description: flexget, instalación y configuración en Raspberry pi para sacar provecho a la automatización de diversas tareas, como uso de Transmision y subtitulos
+description: 'flexget, instalación y configuración en Raspberry pi para sacar provecho a la automatización de diversas tareas, como uso de Transmision y subtitulos'
 ---
 
-up:: [Home](http://salrion.netlify.app)
+up:: [Home](https://salrion.netlify.app)
 
 Flexget permite realizar tareas automatizadas en linux.
 

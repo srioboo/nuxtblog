@@ -12,9 +12,8 @@ const { data: article } = await useAsyncData('home', () =>
     .findOne()
 );
 
-useHead({
-  title: article.title + 'My App',
-  // meta: [{ name: 'description', content: 'My amazing site.' }],
+await useHead({
+  title: article.title,
   meta: [
     { charset: 'utf-8' },
     {
@@ -22,18 +21,16 @@ useHead({
       content: 'width=device-width,initial-scale=1.0,minimum-scale=1.0',
     },
     {
-      hid: 'description',
       name: 'description',
-      content: 'Blog personal, apuntes sobre tecnología, linux, programación, tecnologías, forma de vida. Una pequeño repositorio de cosas de interes.',
+      content: article.description,
     },
   ],
   bodyAttrs: {
-    // class: 'test',
+    // class: 'base',
   },
   htmlAttrs: {
     lang: 'es',
   },
-  // script: [{ children: "console.log('Hello world')" }],
 });
 
 const imgsmall = 'w_810,q_90,f_auto';

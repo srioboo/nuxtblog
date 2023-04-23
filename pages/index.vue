@@ -7,6 +7,23 @@ const query: QueryBuilderParams = {
   //limit: 5,
   // sort: { date: -1 },
 };
+
+useHead({
+  title: 'Salrion Blog: mi blog personal',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Listado de post sobre informática, programación, apuntes, docker, kubernetes, estilo de vida y otras cosas de interés personal',
+    },
+  ],
+  bodyAttrs: {
+    // class: 'base',
+  },
+  htmlAttrs: {
+    lang: 'es',
+  },
+});
 </script>
 
 <template>
