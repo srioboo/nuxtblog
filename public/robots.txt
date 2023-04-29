@@ -1,5 +1,3 @@
 # robots.txt
 User-agent: *
 Allow: /
-
-Sitemap: https://salrion.netlify.app/sitemap.xml
