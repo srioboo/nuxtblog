@@ -6,8 +6,7 @@ alt: Git
 layout: post
 author:
   name: SRN
-date: 2020-04-04
-year: 2020
+year: 2020-04-04
 description: Pequeños apuntes y anotaciones sobre Git y GitFlow, uso, comandos
   principales e inicialización de una de las herramientas de control de
   versiones más populares.
@@ -238,6 +237,40 @@ git mv [existing-path] [new-path]
 git log --stat -M
 
 ```
+
+
+## Cambiar nombre de rama
+
+Se ha creado una rama:
+```shell
+git checkout -b rama-nombre-inicial
+```
+y queremos cambiar el nombre
+
+### En local
+
+si estamos en la rama
+```shell
+git checkout -m rama-nombre-nuevo
+```
+
+desde una rama diferente
+```shell
+git branch -m rama-nombre-inicial rama-nombre-nuevo
+```
+
+### En remoto
+
+Si la rama ya está en el repo, sería subir la nueva rama creada en local
+```shell
+git push origin -u rama-nombre-nuevo
+```
+
+y eliminamos la antigua
+```shell
+git push origin --delete rama-nombre-inicial
+```
+
 
 ## .gitignore e ignorar patrones
 
