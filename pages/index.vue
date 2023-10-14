@@ -1,6 +1,9 @@
 <script lang="ts" setup>
 import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types';
 
+const story = await useAsyncStoryblok('home', { version: 'draft' })
+
+
 const query: QueryBuilderParams = {
   path: '/blog',
   // where: { layout: 'post' },
@@ -27,6 +30,7 @@ useHead({
 </script>
 
 <template>
+  <StoryblokComponent v-if="story" :blok="story.content" />
   <div>
     <SectionsHeader />
     <div class="main">

@@ -1,6 +1,6 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ['@vueuse/nuxt', '@nuxt/content'],
+  modules: ['@vueuse/nuxt', '@nuxt/content', ['@storyblok/nuxt', { accessToken: 'Gc7QfT1vJnGRxTkq8RgpEgtt' }], '@nuxtjs/tailwindcss'],
   content: {
     highlight: {
       preload: ['html', 'shell'],
