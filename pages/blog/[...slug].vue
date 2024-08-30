@@ -202,8 +202,10 @@ article {
         width: 83.333333%; // lg:w-5/6
       }
 
-      margin: 0.5rem; // m-2
-      border-radius: 0.5rem; //   rounded-lg
+      & {
+        margin: 0.5rem; // m-2
+        border-radius: 0.5rem;
+      }
 
       .nav {
         margin-top: 1.25rem; //  mt-5
@@ -237,7 +239,11 @@ article {
       width: 100%; // xs:w-full
       height: 100%; // xs:h-full
     }
-    padding: 1.25rem; //  p-5
+
+    & {
+      padding: 1.25rem;
+    }
+
     .article__date {
       margin-top: 0;
       margin-bottom: 0.75rem;
