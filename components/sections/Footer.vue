@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~/assets/css/_base.scss';
+@import '~/assets/css/_base';
 
 .footer {
   &__info {
@@ -52,7 +52,9 @@ export default {
     @include sm {
       text-align: inherit;
     }
-    color: $grey-dark;
+    & {
+      color: $grey-dark;
+    }
   }
 
   &__top-page {

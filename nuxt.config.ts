@@ -1,6 +1,7 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   modules: ['@vueuse/nuxt', '@nuxt/content'],
+
   content: {
     highlight: {
       preload: ['html', 'shell'],
@@ -14,6 +15,7 @@ export default defineNuxtConfig({
       },
     },
   },
+
   app: {
     head: {
       htmlAttrs: {
@@ -127,4 +129,6 @@ export default defineNuxtConfig({
       ],
     },
   },
+
+  compatibilityDate: '2024-08-30',
 });
