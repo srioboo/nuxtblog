@@ -7,9 +7,9 @@
     <div id="navmenu" class="header__navmenu">
       <ul>
         <!-- <li><SectionsSearch /></li> -->
-        <li>
+        <!-- <li>
           <a href="/year-archive">Posts</a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </header>
