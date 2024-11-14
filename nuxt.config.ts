@@ -1,8 +1,25 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ['@vueuse/nuxt', '@nuxt/content'],
+  modules: [
+    '@vueuse/nuxt',
+    '@nuxt/content',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
+    '@nuxtjs/seo',
+  ],
+
+  robots: {
+    credits: false,
+  },
+
+  sitemap: {
+    xsl: false,
+    xslTips: false,
+    exclude: ['/politica-privacidad/**', 'tags/*'],
+  },
 
   content: {
+    documentDriven: true,
     highlight: {
       preload: ['html', 'shell'],
       theme: {
