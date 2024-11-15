@@ -9,6 +9,12 @@ const query: QueryBuilderParams = {
 };
 
 useHead({
+  htmlAttrs: {
+    lang: 'es',
+  },
+  bodyAttrs: {
+    class: 'dark',
+  },
   title: 'Salrion Blog: mi blog personal',
   meta: [
     {
@@ -17,12 +23,6 @@ useHead({
         'Listado de post sobre informática, programación, apuntes, docker, kubernetes, estilo de vida y otras cosas de interés personal',
     },
   ],
-  bodyAttrs: {
-    // class: 'base',
-  },
-  htmlAttrs: {
-    lang: 'es',
-  },
 });
 </script>
 
