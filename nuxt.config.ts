@@ -17,10 +17,11 @@ export default defineNuxtConfig({
     xsl: false,
     xslTips: false,
     exclude: ['/politica-privacidad/**', 'tags/*'],
+    strictNuxtContentPaths: true,
   },
 
   content: {
-    documentDriven: true,
+    // documentDriven: true,
     highlight: {
       preload: ['html', 'shell'],
       theme: {
@@ -36,16 +37,10 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      htmlAttrs: {
-        lang: 'es',
-      },
+      charset: 'utf-8',
+      viewport: 'width=device-width,initial-scale=1.0,minimum-scale=1.0',
       title: process.env.npm_package_name || '',
       meta: [
-        { charset: 'utf-8' },
-        {
-          name: 'viewport',
-          content: 'width=device-width,initial-scale=1.0,minimum-scale=1.0',
-        },
         {
           name: 'description',
           content: process.env.npm_package_description || '',

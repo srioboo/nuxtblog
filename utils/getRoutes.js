@@ -1,3 +1,4 @@
+/* TODO - this is no usefull now, using nuxt seo sitemaps instead
 export default async () => {
   const { $content } = require('@nuxt/content');
   const files = await $content({ deep: true })
@@ -15,4 +16,4 @@ export default async () => {
       lastmodISO: updated,
     };
   });
-};
+};*/
