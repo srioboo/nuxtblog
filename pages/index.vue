@@ -28,6 +28,7 @@ useHead({
 
 <template>
   <div>
+    <!-- index -->
     <SectionsHeader />
     <div class="main">
       <h1 class="h1">Entradas recientes</h1>
@@ -41,6 +42,7 @@ useHead({
     </div>
 
     <SectionsFooter />
+    <!-- /index -->
   </div>
 </template>
 
