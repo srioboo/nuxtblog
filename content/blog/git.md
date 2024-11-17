@@ -1,6 +1,6 @@
 ---
 id: notas-de-git
-title: "Git: control de versiones"
+title: 'Git: control de versiones'
 img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/git.jpg
 alt: Git
 layout: post
@@ -11,11 +11,13 @@ description: Pequeños apuntes y anotaciones sobre Git y GitFlow, uso, comandos
   principales e inicialización de una de las herramientas de control de
   versiones más populares.
 ---
+
 Git permite a grupos de personas trabajar en los mismos documentos o código al mismo tiempo sin pisarse unos a otros. Al igual que CVS o Subversion es un control de versiones aunque en este caso es distribuido permitiendo que cada usuario tenga una copia local del repositorio.
 
 ## Configuración e incialización
 
 Para inicialicar un nuevo directorio para funcionar con git.
+
 ```bash
 # crear un directorio
 mkdir mi_directorio
@@ -27,30 +29,38 @@ cd mi_directorio
 git init
 ```
 
-Para asignar un usuario global y un email para el usuario 
+Para asignar un usuario global y un email para el usuario
+
 ```bash
 git config --global user.name usuario@mail.net
 
-git config --global user.email usuario@mail.net  
+git config --global user.email usuario@mail.net
 ```
+
 Si queremos que sea en un usuario local
+
 ```bash
 git config --local user.name usuario@mail.net
 
-git config --local user.email usuario@mail.net  
+git config --local user.email usuario@mail.net
 ```
-**Nota**: Para incluir en la configuración de sistema usaremos *--system*
+
+**Nota**: Para incluir en la configuración de sistema usaremos _--system_
 
 También podemos añadir ciertos alias para simplificar la escritura de comandos.
+
 ```bash
-git config --global alias.co checkout  
+git config --global alias.co checkout
 ```
+
 O configurar colores en la salida de datos
+
 ```bash
 git config --global color.ui auto
 ```
 
 Es muy útil poder guardar las credenciales en el credential.helper
+
 ```bash
 # Guardar las credenciales localmente
 git config credential.helper store
@@ -62,15 +72,16 @@ git config --global credential.helper store
 ## Consultar estado y logs
 
 Consultar el estado de los archivos, si no se han añadido, si estan en el espacio de stage, etc.
+
 ```bash
 git status
 ```
 
 Si es muy extensa la salida usar _-p_
+
 ```bash
 git -p status
 ```
-
 
 Consultar se puede consultar el log de diferentes formas
 
@@ -88,30 +99,39 @@ git log --oneline --first-parent
 ## Incluir/excluir archivos en git, commit y subirlos al servidor
 
 Tras crear un archivo hay que añadirlo al indice para su seguimiento, para ello
+
 ```bash
 git add archivo.ext
 ```
+
 Esto añade el archivo al área de Staging
 
 Si queremos añadir todos los archivos del directorio actual
+
 ```bash
 git add .
 ```
+
 Si queremos sacar el archivo del área de staging
+
 ```bash
 git reset mi_archivo
 ```
 
 Una vez que los cambios se han concluido añadimos a git y al log con un mensaje
+
 ```bash
-git commit -m "mi mensaje" 
+git commit -m "mi mensaje"
 ```
+
 Pero esto solo lo agrega localmente, si queremos subir los cambios a un servidor necesitamos hacer un push
+
 ```bash
 git push
 ```
 
 También podemos ver diferencias entre los archivos
+
 ```bash
 # Para ver las diferencias de un archivo con lo que hay en stage
 git diff
@@ -133,7 +153,7 @@ git branch -r
 # Crea una rama con el nombre dado
 git branch nombre_rama
 
-# Cambiar a una rama 
+# Cambiar a una rama
 git switch
 
 # Checkout una rama creada
@@ -144,6 +164,7 @@ git checkout -b nombre_rama
 ```
 
 Checkout nos permite también quitar los cambios de un archivo usando
+
 ```bash
 git checkout -- archivo.ext
 
@@ -159,7 +180,7 @@ Para empezar a compartir los cambios con otros es necesario sincronizar con el r
 # Añadir un repositorio remoto
 git remote add origin https://github.com/githubuser/MiRepositorio.git
 
-# Para enviar un commit al master 
+# Para enviar un commit al master
 git push -u origin master
 
 # Una vez seteado se puede hacer con
@@ -223,7 +244,6 @@ git rebase <branch>
 git reset --hard <commit>
 ```
 
-
 ## Tracking path changes
 
 ```bash
@@ -238,23 +258,26 @@ git log --stat -M
 
 ```
 
-
 ## Cambiar nombre de rama
 
 Se ha creado una rama:
+
 ```shell
 git checkout -b rama-nombre-inicial
 ```
+
 y queremos cambiar el nombre
 
 ### En local
 
 si estamos en la rama
+
 ```shell
 git checkout -m rama-nombre-nuevo
 ```
 
 desde una rama diferente
+
 ```shell
 git branch -m rama-nombre-inicial rama-nombre-nuevo
 ```
@@ -262,20 +285,23 @@ git branch -m rama-nombre-inicial rama-nombre-nuevo
 ### En remoto
 
 Si la rama ya está en el repo, sería subir la nueva rama creada en local
+
 ```shell
 git push origin -u rama-nombre-nuevo
 ```
 
 y eliminamos la antigua
+
 ```shell
 git push origin --delete rama-nombre-inicial
 ```
 
-
 ## .gitignore e ignorar patrones
 
 Si queremos ignorar ciertos archivos, podemos crear un archivo gitignore
+
 ```bash
 touch .gitignore
 ```
+
 Se edita el archivo y se añaden los archivos a ignorar
