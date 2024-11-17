@@ -81,11 +81,10 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~/assets/css/_colors.scss';
 h2 {
   margin: 1em 0 1em;
   font-size: 1em;
-  color: $grey-semi;
-  border-bottom: 1px solid $grey-light;
+  // color: $grey-semi;
+  // border-bottom: 1px solid $grey-light;
 }
 </style>

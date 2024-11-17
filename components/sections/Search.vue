@@ -40,8 +40,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/css/_base.scss';
-
 #search {
   input {
     padding-left: 10px;

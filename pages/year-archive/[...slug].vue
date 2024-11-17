@@ -80,13 +80,12 @@ function formatDate(date) {
 </template>
 
 <style lang="scss">
-@import '~/assets/css/_colors.scss';
-@import '~/assets/css/_breakpoints.scss';
+// @import '~/assets/css/_base.scss';
 h2 {
   margin: 1em 0 1em;
   font-size: 1em;
-  color: $grey-semi;
-  border-bottom: 1px solid $grey-light;
+  // color: $grey-semi;
+  // border-bottom: 1px solid $grey-light;
 }
 
 .container {
@@ -94,7 +93,7 @@ h2 {
 
   .container__header {
     font-weight: bold;
-    color: $grey-dark;
+    // color: $grey-dark;
     border-bottom-width: 1px;
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
@@ -124,21 +123,20 @@ h2 {
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
         &:hover {
-          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          box-shadow:
+            0 4px 6px -1px rgba(0, 0, 0, 0.1),
             0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
         .link__title {
           font-weight: bold;
         }
         .link__year {
-          // font-size: 12px;
           font-size: 0.75rem;
           line-height: 1rem;
         }
         .link__description {
           font-weight: bold;
-          color: $grey-dark;
-          // font-size: 14px;
+          // color: $grey-dark;
           font-size: 0.875rem;
           line-height: 1.25rem;
         }
