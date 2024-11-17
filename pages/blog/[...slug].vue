@@ -1,15 +1,9 @@
 <script setup>
+import { transformImg, formatDate } from '@/utils/helper';
 const { path } = useRoute();
 
-console.log(path);
-
-const { data: article } = await useAsyncData('home', () =>
-  queryContent()
-    .where({
-      id: path.replace('/blog/', ''),
-      //id: `${route.params.slug}[0]`,
-    })
-    .findOne()
+const { data: article, error } = await useAsyncData(`blog-post-${path}`, () =>
+  queryContent(path).findOne()
 );
 
 await useHead({
@@ -32,19 +26,6 @@ await useHead({
     lang: 'es',
   },
 });
-
-const imgsmall = 'w_810,q_90,f_auto';
-const noimage =
-  'https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/glacier.jpg';
-
-function transformImg(img) {
-  return img.replace('{{trans}}', imgsmall);
-}
-
-function formatDate(date) {
-  const options = { year: 'numeric', month: 'long', day: 'numeric' };
-  return new Date(date).toLocaleDateString('es', options);
-}
 </script>
 
 <template>
@@ -53,17 +34,9 @@ function formatDate(date) {
     <article class="article">
       <div class="article__content">
         <img
-          v-if="article.img"
           :src="transformImg(article.img)"
           :alt="article.alt"
           :title="article.title"
-          class="article__img"
-          loading="lazy"
-        />
-        <img
-          v-else
-          :src="transformImg(noimage)"
-          alt="no image"
           class="article__img"
           loading="lazy"
         />

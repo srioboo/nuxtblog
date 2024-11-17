@@ -1,51 +1,54 @@
-<script setup>
-const blog = defineProps(['article']);
-
-const imgsmall = 'w_810,q_90,f_auto';
-const noimage =
-  'https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/glacier.jpg';
-
-function transformImg(img) {
-  const timg = img.replace('{{trans}}', imgsmall);
-  return timg;
+<script lang="ts" setup>
+import { transformImg, formatDate } from '@/utils/helper';
+interface Props {
+  id?: string;
+  path?: string;
+  title?: string;
+  date?: string;
+  description?: string;
+  image?: string;
+  alt?: string;
+  ogImage?: string;
+  tags?: Array<string>;
+  published?: boolean;
 }
 
-function formatDate(date) {
-  const options = { year: 'numeric', month: 'long', day: 'numeric' };
-  return new Date(date).toLocaleDateString('es', options);
-}
+withDefaults(defineProps<Props>(), {
+  id: 'no-id',
+  path: '/',
+  title: 'no-title',
+  date: 'no-date',
+  description: 'no-description',
+  image: undefined,
+  alt: 'no-alt',
+  ogImage: undefined,
+  tags: () => [],
+  published: false,
+});
 </script>
 
 <template>
   <div class="blog">
-    {{ blog.article.imgsmall }}
-    <NuxtLink
-      :to="{ name: 'blog-slug', params: { slug: blog.article.id } }"
-      class="blog__link"
-    >
+    <NuxtLink :to="path" class="blog__link flex flex-col 2xl:flex-col">
       <img
-        v-if="blog.article.img"
-        :src="transformImg(blog.article.img)"
-        :alt="blog.article.alt"
-        class="blog__img"
-        loading="lazy"
-      />
-      <img
-        v-else
-        :src="transformImg(noimage)"
+        :src="transformImg(image)"
         alt="no image"
-        class="blog__img"
+        class="h-48 w-full object-cover max-w-full 2xl:min-w-1/2 2xl:max-w-full"
         loading="lazy"
       />
-      <div class="blog__content">
-        <h2 class="blog__title">
-          {{ blog.article.title }}
+      <div
+        class="blog__content p-6 flex flex-col justify-between 2xl:w-1/2 w-full"
+      >
+        <h2 class="blog__title font-bold">
+          {{ title }}
         </h2>
-        <p class="blog__content__year">
-          {{ formatDate(article.year) }}
+        <p class="blog__content__year text-xs">
+          {{ formatDate(date) }}
         </p>
-        <p class="blog__content__description">
-          {{ blog.article.description }}
+        <p
+          class="blog__content__description text-sm font-bold text-gray-600 w-full"
+        >
+          {{ description }}
         </p>
       </div>
     </NuxtLink>
@@ -53,17 +56,17 @@ function formatDate(date) {
 </template>
 
 <style lang="scss">
-@import '~/assets/css/_base.scss';
+// @import '~/assets/css/_base.scss';
 
-.blog {
+/* .blog {
   a {
     text-decoration: none;
   }
-}
+}*/
 
 .blog__link {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   transition-property: box-shadow;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
@@ -79,7 +82,7 @@ function formatDate(date) {
       var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
-  @include xxl {
+  /*@include xxl {
     flex-direction: column;
   }
 
@@ -93,33 +96,33 @@ function formatDate(date) {
       max-width: 100%;
       object-fit: cover;
     }
-  }
+  }*/
 }
 
 .blog__content {
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  // padding: 1.5rem;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
   width: 100%;
-  @include xxl {
-    width: 50%;
-  }
+  // @include xxl {
+  //   width: 50%;
+  // }
 
-  .blog__title {
-    font-weight: bold;
-  }
+  // .blog__title {
+  //   font-weight: bold;
+  // }
 
-  .blog__content__year {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-  .blog__content__description {
-    font-weight: bold;
-    color: $grey-dark;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
+  // .blog__content__year {
+  //   font-size: 0.75rem;
+  //   line-height: 1rem;
+  // }
+  // .blog__content__description {
+  //   font-weight: bold;
+  //   color: $grey-dark;
+  //   font-size: 0.875rem;
+  //   line-height: 1.25rem;
+  // }
 }
 
 // lazy image inicio
