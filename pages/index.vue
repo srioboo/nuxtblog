@@ -1,12 +1,27 @@
 <script lang="ts" setup>
-import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types';
+import { seoData } from '@/data';
+const { data } = await useAsyncData('recent-post', () =>
+  queryContent('/blog').sort({ _id: -1 }).find()
+);
 
-const query: QueryBuilderParams = {
-  path: '/blog',
-  // where: { layout: 'post' },
-  //limit: 5,
-  // sort: { date: -1 },
-};
+const formattedData = computed(() => {
+  return (
+    data.value?.map((articles) => {
+      return {
+        id: articles.id,
+        path: articles._path,
+        title: articles.title || 'no-title available',
+        description: articles.description || 'no-description available',
+        image: articles.img,
+        alt: articles.alt || 'no alter data available',
+        ogImage: articles.ogImage || '/glacier.jpg',
+        date: articles.date || 'not-date-available',
+        tags: articles.tags || [],
+        published: articles.published || false,
+      };
+    }) || []
+  );
+});
 
 useHead({
   htmlAttrs: {
@@ -15,12 +30,11 @@ useHead({
   bodyAttrs: {
     class: 'dark',
   },
-  title: 'Salrion Blog: mi blog personal',
+  title: seoData.title,
   meta: [
     {
       name: 'description',
-      content:
-        'Listado de post sobre informática, programación, apuntes, docker, kubernetes, estilo de vida y otras cosas de interés personal',
+      content: seoData.description,
     },
   ],
 });
@@ -33,14 +47,22 @@ useHead({
     <div class="main">
       <h1 class="h1">Entradas recientes</h1>
       <ul class="container">
-        <ContentList v-slot="{ list }" :query="query">
-          <li v-for="article in list" :key="article._path" class="article-card">
-            <SectionsBlogCard :article="article" />
-          </li>
-        </ContentList>
+        <li v-for="post in formattedData" :key="post.path" class="article-card">
+          <SectionsBlogCard
+            :id="post.id"
+            :path="post.path"
+            :title="post.title"
+            :date="post.date"
+            :description="post.description"
+            :image="post.image"
+            :alt="post.alt"
+            :og-image="post.ogImage"
+            :tags="post.tags"
+            :published="post.published"
+          />
+        </li>
       </ul>
     </div>
-
     <SectionsFooter />
     <!-- /index -->
   </div>
@@ -48,6 +70,7 @@ useHead({
 
 <style lang="scss" scoped>
 @import '~/assets/css/_base.scss';
+
 .main {
   margin: 2rem;
 }
