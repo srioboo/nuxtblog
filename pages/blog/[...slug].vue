@@ -31,13 +31,16 @@ await useHead({
 <template>
   <SectionsHeader />
   <main>
-    <article class="article">
-      <div class="article__content">
+    <article
+      class="article text-gray-700 bg-gray-100 w-screen flex flex-col overflow-hidden"
+    >
+      <div class="article__content flex justify-center relative">
+        {{ article.alt }}
         <img
           :src="transformImg(article.img)"
-          :alt="article.alt"
+          :alt="article.alt ? article.alt : 'glacier'"
           :title="article.title"
-          class="article__img"
+          class="article__img absolute h-full w-full object-cover"
           loading="lazy"
         />
         <div class="overlay" />
@@ -50,11 +53,11 @@ await useHead({
           </nav>
         </div>
       </div>
-      <div class="article__wrapper">
-        <h1>
+      <div class="article__wrapper relative overflow-y-scroll p-5">
+        <h1 class="font-bold mb-2">
           {{ article.title }}
         </h1>
-        <p class="article__date">
+        <p class="article__date mt-0 mb-3 text-xs">
           {{ formatDate(article.year) }}<br />
           <span class="article__date">
             Actualizado: {{ formatDate(article.updatedAt) }}
@@ -68,45 +71,21 @@ await useHead({
 </template>
 
 <style lang="scss">
-@import '~/assets/css/_base';
-
-.bg-opacity-95 {
-  --bg-opacity: 0.95;
-}
-
-.text-menu {
-  color: $grey;
-}
-
 nav {
   ul {
-    color: $font-color-nav-menu;
+    color: #2b5866;
   }
   .tag {
-    border: 1px solid $white;
+    border: 1px solid white;
     border-radius: 99999px;
     margin: 5px 5px;
     padding: 2px 10px;
-    color: $white;
+    color: white;
     width: 50%;
   }
 }
 
 article {
-  color: $font-color;
-  background-color: $grey-light;
-  width: 100vw;
-
-  display: flex;
-  @include sm {
-    flex-direction: column;
-  }
-  @include lg {
-    height: 100vh;
-    flex-direction: row;
-    overflow: hidden;
-  }
-
   h1 {
     font-weight: bold;
     margin: 0 0 10px 0;
@@ -134,46 +113,13 @@ article {
   }
 
   .article__content {
-    display: flex;
-    justify-content: center;
-    position: relative; //relative
-    @include sm {
-      width: 100%; //xs:w-full
-      height: 20rem; //  xs:h-84
-    }
-
-    @include lg {
-      width: 25%; // lg:w-1/4
-      height: 100%; // lg:h-full
-    }
-
-    .article__img {
-      //absolute h-full w-full object-cover
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
-
     .nav__wrapper {
       position: absolute; // absolute
       // text-menu
       top: 8rem; // top-30
       left: 8rem; // left-30
       --tw-bg-opacity: 1;
-      background-color: rgba(
-        156,
-        163,
-        175,
-        var(--tw-bg-opacity)
-      ); //  bg-gray-400 bg-opacity-95
-
-      @include sm {
-        width: 100%; //  xs:w-full
-      }
-      @include lg {
-        width: 83.333333%; // lg:w-5/6
-      }
+      background-color: rgba(156, 163, 175, var(--tw-bg-opacity));
 
       & {
         margin: 0.5rem; // m-2
@@ -181,46 +127,13 @@ article {
       }
 
       .nav {
-        margin-top: 1.25rem; //  mt-5
-        @include lg {
-          position: relative; //  lg:relative
-
-          top: 24rem; //  lg:top-100
-          left: 2.5rem; // lg:left-10
-        }
-        @include sm {
-          position: absolute; //  xs:absolute
-          top: 0; //  xs:top-0
-          left: 0; //  xs:left-0
-        }
+        margin-top: 1.25rem;
 
         .nav__tag {
           font-size: 1.25rem;
           line-height: 1.75rem;
         }
       }
-    }
-  }
-  .article__wrapper {
-    position: relative; //relative
-    overflow-y: scroll; // overflow-y-scroll
-    @include lg {
-      width: 75%; // lg:w-3/4
-      height: 100%; // lg:h-full
-    }
-    @include sm {
-      width: 100%; // xs:w-full
-      height: 100%; // xs:h-full
-    }
-
-    & {
-      padding: 1.25rem;
-    }
-
-    .article__date {
-      margin-top: 0;
-      margin-bottom: 0.75rem;
-      font-size: 0.75rem;
     }
   }
 }
@@ -236,6 +149,6 @@ table {
 
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
-  background-color: $cream;
+  background-color: #e4dbc7;
 }
 </style>

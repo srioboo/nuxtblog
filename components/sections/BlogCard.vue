@@ -29,16 +29,17 @@ withDefaults(defineProps<Props>(), {
 
 <template>
   <div class="blog">
-    <NuxtLink :to="path" class="blog__link flex flex-col 2xl:flex-col">
+    <NuxtLink
+      :to="path"
+      class="blog__link flex flex-col 2xl:flex-col no-underline"
+    >
       <img
         :src="transformImg(image)"
         alt="no image"
-        class="h-48 w-full object-cover max-w-full 2xl:min-w-1/2 2xl:max-w-full"
+        class="h-48 w-1/2 object-cover max-w-full min-w-full"
         loading="lazy"
       />
-      <div
-        class="blog__content p-6 flex flex-col justify-between 2xl:w-1/2 w-full"
-      >
+      <div class="blog__content p-6 flex flex-col justify-between w-full">
         <h2 class="blog__title font-bold">
           {{ title }}
         </h2>
@@ -104,7 +105,7 @@ withDefaults(defineProps<Props>(), {
   // display: flex;
   // flex-direction: column;
   // justify-content: space-between;
-  width: 100%;
+  // width: 100%;
   // @include xxl {
   //   width: 50%;
   // }
