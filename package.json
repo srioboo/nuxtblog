@@ -24,6 +24,8 @@
     "@nuxtjs/sitemap": "^6.1.5",
     "@nuxtjs/tailwindcss": "^6.12.2",
     "@release-it/conventional-changelog": "^8.0.2",
+    "@tailwindcss/forms": "^0.5.9",
+    "@tailwindcss/typography": "^0.5.15",
     "@typescript-eslint/parser": "^8.14.0",
     "@vueuse/core": "^11.2.0",
     "@vueuse/nuxt": "^11.2.0",
