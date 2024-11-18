@@ -28,7 +28,7 @@ useHead({
     lang: 'es',
   },
   bodyAttrs: {
-    class: 'dark',
+    // class: 'dark',
   },
   title: seoData.title,
   meta: [
