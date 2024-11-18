@@ -106,14 +106,14 @@ h2 {
     .container__item {
       padding-left: 0.5rem;
       padding-right: 0.5rem;
-      @include sm {
-        width: 100%;
-        margin-bottom: 1.25rem;
-      }
-      @include md {
-        width: 100%;
-        margin-bottom: 1.25rem;
-      }
+      // @include sm {
+      //   width: 100%;
+      //   margin-bottom: 1.25rem;
+      // }
+      // @include md {
+      //   width: 100%;
+      //   margin-bottom: 1.25rem;
+      // }
 
       .container__link {
         display: flex;
