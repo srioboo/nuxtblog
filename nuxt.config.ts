@@ -12,6 +12,12 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
   ],
 
+  runtimeConfig: {
+    public: {
+      SITE_URL: process.env.NUXT_PUBLIC_SITE_URL,
+    },
+  },
+
   robots: {
     credits: false,
   },

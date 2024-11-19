@@ -1,5 +1,4 @@
 <script setup>
-import { seoData } from '~/data';
 import { transformImg, formatDate } from '@/utils/helper';
 const { path } = useRoute();
 
@@ -21,7 +20,11 @@ await useHead({
     },
     {
       property: 'og:url',
-      content: seoData.mySite + path,
+      content: useRuntimeConfig().public.SITE_URL + path,
+    },
+    {
+      property: 'og:image',
+      content: transformImg(article.img),
     },
   ],
   bodyAttrs: {

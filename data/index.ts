@@ -3,9 +3,9 @@ export const seoData = {
   ogTitle: `Salrion's Blog: mi blog personal | Salrion's Blog`,
   description: `Listado de post sobre informática, programación, apuntes, docker, kubernetes, estilo de vida y otras cosas de interés personal - Salrion Blog | Salrion's Blog`,
   // twitterDescription: `Listado de post sobre informática, programación, apuntes, docker, kubernetes, estilo de vida y otras cosas de interés personal - Salrion Blog | Salrion's Blog`,
-  // image:
-  //  'https://res.cloudinary.com/salrion/image/upload/w_810,q_90,f_auto/salrionblog/glacier.jpg',
-  mySite: 'https://salrion.vercel.app',
+  image:
+    'https://res.cloudinary.com/salrion/image/upload/w_810,q_90,f_auto/salrionblog/glacier.jpg',
+  mySite: 'My site name',
   twitterHandle: '@salrio74',
   // mailAddress: 'some_email@some_mail_provider.com',
 };
@@ -44,10 +44,10 @@ export const siteMetaData = [
     property: 'og:description',
     content: seoData.description,
   },
-  // {
-  //  property: 'og:image',
-  //  content: seoData.image,
-  //},
+  {
+    property: 'og:image',
+    content: seoData.image,
+  },
   // { property: 'og:updated_time', content: builtAt },
   // Test on: https://cards-dev.twitter.com/validator or https://socialsharepreview.com/
   { name: 'twitter:site', content: seoData.twitterHandle },
