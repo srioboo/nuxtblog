@@ -1,7 +1,7 @@
 ---
 id: notas-vs-code
 name: notas-vs-code
-title: 'VS Code: notas y apuntes del editor de código'
+title: "VS Code: notas y apuntes del editor de código"
 img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/macbook.jpg
 alt: VSCode
 layout: post
@@ -23,12 +23,18 @@ VS Code es un editor de código multiplataforma que permite multitud de lenguaje
 
 ## Atajos útiles
 
-| **Atajo**    | **Acción**                              | **Notas**                                                                        |
-| ------------ | --------------------------------------- | -------------------------------------------------------------------------------- |
-| ctrl+shift+P | consola de comandos                     | puedes escribir la acción para llegar a un comando, por ejemplo 'abrir terminal' |
-| ctrl+j       | muestra u oculta la consola             | hay que crear antes la consola                                                   |
-| ctrl+shift+` | abre el terminal                        |
-| ctrl+B       | muestra/oculta la barra lateral de menú |                                                                                  |
+| **Atajo**                                                                   | **Acción**                                       | **Notas**                                                                        |
+| --------------------------------------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------- |
+| ctrl+shift+P                                                                | consola de comandos                              | puedes escribir la acción para llegar a un comando, por ejemplo 'abrir terminal' |
+| ctrl+j                                                                      | muestra u oculta la consola                      | hay que crear antes la consola                                                   |
+| ctrl+shift+ \`                                                              | abre el terminal                                 |                                                                                  |
+| ctrl+B                                                                      | muestra/oculta la barra lateral de menú          |                                                                                  |
+| alt+ click                                                                  | múltiples cursores                               |                                                                                  |
+| alt+shift + click                                                           | múltiples cursores                               |                                                                                  |
+| cmd + alt + flecha / ctrl + alt + flecha (win) / shift + alt + flecha (lin) | múltiples cursores                               |                                                                                  |
+| cmd + d / ctrl + d                                                          | selecionar misma palabra                         |                                                                                  |
+| cmd + u / ctrl + u                                                          | deshacer la útlima selección                     |                                                                                  |
+| cmd + shift + l / ctrl + shift + l                                          | selecciona todas las ocurrencias en el documento |                                                                                  |
 
 Si tenemos abierta la consola y desde esta linea de comandos escribimos:
 "code ." --> abre una nueva ventana en el directorio actual
