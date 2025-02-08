@@ -1,23 +1,25 @@
-<script lang="ts" setup>
+<script setup lang="ts">
 import { seoData } from '@/data';
-const { data } = await useAsyncData('recent-post', () =>
-  queryContent('/blog').sort({ _id: -1 }).find()
-);
+const { data } = await useAsyncData(() =>
+  queryCollection('content').path('/').all())
+
+
+console.log("hi", data.value);
 
 const formattedData = computed(() => {
   return (
     data.value?.map((articles) => {
       return {
         id: articles.id,
-        path: articles._path,
+        path: articles.path,
         title: articles.title || 'no-title available',
         description: articles.description || 'no-description available',
-        image: articles.img,
-        alt: articles.alt || 'no alter data available',
-        ogImage: articles.ogImage || '/glacier.jpg',
-        date: articles.date || 'not-date-available',
-        tags: articles.tags || [],
-        published: articles.published || false,
+        // image: articles.img,
+        // alt: articles.alt || 'no alter data available',
+        // ogImage: articles.ogImage || '/glacier.jpg',
+        // date: articles.date || 'not-date-available',
+        // tags: articles.tags || [],
+        // published: articles.published || false,
       };
     }) || []
   );
@@ -54,7 +56,8 @@ useHead({
           :key="post.path"
           class="article-card py-0 px-2 sm:w-1/2 mb-6 sm:mb-12"
         >
-          <SectionsBlogCard
+        {{ post }}
+         <!-- <SectionsBlogCard
             :id="post.id"
             :path="post.path"
             :title="post.title"
@@ -65,7 +68,7 @@ useHead({
             :og-image="post.ogImage"
             :tags="post.tags"
             :published="post.published"
-          />
+          /> -->
         </li>
       </ul>
     </div>

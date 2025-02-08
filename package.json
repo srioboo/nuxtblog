@@ -20,7 +20,7 @@
     "@nuxt/content": "^3.1.0",
     "@nuxt/eslint": "^1.0.1",
     "@nuxtjs/robots": "^5.2.2",
-    "@nuxtjs/seo": "2.0.0-rc.23",
+    "@nuxtjs/seo": "2.1.1",
     "@nuxtjs/sitemap": "^7.2.4",
     "@nuxtjs/tailwindcss": "^6.13.1",
     "@release-it/conventional-changelog": "^10.0.0",
