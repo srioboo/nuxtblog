@@ -5,9 +5,9 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-08-30',
   modules: [
     '@vueuse/nuxt',
-    '@nuxt/content',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
+    '@nuxt/content',
     '@nuxtjs/seo',
     '@nuxtjs/tailwindcss',
   ],
@@ -26,22 +26,26 @@ export default defineNuxtConfig({
     xsl: false,
     xslTips: false,
     exclude: ['/politica-privacidad/**', 'tags/*'],
-    strictNuxtContentPaths: true,
+    // strictNuxtContentPaths: true,
   },
 
   content: {
-    // documentDriven: true,
-    highlight: {
-      preload: ['html', 'shell'],
-      theme: {
-        // Default theme (same as single string)
-        default: 'github-light',
-        // Theme used if `html.dark`
-        dark: 'github-dark',
-        // Theme used if `html.sepia`
-        sepia: 'monokai',
-      },
-    },
+    build: {
+      markdown: {
+        // documentDriven: true,
+        highlight: {
+          preload: ['html', 'shell'],
+          theme: {
+            // Default theme (same as single string)
+            default: 'github-light',
+            // Theme used if `html.dark`
+            dark: 'github-dark',
+            // Theme used if `html.sepia`
+            sepia: 'monokai',
+          }
+        }
+      }
+    }
   },
 
   app: {
