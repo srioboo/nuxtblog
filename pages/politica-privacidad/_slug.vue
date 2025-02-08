@@ -1,3 +1,20 @@
+<script setup lang="ts">
+/*function formatDate(date) {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  return new Date(date).toLocaleDateString('es', options);
+}*/
+/*
+useHead({
+  title: 'Politica de privacidad',
+  meta: [
+    {
+      name: 'description',
+      content: 'Politica de privacidad y política de cookies',
+    },
+  ],
+});*/
+</script>
+
 <template>
   <div>
     <Header />
@@ -49,36 +66,6 @@
   </div>
 </template>
 
-<script>
-import Header from '~/components/sections/Header.vue';
-import Footer from '~/components/sections/Footer.vue';
-
-export default {
-  components: {
-    Header,
-    Footer,
-  },
-
-  methods: {
-    formatDate(date) {
-      const options = { year: 'numeric', month: 'long', day: 'numeric' };
-      return new Date(date).toLocaleDateString('es', options);
-    },
-  },
-  head() {
-    return {
-      title: 'Politica de privacidad',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'Politica de privacidad y política de cookies',
-        },
-      ],
-    };
-  },
-};
-</script>
 
 <style lang="scss">
 h2 {

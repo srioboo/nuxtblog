@@ -1,76 +1,43 @@
-<script>
-import Header from '~/components/sections/Header.vue';
-import Footer from '~/components/sections/Footer.vue';
+<script setup lang="ts">
+const articles = ref<any[]>([]);
+const tags = ref<string[]>([]);
 
-export default {
-  components: {
-    Header,
-    Footer,
-  },
-  async asyncData({ $content, params, error }) {
-    const articles = await $content('articles', params.slug)
-      .only([
-        'title',
-        'description',
-        'img',
-        'alt',
-        'year',
-        'slug',
-        'author',
-        'tags',
-      ])
-      .sortBy('year', 'asc')
-      .fetch()
-      // eslint-disable-next-line prettier/prettier
-      .catch((err) => {
-        error({ statusCode: 404, message: 'Page not found' });
-        console.error(err);
-      });
+// Cargar datos (puedes adaptar esto según tu API)
+try {
+  const data = await queryCollection('content')
+    //.select('title', 'description', 'img', 'alt', 'year', 'slug', 'author', 'tags')
+    .select('title', 'description', 'tags')
+    .all();
 
-    // eslint-disable-next-line prettier/prettier
-    const mapTags = articles.map((actualTag) => {
-      console.log('actualtag: ' + actualTag);
-      return actualTag.tags;
-    });
+  articles.value = data || [];
 
-    const tags = [];
+  // Extraer tags únicos
+  const allTags = new Set();
+  articles.value.forEach((article) => {
+    if (article.tags) {
+      article.tags.forEach((tag: unknown) => allTags.add(tag));
+    }
+  });
+  tags.value = Array.from(allTags).sort() as string[];
+} catch (error) {
+  console.error('Error loading articles:', error);
+}
 
-    // eslint-disable-next-line prettier/prettier
-    mapTags.forEach((x) => {
-      // eslint-disable-next-line prettier/prettier
-      x.forEach((y) => {
-        if (!tags.includes(y)) {
-          tags.push(y);
-        }
-      });
-      return tags;
-    });
+/*function formatDate(date: string | number | Date) {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  return new Date(date).toLocaleDateString('es', options);
+}
 
-    return {
-      articles,
-      tags,
-    };
-  },
-  methods: {
-    formatDate(date) {
-      const options = { year: 'numeric', month: 'long', day: 'numeric' };
-      return new Date(date).toLocaleDateString('es', options);
+useHead({
+  title: 'Salrion, post ordenados por tags',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Todos los articulos ordenados por tags o temática, una forma fácil de ver artículos de tus temas preferidos. Elije un tema y comienza a leer.',
     },
-  },
-  head() {
-    return {
-      title: 'Salrion, post ordenados por tags',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content:
-            'Todos los articulos ordenados por tags o temática, una forma fácil de ver artículos de tus temas preferidos. Elije un tema y comienza a leer.',
-        },
-      ],
-    };
-  },
-};
+  ],
+});*/
 </script>
 
 <template>

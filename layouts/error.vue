@@ -32,35 +32,40 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'NuxtError',
-  props: {
-    error: {
-      type: Object,
-      default: null,
+<script setup lang="ts">
+import { computed } from 'vue';
+
+interface ErrorType {
+  statusCode?: number;
+  message?: string;
+}
+
+interface Props {
+  error?: ErrorType;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  error: () => ({}),
+});
+
+const statusCode = computed(() => {
+  return (props.error?.statusCode) || 500;
+});
+
+const message = computed(() => {
+  return props.error?.message || 'Error';
+});
+
+// Usar useHead dentro del setup
+/*useHead({
+  title: message.value,
+  meta: [
+    {
+      name: 'viewport',
+      content: 'width=device-width,initial-scale=1.0,minimum-scale=1.0',
     },
-  },
-  computed: {
-    statusCode() {
-      return (this.error && this.error.statusCode) || 500;
-    },
-    message() {
-      return this.error.message || '<%= messages.client_error %>';
-    },
-  },
-  head() {
-    return {
-      title: this.message,
-      meta: [
-        {
-          name: 'viewport',
-          content: 'width=device-width,initial-scale=1.0,minimum-scale=1.0',
-        },
-      ],
-    };
-  },
-};
+  ],
+});*/
 </script>
 
 <style>

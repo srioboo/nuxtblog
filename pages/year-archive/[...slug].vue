@@ -3,12 +3,13 @@ const control = '';
 
 // articles
 const { data: articles } = await useAsyncData('home', () =>
-  queryContent('/')
+  queryCollection('/')
     .sort({ year: 1 })
     .only(['title', 'description', 'id', 'date', 'year'])
     .find()
 );
 
+/*
 useHead({
   title: 'Salrion, post ordenados por año de creación',
   meta: [
@@ -29,7 +30,7 @@ useHead({
   htmlAttrs: {
     lang: 'es',
   },
-});
+});*/
 
 function transformImg(img) {
   return img.replace('{{trans}}', imgsmall);

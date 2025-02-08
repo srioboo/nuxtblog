@@ -1,28 +1,43 @@
 <script lang="ts" setup>
 import { seoData } from '@/data';
-const { data } = await useAsyncData('recent-post', () =>
-  queryContent('/blog').sort({ _id: -1 }).find()
-);
 
-const formattedData = computed(() => {
+const route = useRoute()
+/*const { data: data } = await useAsyncData(route.path, () => {
+  return queryCollection('content')
+  //.path(route.path)
+  //.path(route.path + 'content/blog/')
+  .where('path', 'LIKE', '/blog%')
+  .order('title', 'ASC')
+  .all()
+})*/
+
+//const { data: posts } = await useAsyncData('content',
+//() => queryCollection('content').all())
+
+//const route = useRoute()
+const { data: posts } = await useAsyncData(route.path, () => {
+  return queryCollection('content').path(route.path).all()
+})
+
+/*const formattedData = computed(() => {
   return (
     data.value?.map((articles) => {
       return {
         id: articles.id,
-        path: articles._path,
+        path: articles.path,
         title: articles.title || 'no-title available',
         description: articles.description || 'no-description available',
-        image: articles.img,
-        alt: articles.alt || 'no alter data available',
-        ogImage: articles.ogImage || '/glacier.jpg',
-        date: articles.date || 'not-date-available',
-        tags: articles.tags || [],
-        published: articles.published || false,
+        // alt: articles.alt || 'no alter data available',
+        // ogImage: articles.ogImage || '/glacier.jpg',
+        // date: articles.date || 'not-date-available',
+        // tags: articles.tags || [],
+        // published: articles.published || false,
       };
     }) || []
   );
-});
+});*/
 
+/*
 useHead({
   htmlAttrs: {
     lang: 'es',
@@ -37,7 +52,7 @@ useHead({
       content: seoData.description,
     },
   ],
-});
+});*/
 </script>
 
 <template>
@@ -50,11 +65,11 @@ useHead({
       </h1>
       <ul class="container flex flex-wrap list-none">
         <li
-          v-for="post in formattedData"
+          v-for="post in posts"
           :key="post.path"
           class="article-card py-0 px-2 sm:w-1/2 mb-6 sm:mb-12"
         >
-          <SectionsBlogCard
+         <!-- <SectionsBlogCard
             :id="post.id"
             :path="post.path"
             :title="post.title"
@@ -65,6 +80,15 @@ useHead({
             :og-image="post.ogImage"
             :tags="post.tags"
             :published="post.published"
+          /> -->
+          <SectionsBlogCard
+            :id="post.id"
+            :path="post.path"
+            :title="post.title"
+            :description="post.description"
+            :image="post.image"
+            :date="post.date"
+            :tags="post.tags"
           />
         </li>
       </ul>
