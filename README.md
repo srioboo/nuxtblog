@@ -1,4 +1,4 @@
-# Nuxtblog: Nuxt 3 blog proyect
+# Nuxtblog: Nuxt 3 blog project
 
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
