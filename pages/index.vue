@@ -2,21 +2,10 @@
 import { seoData } from '@/data';
 
 const route = useRoute()
-/*const { data: data } = await useAsyncData(route.path, () => {
-  return queryCollection('content')
-  //.path(route.path)
-  //.path(route.path + 'content/blog/')
-  .where('path', 'LIKE', '/blog%')
-  .order('title', 'ASC')
-  .all()
-})*/
-
-//const { data: posts } = await useAsyncData('content',
-//() => queryCollection('content').all())
-
-//const route = useRoute()
 const { data: posts } = await useAsyncData(route.path, () => {
-  return queryCollection('content').path(route.path).all()
+  return queryCollection('content')
+    .order('title', 'ASC')
+    .all()
 })
 
 /*const formattedData = computed(() => {
@@ -37,13 +26,13 @@ const { data: posts } = await useAsyncData(route.path, () => {
   );
 });*/
 
-/*
+
 useHead({
   htmlAttrs: {
     lang: 'es',
   },
   bodyAttrs: {
-    // class: 'dark',
+    class: 'light',
   },
   title: seoData.title,
   meta: [
@@ -52,7 +41,7 @@ useHead({
       content: seoData.description,
     },
   ],
-});*/
+});
 </script>
 
 <template>
@@ -69,7 +58,7 @@ useHead({
           :key="post.path"
           class="article-card py-0 px-2 sm:w-1/2 mb-6 sm:mb-12"
         >
-         <!-- <SectionsBlogCard
+        <SectionsBlogCard
             :id="post.id"
             :path="post.path"
             :title="post.title"
@@ -80,15 +69,6 @@ useHead({
             :og-image="post.ogImage"
             :tags="post.tags"
             :published="post.published"
-          /> -->
-          <SectionsBlogCard
-            :id="post.id"
-            :path="post.path"
-            :title="post.title"
-            :description="post.description"
-            :image="post.image"
-            :date="post.date"
-            :tags="post.tags"
           />
         </li>
       </ul>

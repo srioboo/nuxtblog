@@ -9,7 +9,10 @@ export default defineContentConfig({
       schema: z.object({
         tags: z.array(z.string()),
         image: z.string(),
-        date: z.date()
+        date: z.date(),
+        alt: z.string(),
+        ogImage: z.string(),
+        published: z.date()
       })
     })
   }
