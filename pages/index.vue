@@ -1,31 +1,10 @@
 <script lang="ts" setup>
 import { seoData } from '@/data';
 
-const route = useRoute()
+const route = useRoute();
 const { data: posts } = await useAsyncData(route.path, () => {
-  return queryCollection('content')
-    .order('title', 'ASC')
-    .all()
-})
-
-/*const formattedData = computed(() => {
-  return (
-    data.value?.map((articles) => {
-      return {
-        id: articles.id,
-        path: articles.path,
-        title: articles.title || 'no-title available',
-        description: articles.description || 'no-description available',
-        // alt: articles.alt || 'no alter data available',
-        // ogImage: articles.ogImage || '/glacier.jpg',
-        // date: articles.date || 'not-date-available',
-        // tags: articles.tags || [],
-        // published: articles.published || false,
-      };
-    }) || []
-  );
-});*/
-
+  return queryCollection('content').order('date', 'DESC').all();
+});
 
 useHead({
   htmlAttrs: {
@@ -58,13 +37,13 @@ useHead({
           :key="post.path"
           class="article-card py-0 px-2 sm:w-1/2 mb-6 sm:mb-12"
         >
-        <SectionsBlogCard
+          <SectionsBlogCard
             :id="post.id"
             :path="post.path"
             :title="post.title"
             :date="post.date"
             :description="post.description"
-            :image="post.image"
+            :image="post.meta.img"
             :alt="post.alt"
             :og-image="post.ogImage"
             :tags="post.tags"

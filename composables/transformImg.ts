@@ -7,7 +7,3 @@ export function transformImg(img: any) {
   const timg = img.replace('{{trans}}', imgsmall);
   return timg;
 }
-
-export function formatDate(date: any) {
-  return new Date(date).toLocaleDateString('es');
-}

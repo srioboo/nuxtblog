@@ -1,13 +1,9 @@
 <script lang="ts" setup>
-import { transformImg, formatDate } from '@/utils/helper';
-
-const route = useRoute()
+const route = useRoute();
 const { data: article } = await useAsyncData(route.path, () => {
-  return queryCollection('content').path(route.path).first()
-})
+  return queryCollection('content').path(route.path).first();
+});
 
-console.log("SRN article: ", article)
-/*
 await useHead({
   title: article.title,
   meta: [
@@ -22,11 +18,11 @@ await useHead({
     },
     {
       property: 'og:url',
-      content: useRuntimeConfig().public.SITE_URL + path,
+      content: useRuntimeConfig().public.SITE_URL + route.path,
     },
     {
       property: 'og:image',
-      content: transformImg(article.img),
+      content: article.meta?.img,
     },
   ],
   bodyAttrs: {
@@ -36,7 +32,6 @@ await useHead({
     lang: 'es',
   },
 });
-*/
 </script>
 
 <template>
@@ -46,38 +41,34 @@ await useHead({
       class="article text-gray-700 bg-gray-100 w-screen flex flex-col overflow-hidden"
     >
       <div class="article__content flex justify-center relative">
-       <!-- TODO - corregir {{ article.alt }}
         <img
-          :src="transformImg(article.img)"
+          :src="transformImg(article.meta?.img)"
           :alt="article.alt ? article.alt : 'glacier'"
           :title="article.title"
           class="article__img absolute h-full w-full object-cover"
           loading="lazy"
-        /> -->
+        />
         <div class="overlay" />
         <div class="nav__wrapper">
           <nav class="nav">
-           <!-- TODO - tags <div v-for="tag in article.tags" :key="tag" class="nav__tag">
+            <div v-for="tag in article.meta?.tags" :key="tag" class="nav__tag">
               {{ tag }}
-            </div> -->
+            </div>
             <br />
           </nav>
         </div>
       </div>
       <div class="article__wrapper relative overflow-y-scroll p-5">
         <h1 class="font-bold mb-2">
-          {{ article?.title }}
+          {{ article.title }}
         </h1>
         <p class="article__date mt-0 mb-3 text-xs">
-          <!--{{ formatDate(article?.meta) }}-->
-          <br />
+          {{ formatDate(article.meta?.year) }}<br />
           <span class="article__date">
-            <!--Actualizado: {{ formatDate(article. .value.updatedAt) }}-->
+            Actualizado: {{ formatDate(article.updatedAt) }}
           </span>
         </p>
-        <!-- deprecated <ContentDoc :path="article._path" /> -->
-             <ContentRenderer v-if="article" :value="article" />
-
+        <ContentRenderer v-if="article" :value="article" />
       </div>
     </article>
   </main>

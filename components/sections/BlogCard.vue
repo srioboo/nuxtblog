@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { transformImg, formatDate } from '@/utils/helper';
 interface Props {
   id?: string;
   path?: string;
