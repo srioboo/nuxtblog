@@ -10,9 +10,8 @@ useHead({
   htmlAttrs: {
     lang: 'es',
   },
-  bodyAttrs: {
-    class: 'light',
-  },
+  // Note: Dark mode is controlled via Tailwind's 'dark' class on the html element
+  // at the app.vue level. No bodyAttrs needed here.
   title: seoData.title,
   meta: [
     {
