@@ -1,5 +1,4 @@
 <script setup lang="ts">
-/*
 useHead({
   title: 'Politica de privacidad',
   meta: [
@@ -8,7 +7,7 @@ useHead({
       content: 'Politica de privacidad y política de cookies',
     },
   ],
-});*/
+});
 </script>
 
 <template>
