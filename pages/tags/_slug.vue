@@ -23,11 +23,6 @@ try {
   console.error('Error loading articles:', error);
 }
 
-/*function formatDate(date: string | number | Date) {
-  const options = { year: 'numeric', month: 'long', day: 'numeric' };
-  return new Date(date).toLocaleDateString('es', options);
-}
-
 useHead({
   title: 'Salrion, post ordenados por tags',
   meta: [
@@ -37,7 +32,7 @@ useHead({
         'Todos los articulos ordenados por tags o temática, una forma fácil de ver artículos de tus temas preferidos. Elije un tema y comienza a leer.',
     },
   ],
-});*/
+});
 </script>
 
 <template>
