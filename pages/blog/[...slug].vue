@@ -22,7 +22,7 @@ await useHead({
     },
     {
       property: 'og:image',
-      content: article.meta?.img,
+      content: article.meta?.img || '/glacier.jpg',
     },
   ],
   bodyAttrs: {
