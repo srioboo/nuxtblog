@@ -44,7 +44,7 @@ await useHead({
         <img
           :src="transformImg(article.meta?.img)"
           :alt="article.alt ? article.alt : 'glacier'"
-          :title="article.title"
+          :title="article?.title"
           class="article__img absolute h-full w-full object-cover"
           loading="lazy"
         />
@@ -60,12 +60,12 @@ await useHead({
       </div>
       <div class="article__wrapper relative overflow-y-scroll p-5">
         <h1 class="font-bold mb-2">
-          {{ article.title }}
+          {{ article?.title }}
         </h1>
         <p class="article__date mt-0 mb-3 text-xs">
           {{ formatDate(article.meta?.year) }}<br />
           <span class="article__date">
-            Actualizado: {{ formatDate(article.updatedAt) }}
+            Actualizado: {{ formatDate(article?.updatedAt) }}
           </span>
         </p>
         <ContentRenderer v-if="article" :value="article" />
