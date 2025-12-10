@@ -43,7 +43,7 @@ useHead({
             :title="post.title"
             :date="post.date"
             :description="post.description"
-            :image="post.meta.img"
+            :image="post.meta?.img"
             :alt="post.alt"
             :og-image="post.ogImage"
             :tags="post.tags"
