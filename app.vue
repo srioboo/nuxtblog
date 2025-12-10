@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-// import { siteMetaData } from './data'
-/*
+import { siteMetaData } from './data'
+
 useHead({
   htmlAttrs: {
     lang: 'es',
   },
-  // meta: () => siteMetaData,
-});*/
+  meta: () => siteMetaData,
+});
 </script>
 
 <template>
