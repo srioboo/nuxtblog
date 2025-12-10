@@ -56,8 +56,7 @@ const message = computed(() => {
   return props.error?.message || 'Error';
 });
 
-// Usar useHead dentro del setup
-/*useHead({
+useHead({
   title: message.value,
   meta: [
     {
@@ -65,7 +64,7 @@ const message = computed(() => {
       content: 'width=device-width,initial-scale=1.0,minimum-scale=1.0',
     },
   ],
-});*/
+});
 </script>
 
 <style>
