@@ -1,7 +1,7 @@
 ---
-id: 'raspberrypi'
-title: 'Raspberry Pi: el mini ordenador versátil'
-name: 'raspberrypi'
+id: raspberrypi
+title: "Raspberry Pi: el mini ordenador versátil"
+name: raspberrypi
 img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/raspberry-pi.jpg
 alt: Raspberry Pi
 layout: post
@@ -10,6 +10,8 @@ author:
 date: 2016-05-22
 year: 2016
 description: Apuntes y notas sobre Rasbperry PI, diferentes usos y configuraciones base para configurar diferentes opciones de este mini ordernador.
+tags:
+  - blog-main
 ---
 
 ## Montar un servidor web

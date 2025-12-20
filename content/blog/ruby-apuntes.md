@@ -1,7 +1,7 @@
 ---
 id: apuntes-de-ruby
-title: 'Ruby: lenguaje de programación de scripting'
-name: 'apuntes-de-ruby'
+title: "Ruby: lenguaje de programación de scripting"
+name: apuntes-de-ruby
 img: https://res.cloudinary.com/salrion/images/{{trans}}/salrionblog/ruby/apuntes-de-ruby.jpg
 alt: ruby
 layout: post
@@ -9,11 +9,10 @@ author:
   name: Salrion
 tags:
   - apuntes
-date: 2015-12-12 
+  - blog-main
+date: 2015-12-12
 year: 2015
-description: Apuntes de Ruby, primeros pasos con Ruby, un lenguaje de
-  programación de scripting, sencillo, potente y moderno. Variables,
-  comentarios, tipos y métodos.
+description: Apuntes de Ruby, primeros pasos con Ruby, un lenguaje de programación de scripting, sencillo, potente y moderno. Variables, comentarios, tipos y métodos.
 ---
 
 ## Vistazo general y adelanto

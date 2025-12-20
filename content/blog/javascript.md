@@ -1,6 +1,6 @@
 ---
-id: 'apuntes-javascript-i-variables-y-tipos'
-title: 'Javascript: I - Variables y Tipos'
+id: apuntes-javascript-i-variables-y-tipos
+title: "Javascript: I - Variables y Tipos"
 img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/coffee-yellow.jpg
 alt: Javascript
 layout: post
@@ -9,6 +9,8 @@ author:
 date: 2020-10-10
 year: 2020
 description: Primera parte del los apuntes de javascript "Javascript variables y tipos", uso de las variables en javascript y tipos de variables, constantes, templates y literales
+tags:
+  - blog-main
 ---
 
 ## Variables y constantes

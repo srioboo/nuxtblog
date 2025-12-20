@@ -9,9 +9,9 @@ author:
   name: Salrion
 date: 2020-03-14
 year: 2020
-description: Apuntes sobre gestión de proyectos y automatización con Grunt,
-  inicialización, configuración y algunas de las tareas más conocidas de este
-  gestor.
+description: Apuntes sobre gestión de proyectos y automatización con Grunt, inicialización, configuración y algunas de las tareas más conocidas de este gestor.
+tags:
+  - blog-main
 ---
 
 Grunt es un gestor de automatización tareas que permite facilitar la validación, despliegue de código, compilación, etc.

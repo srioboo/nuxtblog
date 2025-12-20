@@ -8,11 +8,10 @@ author:
   name: Salrion
 date: 2017-05-07
 year: 2017
-description: Dojo kun, reglas dojo para practicantes de Karate Shotokan. Reglas
-  básicas que todo practicante debe tratar de cumplir, tanto dentro como fuera
-  del dojo.
+description: Dojo kun, reglas dojo para practicantes de Karate Shotokan. Reglas básicas que todo practicante debe tratar de cumplir, tanto dentro como fuera del dojo.
 tags:
   - life
+  - blog-main
 ---
 
 **一丶 人格完成に努むること。**
@@ -25,7 +24,6 @@ Buscar la perfección del carácter <br>
 | Jinkaku     | Personalidad         |
 | Kansei      | Completar, finalizar |
 | Tsutomuru   | Trabajo, esfuerzo    |
-
 <br>
 
 **一丶 誠の道を守ること。**

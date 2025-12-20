@@ -9,8 +9,9 @@ author:
   name: SRN
 date: 2020-04-04
 year: 2020
-description: Apuntes y notas de VS Code, el editor de código multilenguaje.
-  Atajos de teclado, opciones útiles, extensiones y otras características
+description: Apuntes y notas de VS Code, el editor de código multilenguaje. Atajos de teclado, opciones útiles, extensiones y otras características
+tags:
+  - blog-main
 ---
 
 VS Code es un editor de código multiplataforma que permite multitud de lenguajes y alta configuración, es bastante últil para Angular, Vue o React y fue creado por Microsoft

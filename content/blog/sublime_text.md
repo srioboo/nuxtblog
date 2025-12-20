@@ -1,6 +1,6 @@
 ---
-id: 'apuntes-sublime-text'
-title: 'Sublime Text: el editor de código multilenguajes'
+id: apuntes-sublime-text
+title: "Sublime Text: el editor de código multilenguajes"
 img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/menu-bar.jpg
 alt: Sublime Text
 layout: post
@@ -9,6 +9,8 @@ author:
 date: 2016-06-07
 year: 2016
 description: Apuntes de atajos de teclados de Sublime Text, configuración, extensiones, todo para sacar provecho a este editor ligero y potente
+tags:
+  - blog-main
 ---
 
 ## SHORCUT

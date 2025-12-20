@@ -1,6 +1,6 @@
 ---
 id: html-css-best-practices
-title: 'HTML y CSS: buenas prácticas de uso'
+title: "HTML y CSS: buenas prácticas de uso"
 img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/notes.jpg
 alt: article 2
 layout: post
@@ -10,6 +10,8 @@ author:
 date: 2016-06-06
 year: 2016
 description: Buenas prácticas en HTML y CSS, todo lo que se debe hacer para construir una buena estructura de HTML y uno CSS correctos
+tags:
+  - blog-main
 ---
 
 ## Nunca uses estilos inline
@@ -35,6 +37,7 @@ El objetivo principal es que la pagina se carge lo más rápido posible para el 
 ## No uses javascript en linea, no estamos en 1996!
 
 Hace años era una práctica común poner comandos JS directamente en el interior de los tags. Por lo general un "onclick" o similar se añade al tag.
+
 Ni que decir tiene que no se debe hacer nunca esto. Lo mejor es pasar el código a un JS externo y usar un "addEventListener/attachEvent" para escuchar el evento o usar un framework como JQuery.
 
 ```javascript

@@ -9,10 +9,9 @@ author:
 date: 2021-06-20
 year: 2021
 tags:
-- GitFlow
-description: GitFlow, apuntes y anotaciones sobre uso, comandos principales e
-  inicialización de una de las herramientas de control de versiones más
-  populares.
+  - GitFlow
+  - blog-main
+description: GitFlow, apuntes y anotaciones sobre uso, comandos principales e inicialización de una de las herramientas de control de versiones más populares.
 ---
 
 # GitFlow

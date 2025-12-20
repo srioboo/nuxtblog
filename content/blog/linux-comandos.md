@@ -1,6 +1,6 @@
 ---
 id: comandos-linux-unix
-title: 'Comandos Linux/Unix'
+title: Comandos Linux/Unix
 alt: commandos linux unix
 layout: post
 author:
@@ -8,6 +8,8 @@ author:
 date: 2021-03-06
 year: 2021
 description: Tabla con los comandos más útiles en Linux/Unix para usar en el terminal
+tags:
+  - blog-main
 ---
 
 # Comandos linux/unix

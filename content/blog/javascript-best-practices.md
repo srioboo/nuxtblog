@@ -1,6 +1,6 @@
 ---
-id: 'notas-de-javascript'
-title: 'Javascript: buenas prácticas de uso'
+id: notas-de-javascript
+title: "Javascript: buenas prácticas de uso"
 img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/coffee-grey.jpg
 alt: Javascript
 layout: post
@@ -9,6 +9,8 @@ author:
 date: 2016-06-18
 year: 2016
 description: Buenas prácticas en el desarrollo de javascript, como realizar un buen código de javascript, siguiendo unas pautas adecuadas de desarrollo.
+tags:
+  - blog-main
 ---
 
 ## Enlaces:
