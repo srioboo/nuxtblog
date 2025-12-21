@@ -1,5 +1,5 @@
 [build]
-  command = "bunt run build"
+  command = "bun run build"
   functions = "netlify/functions"
   publish = "dist"
 
