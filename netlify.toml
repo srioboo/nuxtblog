@@ -1,8 +1,8 @@
 [build]
-  command = "nuxt generate"
+  command = "bunt run build"
   functions = "netlify/functions"
   publish = "dist"
-  
+
 # [[headers]]
   # Define which paths this specific [[headers]] block will cover.
   # for = "/sitemap.xml"
