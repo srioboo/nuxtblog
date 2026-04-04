@@ -7,7 +7,7 @@
 - `data/index.ts` concentra SEO, `meta` globales e iconos; evita duplicar estas listas en páginas nuevas.
 
 ## Flujo de contenido
-- Los posts viven en `content/blog/*.md` y usan frontmatter real como `id`, `title`, `img`, `alt`, `date`, `year`, `description`, `tags`, `author`, `layout`, `published`, `ogImage`.
+- Los posts viven en `content/blog/*.md` y usan frontmatter real como `id`, `title`, `image`, `alt`, `date`, `year`, `description`, `tags`, `author`, `layout`, `published`, `ogImage`.
 - La colección se define en `content.config.ts` como `content`, con esquema `zod` para `tags`, `image`, `date`, `alt`, `ogImage` y `published`.
 - Si añades o cambias campos del frontmatter, actualiza también ese esquema y los consumidores en `pages/index.vue` y `pages/blog/[...slug].vue`.
 

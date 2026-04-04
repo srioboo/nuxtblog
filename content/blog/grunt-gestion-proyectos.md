@@ -2,7 +2,7 @@
 id: grunt
 title: "Grunt: Gestión de proyectos"
 name: gestion-proyectos-grunt
-img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/grunt.jpg
+image: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/grunt.jpg
 alt: grunt
 layout: post
 author:

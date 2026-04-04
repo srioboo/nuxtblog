@@ -1,7 +1,7 @@
 ---
 id: dojokun
 title: "Life: Dojo Kun - 道場訓 - Preceptos del Dojo"
-img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/torii.jpg
+image: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/torii.jpg
 alt: Dojo kun
 layout: post
 author:

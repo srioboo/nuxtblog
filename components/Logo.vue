@@ -1,3 +1,7 @@
+<script setup lang="ts">
+defineOptions({ name: 'BaseLogo' });
+</script>
+
 <template>
   <svg
     class="NuxtLogo"

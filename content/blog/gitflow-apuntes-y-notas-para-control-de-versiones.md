@@ -1,7 +1,7 @@
 ---
 id: notas-de-git
 title: "Git: GitFlow, apuntes y notas para control de versiones"
-img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/git.jpg
+image: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/git.jpg
 alt: GitFlow
 layout: post
 author:

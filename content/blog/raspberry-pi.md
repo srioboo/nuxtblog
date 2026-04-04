@@ -2,7 +2,7 @@
 id: raspberrypi
 title: "Raspberry Pi: el mini ordenador versátil"
 name: raspberrypi
-img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/raspberry-pi.jpg
+image: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/raspberry-pi.jpg
 alt: Raspberry Pi
 layout: post
 author:

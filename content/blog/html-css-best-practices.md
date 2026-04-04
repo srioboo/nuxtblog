@@ -1,7 +1,7 @@
 ---
 id: html-css-best-practices
 title: "HTML y CSS: buenas prácticas de uso"
-img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/notes.jpg
+image: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/notes.jpg
 alt: article 2
 layout: post
 author:

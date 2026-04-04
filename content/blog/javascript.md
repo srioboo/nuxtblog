@@ -1,7 +1,7 @@
 ---
 id: apuntes-javascript-i-variables-y-tipos
 title: "Javascript: I - Variables y Tipos"
-img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/coffee-yellow.jpg
+image: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/coffee-yellow.jpg
 alt: Javascript
 layout: post
 author:
