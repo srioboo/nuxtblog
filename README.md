@@ -6,37 +6,35 @@ Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
 ## Build Setup
 
-Make sure to install the dependencies:
+Instala dependencias con Bun:
 
 ```bash
-# yarn
-yarn install
+bun install
+```
 
-# npm
+Si prefieres npm:
+
+```bash
 npm install
-
-# pnpm
-pnpm install --shamefully-hoist
 ```
 
 ## Development Server
 
-Serve with hot reload at localhost:3000
-
 ```bash
-$ npm run dev
+bun run dev
 ```
 
-## build for production and launch server
+## Build and preview
 
 ```bash
-npm run build
+bun run build
+bun run preview
 ```
 
 ## Generate static project
 
 ```bash
-npm run generate
+bun run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
