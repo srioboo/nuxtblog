@@ -1,7 +1,7 @@
 ---
 id: notas-de-javascript
 title: "Javascript: buenas prácticas de uso"
-img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/coffee-grey.jpg
+image: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/coffee-grey.jpg
 alt: Javascript
 layout: post
 author:

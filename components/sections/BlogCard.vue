@@ -37,7 +37,7 @@ withDefaults(defineProps<Props>(), {
         alt="no image"
         class="h-48 w-1/2 object-cover max-w-full min-w-full"
         loading="lazy"
-      />
+      >
       <div class="blog__content p-6 flex flex-col justify-between w-full">
         <h2 class="blog__title font-bold">
           {{ title }}

@@ -2,7 +2,7 @@
 id: notas-vs-code
 name: notas-vs-code
 title: "VS Code: notas y apuntes del editor de código"
-img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/macbook.jpg
+image: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/macbook.jpg
 alt: VSCode
 layout: post
 author:

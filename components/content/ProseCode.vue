@@ -5,22 +5,19 @@
     </span>
     <span
       v-if="languageText"
-      :style="{ background: languageBackground, color: languageColor }"
+      :style="{ backgroundColor: languageBackground || '', color: languageColor || '' }"
       class="language-text"
     >
       {{ languageText }}
     </span>
     <slot />
+    <pre hidden aria-hidden="true"><code><span class="line highlight" /></code></pre>
     <div class="bottom-container">
       <div class="copy-container">
         <span v-if="copied" class="copied-text">Copied code!</span>
-        <!-- <button @click="copy(code)">Copy code</button> -->
-        <div class="pr-1" @click="copy(code)">
-          <!----><svg
+        <div class="pr-1" @click="copy(props.code ?? '')">
+          <svg
             class="svg-inline--fa fa-copy top-bar-text"
-            style=""
-            aria-hidden="true"
-            focusable="false"
             data-prefix="far"
             data-icon="copy"
             role="img"
@@ -29,11 +26,9 @@
             data-v-9aa6a873=""
           >
             <path
-              class=""
-              style=""
               fill="currentColor"
               d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"
-            ></path>
+            />
           </svg>
         </div>
       </div>
@@ -44,7 +39,7 @@
 <script setup lang="ts">
 import { useClipboard } from '@vueuse/core';
 
-const { copy, copied, text } = useClipboard();
+const { copy, copied } = useClipboard();
 
 const props = withDefaults(
   defineProps<{
@@ -53,8 +48,7 @@ const props = withDefaults(
     filename?: string | null;
     highlights?: Array<number>;
   }>(),
-  // eslint-disable-next-line vue/require-valid-default-prop
-  { code: '', language: null, filename: null, highlights: [] }
+  { code: '', language: null, filename: null, highlights: () => [] }
 );
 
 const languageMap: Record<
@@ -94,7 +88,7 @@ const languageColor = computed(() =>
 );
 </script>
 
-<style scoped>
+<style>
 .svg-inline--fa {
   color: #939396;
   height: 1em;
@@ -149,29 +143,30 @@ const languageColor = computed(() =>
   border-bottom-left-radius: 0.25em;
 }
 
-:slotted(pre) {
+/* stylelint-disable selector-class-pattern, selector-type-no-unknown, no-unused-selectors */
+.container pre {
   margin-top: 0;
   margin-bottom: 0;
   display: flex;
-  flex: 1 1 0%;
+  flex: 1 1 0;
   overflow-x: auto;
   padding: 1rem;
   line-height: 1.625;
   counter-reset: lines;
 }
 
-:slotted(pre code) {
+.container pre code {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-:slotted(pre code .line) {
+.container pre code .line {
   display: inline-table;
   min-height: 1rem;
 }
 
-:slotted(pre code .line::before) {
+.container pre code .line::before {
   counter-increment: lines;
   content: counter(lines);
   width: 1rem;
@@ -181,7 +176,7 @@ const languageColor = computed(() =>
   color: rgba(115, 138, 148, 0.4);
 }
 
-:slotted(pre code .highlight) {
+.container pre code .highlight {
   background-color: #363b46;
   display: block;
   margin-right: -1em;
@@ -190,4 +185,5 @@ const languageColor = computed(() =>
   padding-left: 0.75em;
   border-left: 0.25em solid red;
 }
+/* stylelint-enable selector-class-pattern, selector-type-no-unknown, no-unused-selectors */
 </style>

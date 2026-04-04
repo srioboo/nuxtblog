@@ -1,10 +1,15 @@
 <script lang="ts" setup>
 const route = useRoute();
-const { data: article } = await useAsyncData(route.path, () => {
-  return queryCollection('content').path(route.path).first();
-});
+const article = await queryCollection('content').path(route.path).first();
 
-await useHead({
+if (!article) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Artículo no encontrado',
+  });
+}
+
+useHead({
   title: article.title,
   meta: [
     { charset: 'utf-8' },
@@ -22,7 +27,7 @@ await useHead({
     },
     {
       property: 'og:image',
-      content: article.meta?.img || '/glacier.jpg',
+      content: article.image || '/glacier.jpg',
     },
   ],
   bodyAttrs: {
@@ -35,44 +40,43 @@ await useHead({
 </script>
 
 <template>
-  <SectionsHeader />
-  <main>
-    <article
-      class="article text-gray-700 bg-gray-100 w-screen flex flex-col overflow-hidden"
-    >
-      <div class="article__content flex justify-center relative">
-        <img
-          :src="transformImg(article.meta?.img)"
-          :alt="article.alt ? article.alt : 'glacier'"
-          :title="article?.title"
-          class="article__img absolute h-full w-full object-cover"
-          loading="lazy"
-        />
-        <div class="overlay" />
-        <div class="nav__wrapper">
-          <nav class="nav">
-            <div v-for="tag in article.meta?.tags" :key="tag" class="nav__tag">
-              {{ tag }}
-            </div>
-            <br />
-          </nav>
+  <div>
+    <SectionsHeader />
+    <main>
+      <article
+        class="article text-gray-700 bg-gray-100 w-screen flex flex-col overflow-hidden"
+      >
+        <div class="article__content flex justify-center relative">
+          <img
+            :src="transformImg(article.image)"
+            :alt="article.alt ? article.alt : 'glacier'"
+            :title="article.title"
+            class="article__img absolute h-full w-full object-cover"
+            loading="lazy"
+          >
+          <div class="overlay" />
+          <div class="nav__wrapper">
+            <nav class="nav">
+              <div v-for="tag in article.tags" :key="tag" class="nav__tag">
+                {{ tag }}
+              </div>
+              <br>
+            </nav>
+          </div>
         </div>
-      </div>
-      <div class="article__wrapper relative overflow-y-scroll p-5">
-        <h1 class="font-bold mb-2">
-          {{ article?.title }}
-        </h1>
-        <p class="article__date mt-0 mb-3 text-xs">
-          {{ formatDate(article.meta?.year) }}<br />
-          <span class="article__date">
-            Actualizado: {{ formatDate(article?.updatedAt) }}
-          </span>
-        </p>
-        <ContentRenderer v-if="article" :value="article" />
-      </div>
-    </article>
-  </main>
-  <SectionsFooter />
+        <div class="article__wrapper relative overflow-y-scroll p-5">
+          <h1 class="font-bold mb-2">
+            {{ article.title }}
+          </h1>
+          <p class="article__date mt-0 mb-3 text-xs">
+            {{ formatDate(article.date) }}
+          </p>
+          <ContentRenderer v-if="article" :value="article" />
+        </div>
+      </article>
+    </main>
+    <SectionsFooter />
+  </div>
 </template>
 
 <style lang="scss">
@@ -94,6 +98,7 @@ article {
   h1 {
     font-weight: bold;
     margin: 0 0 10px 0;
+    font-size: 1.3em;
   }
 
   h2,
@@ -103,12 +108,6 @@ article {
   h6 {
     font-weight: bold;
     margin: 20px 0 10px 0;
-  }
-  h1 {
-    font-size: 1.3em;
-  }
-  h2 {
-    font-size: 1.2em;
   }
   h3 {
     font-size: 1.1em;

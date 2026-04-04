@@ -35,7 +35,7 @@ useHead({
         recibe y las páginas que se consultan, quedando aceptado su uso al
         navegar por ella.
       </p>
-      <br />
+        <br>
       <div class="flex flex-row justify-between">
         <div class="flex flex-col justify-between">
           <div>COOKIE (Y PROVEEDOR)</div>

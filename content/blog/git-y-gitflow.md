@@ -1,6 +1,6 @@
 ---
 title: "Git: control de versiones"
-img: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/git.jpg
+image: https://res.cloudinary.com/salrion/image/upload/{{trans}}/salrionblog/git.jpg
 alt: Git
 layout: post
 author:

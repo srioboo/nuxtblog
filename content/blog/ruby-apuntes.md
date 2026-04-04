@@ -2,7 +2,7 @@
 id: apuntes-de-ruby
 title: "Ruby: lenguaje de programación de scripting"
 name: apuntes-de-ruby
-img: https://res.cloudinary.com/salrion/images/{{trans}}/salrionblog/ruby/apuntes-de-ruby.jpg
+image: https://res.cloudinary.com/salrion/images/{{trans}}/salrionblog/ruby/apuntes-de-ruby.jpg
 alt: ruby
 layout: post
 author:
