@@ -34,7 +34,7 @@ export const siteMetaData = [
   { property: 'og:type', content: 'website' },
   {
     property: 'og:url',
-    content: seoData.mySite,
+    content: process.env.NUXT_PUBLIC_SITE_URL,
   },
   {
     property: 'og:title',
