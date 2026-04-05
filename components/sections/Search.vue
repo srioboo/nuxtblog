@@ -5,9 +5,17 @@
       type="search"
       autocomplete="off"
       placeholder="Buscar Artículos"
+      class="px-[10px] py-[2px] border border-black rounded-full"
     >
-    <ul v-if="filteredArticles.length">
-      <li v-for="article of filteredArticles" :key="article.path">
+    <ul
+      v-if="filteredArticles.length"
+      class="absolute left-0 top-full z-[2] p-[5px] border border-black bg-white"
+    >
+      <li
+        v-for="article of filteredArticles"
+        :key="article.path"
+        class="list-none border-b border-gray-400 mb-[7px] last:border-b-0 last:mb-0"
+      >
         <NuxtLink :to="article.path">
           <span class="block font-bold">{{ article.title }}</span>
           <span v-if="article.description" class="block text-xs text-gray-600">
@@ -58,28 +66,3 @@ const filteredArticles = computed(() => {
 });
 </script>
 
-<style lang="scss" scoped>
-#search {
-  input {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    border: 1px solid black;
-    border-radius: 50px;
-  }
-
-  ul {
-    position: absolute;
-    padding: 5px;
-    border: 1px solid black;
-    background-color: white;
-    z-index: 2;
-    li {
-      list-style: none;
-      border-bottom: 1px solid grey;
-      margin-bottom: 7px;
-    }
-  }
-}
-</style>
