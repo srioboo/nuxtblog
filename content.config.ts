@@ -10,6 +10,7 @@ export default defineContentConfig({
         tags: z.array(z.string()),
         image: z.string(),
         date: z.date(),
+        year: z.union([z.string(), z.number(), z.date(), z.null()]).optional(),
         alt: z.string(),
         ogImage: z.string(),
         published: z.date()

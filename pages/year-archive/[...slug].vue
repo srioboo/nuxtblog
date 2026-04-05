@@ -1,148 +1,137 @@
-<script setup>
-const control = '';
+<script setup lang="ts">
+type YearArchiveArticle = {
+  path: string;
+  title?: string;
+  description?: string;
+  date?: string | Date;
+  year?: string | number | Date | null;
+};
 
-// articles
-const { data: articles } = await useAsyncData('home', () =>
-  queryCollection('/')
-    .sort({ year: 1 })
-    .only(['title', 'description', 'id', 'date', 'year'])
-    .find()
+type NormalizedArticle = YearArchiveArticle & {
+  normalizedYear: number;
+};
+
+const { data: articles } = await useAsyncData('year-archive', () =>
+  queryCollection('content')
+    .select('title', 'description', 'path', 'date', 'year')
+    .all()
 );
 
-/*
-useHead({
-  title: 'Salrion, post ordenados por año de creación',
-  meta: [
-    { charset: 'utf-8' },
-    {
-      name: 'viewport',
-      content: 'width=device-width,initial-scale=1.0,minimum-scale=1.0',
-    },
-    {
-      name: 'description',
-      content:
-        'Todos los artículos ordenados por la fecha en las que fueron creados, una forma fácil de tener un historial de tus artículos favoritos',
-    },
-  ],
-  bodyAttrs: {
-    // class: 'base',
-  },
-  htmlAttrs: {
-    lang: 'es',
-  },
-});*/
+const normalizeYear = (value: YearArchiveArticle['year']) => {
+  if (value instanceof Date) {
+    return value.getFullYear();
+  }
 
-function transformImg(img) {
-  return img.replace('{{trans}}', imgsmall);
-}
+  if (typeof value === 'number' && Number.isFinite(value)) {
+    return value;
+  }
 
-function formatDate(date) {
-  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  if (typeof value === 'string' && value.trim()) {
+    const numericYear = Number(value);
+    if (!Number.isNaN(numericYear)) {
+      return numericYear;
+    }
+
+    const parsedDate = new Date(value);
+    if (!Number.isNaN(parsedDate.getTime())) {
+      return parsedDate.getFullYear();
+    }
+  }
+
+  return null;
+};
+
+const formatDate = (date?: string | Date) => {
+  if (!date) {
+    return '';
+  }
+
+  const options: Intl.DateTimeFormatOptions = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  };
+
   return new Date(date).toLocaleDateString('es', options);
-}
+};
+
+const groupedArticles = computed(() => {
+  const normalizedArticles = ((articles.value || []) as YearArchiveArticle[])
+    .map((article) => ({
+      ...article,
+      normalizedYear: normalizeYear(article.year),
+    }))
+    .filter((article): article is NormalizedArticle => article.normalizedYear !== null)
+    .sort((a, b) => {
+      if (b.normalizedYear !== a.normalizedYear) {
+        return b.normalizedYear - a.normalizedYear;
+      }
+
+      const dateA = a.date ? new Date(a.date).getTime() : 0;
+      const dateB = b.date ? new Date(b.date).getTime() : 0;
+
+      return dateB - dateA;
+    });
+
+  const groups = new Map<number, NormalizedArticle[]>();
+
+  for (const article of normalizedArticles) {
+    const year = article.normalizedYear;
+    const current = groups.get(year) || [];
+    current.push(article);
+    groups.set(year, current);
+  }
+
+  return [...groups.entries()].map(([year, items]) => ({
+    year,
+    articles: items,
+  }));
+});
 </script>
 
 <template>
   <div>
     <SectionsHeader />
-    <div class="container">
-      <h1 class="container__header">Post por año</h1>
-      <div
-        v-for="article of articles"
-        :key="article.slug"
-        :set="(actualYear = article.year)"
+    <main class="m-8">
+      <h1 class="my-5 border-b border-gray-300 font-bold text-gray-600">
+        Post por año
+      </h1>
+
+      <section
+        v-for="group in groupedArticles"
+        :key="group.year"
+        class="mb-10"
       >
-        <h2 v-if="actualYear != control">{{ actualYear }}</h2>
-        <ul class="container__list" :set="(control = article.year)">
-          <!-- <li v-if="article.year == year.year" class="container__item"> -->
-          <li class="container__item">
+        <h2 class="mb-5 text-lg font-bold text-gray-700">
+          {{ group.year }}
+        </h2>
+
+        <ul class="flex flex-wrap list-none gap-y-6">
+          <li
+            v-for="article in group.articles"
+            :key="article.path"
+            class="w-full px-2"
+          >
             <NuxtLink
-              :to="{ name: 'blog-slug', params: { slug: article.id } }"
-              class="container__link"
+              :to="article.path"
+              class="flex flex-col p-4 shadow-sm transition-shadow duration-150 ease-in-out hover:shadow-md"
             >
-              <h3 class="link__title">
+              <h3 class="font-bold">
                 {{ article.title }}
               </h3>
-              <p class="link__year">
+              <p class="text-xs">
                 {{ formatDate(article.date) }}
               </p>
-              <p class="link__description">
+              <p class="text-sm font-bold text-gray-600">
                 {{ article.description }}
               </p>
             </NuxtLink>
           </li>
         </ul>
-      </div>
-      <!-- </div> -->
-    </div>
+      </section>
+    </main>
 
     <SectionsFooter />
   </div>
 </template>
 
-<style lang="scss">
-// @import '~/assets/css/_base.scss';
-h2 {
-  margin: 1em 0 1em;
-  font-size: 1em;
-  // color: $grey-semi;
-  // border-bottom: 1px solid $grey-light;
-}
-
-.container {
-  margin: 2rem;
-
-  .container__header {
-    font-weight: bold;
-    // color: $grey-dark;
-    border-bottom-width: 1px;
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
-  }
-
-  .container__list {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    .container__item {
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
-      // @include sm {
-      //   width: 100%;
-      //   margin-bottom: 1.25rem;
-      // }
-      // @include md {
-      //   width: 100%;
-      //   margin-bottom: 1.25rem;
-      // }
-
-      .container__link {
-        display: flex;
-        flex-direction: column;
-        transition-property: box-shadow;
-        transition-duration: 150ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-        &:hover {
-          box-shadow:
-            0 4px 6px -1px rgba(0, 0, 0, 0.1),
-            0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        }
-        .link__title {
-          font-weight: bold;
-        }
-        .link__year {
-          font-size: 0.75rem;
-          line-height: 1rem;
-        }
-        .link__description {
-          font-weight: bold;
-          // color: $grey-dark;
-          font-size: 0.875rem;
-          line-height: 1.25rem;
-        }
-      }
-    }
-  }
-}
-</style>
