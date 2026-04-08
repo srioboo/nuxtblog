@@ -5,14 +5,14 @@
 - [ ] Ejecutar Fase 2: Contenido.
 - [ ] Validar criterios de salida por fase.
 
-## Fase 1 - Base tecnica
+## Fase 1 - Base técnica
 
 ### 1) Inicializar Astro + Vue + Tailwind
-- Crear proyecto Astro base en la rama actual (`migration/astro`) dentro de un nuevo directorio de trabajo (por ejemplo `astro/`) o como reemplazo planificado del root.
-- Instalar integraciones necesarias: `@astrojs/vue` y Tailwind para Astro.
-- Definir estructura inicial equivalente al proyecto actual: `src/pages`, `src/components`, `src/layouts`, `src/content`, `src/data`.
-- Migrar una primera ruta de prueba (`/`) con layout minimo para validar SSR/SSG.
-- Confirmar flujo local de desarrollo y build sin errores antes de migrar contenido real.
+- [X] Crear proyecto Astro base en la rama actual (`migration/astro`) dentro de un nuevo directorio de trabajo (por ejemplo `astro/`) o como reemplazo planificado del root.
+- [X] Instalar integraciones necesarias: `@astrojs/vue` y Tailwind para Astro.
+- [X] Definir estructura inicial equivalente al proyecto actual: `src/pages`, `src/components`, `src/layouts`, `src/content`, `src/data`.
+- [X] Migrar una primera ruta de prueba (`/`) con layout minimo para validar SSR/SSG.
+- [X] Confirmar flujo local de desarrollo y build sin errores antes de migrar contenido real.
 
 ### 2) Replicar config de entorno (`SITE_URL`, verificacion, etc.)
 - Inventariar variables usadas hoy en `nuxt.config.ts` y sus consumidores (por ejemplo `SITE_URL`, `GOOGLE_SITE_VERIFICATION`).
