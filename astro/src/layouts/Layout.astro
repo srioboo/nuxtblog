@@ -1,5 +1,9 @@
 ---
 import '../styles/global.css'
+import { site } from "../data/site";
+
+const { title, description, path = "/" } = Astro.props;
+const canonical = `${site.siteUrl}${path.startsWith("/") ? path : `/${path}`}`;
 ---
 
 <!doctype html>
@@ -10,7 +14,13 @@ import '../styles/global.css'
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:url" content={canonical} />
+    {site.googleSiteVerification && (
+      <meta name="google-site-verification" content={site.googleSiteVerification} />
+    )}
+		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
@@ -25,3 +35,4 @@ import '../styles/global.css'
 		height: 100%;
 	}
 </style>
+
