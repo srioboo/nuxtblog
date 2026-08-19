@@ -1,46 +1,36 @@
-# Astro Starter Kit: Basics
+# Salrion Blog (Astro)
 
-```sh
-bun create astro@latest -- --template basics
-```
+Blog personal, apuntes sobre tecnología, linux, programación, tecnologías, forma de vida. Migración desde Nuxt 4 + Nuxt Content 3 a Astro.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+El plan y las decisiones de la migración están en [`../docs-migration/`](../docs-migration/).
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+## Estructura del proyecto
 
 ```text
 /
-├── public/
-│   └── favicon.svg
+├── public/               favicons, _redirects, robots.txt
 ├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+│   ├── components/       componentes .astro estáticos + Search.vue (isla interactiva)
+│   ├── content/blog/     posts en markdown (Content Collections)
+│   ├── content.config.ts esquema zod de la colección blog
+│   ├── data/              datos de sitio/SEO
+│   ├── layouts/           layout base
+│   ├── pages/             rutas
+│   ├── styles/            CSS global y por artículo
+│   └── utils/             transformImg, formatDate, normalizeYear, seo
+└── astro.config.mjs
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Comandos
 
-## 🧞 Commands
+| Comando          | Acción                                       |
+| :---------------- | :-------------------------------------------- |
+| `bun install`      | Instala dependencias                          |
+| `bun run dev`      | Servidor de desarrollo en `localhost:4321`    |
+| `bun run build`    | Build de producción a `./dist/`               |
+| `bun run preview`  | Preview del build en local                    |
+| `bun run astro ...`| Comandos CLI de Astro (`astro check`, etc.)   |
 
-All commands are run from the root of the project, from a terminal:
+## Stack
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Astro 7 + Tailwind CSS v4 (`@tailwindcss/vite`) + Vue (isla interactiva solo para el buscador, vía `@astrojs/vue`) + Content Collections nativas de Astro para el markdown.
