@@ -1,0 +1,65 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+import { normalizeYear } from '../../utils/normalizeYear';
+import { formatDate } from '../../utils/formatDate';
+
+const posts = await getCollection('blog');
+
+const normalized = posts
+  .map((post) => ({ post, normalizedYear: normalizeYear(post.data.year) }))
+  .filter(
+    (entry): entry is { post: (typeof posts)[number]; normalizedYear: number } =>
+      entry.normalizedYear !== null
+  )
+  .sort((a, b) => {
+    if (b.normalizedYear !== a.normalizedYear) {
+      return b.normalizedYear - a.normalizedYear;
+    }
+    return b.post.data.date.valueOf() - a.post.data.date.valueOf();
+  });
+
+const groups = new Map<number, typeof normalized>();
+for (const entry of normalized) {
+  const current = groups.get(entry.normalizedYear) ?? [];
+  current.push(entry);
+  groups.set(entry.normalizedYear, current);
+}
+const groupedArticles = [...groups.entries()].map(([year, entries]) => ({ year, entries }));
+---
+
+<Layout title="Post por año | Salrion Blog" description="Entradas agrupadas por año" path="/year-archive">
+  <Header />
+  <main class="m-8">
+    <h1 class="my-5 border-b border-gray-300 font-bold text-gray-600">
+      Post por año
+    </h1>
+
+    {
+      groupedArticles.map((group) => (
+        <section class="mb-10">
+          <h2 class="mb-5 text-lg font-bold text-gray-700">{group.year}</h2>
+
+          <ul class="flex flex-wrap list-none gap-y-6">
+            {group.entries.map(({ post }) => (
+              <li class="w-full px-2">
+                <a
+                  href={`/blog/${post.id}`}
+                  class="flex flex-col p-4 shadow-sm transition-shadow duration-150 ease-in-out hover:shadow-md"
+                >
+                  <h3 class="font-bold">{post.data.title}</h3>
+                  <p class="text-xs">{formatDate(post.data.date)}</p>
+                  <p class="text-sm font-bold text-gray-600">{post.data.description}</p>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))
+    }
+  </main>
+
+  <Footer />
+</Layout>
