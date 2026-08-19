@@ -1,7 +1,38 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import BlogCard from '../components/BlogCard.astro';
+import { getCollection } from 'astro:content';
+import { seoData } from '../data/site';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
 ---
 
-<Layout>
-	<p>Migrating to Astro&hellip;</p>
+<Layout title={seoData.title} description={seoData.description}>
+  <Header />
+  <div class="main m-9">
+    <h1 class="h1 my-8 mx-0 text-gray-900 border-gray-200 font-bold">
+      Entradas recientes
+    </h1>
+    <ul class="container flex flex-wrap list-none">
+      {
+        posts.map((post) => (
+          <li class="article-card py-0 px-2 sm:w-1/2 mb-6 sm:mb-12">
+            <BlogCard
+              path={`/blog/${post.id}`}
+              title={post.data.title}
+              date={post.data.date}
+              description={post.data.description}
+              image={post.data.image}
+              alt={post.data.alt}
+            />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <Footer />
 </Layout>
