@@ -1,4 +1,5 @@
 ---
+import Search from './Search.vue';
 ---
 
 <header
@@ -10,7 +11,7 @@
 
   <div id="navmenu" class="header__navmenu font-bold">
     <ul class="flex list-none">
-      <li class="mr-6"><!-- Search mounts here, see Phase 6 --></li>
+      <li class="mr-6"><Search client:visible /></li>
       <li class="mr-6">
         <a href="/year-archive">Posts</a>
       </li>
