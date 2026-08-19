@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css'
+import { ClientRouter } from "astro:transitions";
 import { site, seoData, iconsLinks } from "../data/site";
 import { buildMeta } from "../utils/seo";
 
@@ -28,6 +29,7 @@ const meta = buildMeta({ title, description, ogImage, canonicalPath: path });
       <meta name="google-site-verification" content={site.googleSiteVerification} />
     )}
 		<title>{title}</title>
+		<ClientRouter />
 	</head>
 	<body class="bg-[#F1F2F4] dark:text-zinc-300 dark:bg-slate-950">
 		<slot />
