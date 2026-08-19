@@ -8,15 +8,14 @@ const site = process.env.PUBLIC_SITE_URL || 'https://tu-dominio.com';
 
 // Excluye:
 // - /politica-privacidad/**
-// - /tags/* (y /tags)
+// /tags es ahora una única página de índice real (ver src/pages/tags/index.astro)
+// y sí debe aparecer en el sitemap - no hay rutas /tags/* que excluir.
 /**
  * @param {string | URL} page
  */
 function shouldIncludePage(page) {
   const { pathname } = new URL(page);
   return !(
-    pathname === '/tags' ||
-    pathname.startsWith('/tags/') ||
     pathname === '/politica-privacidad' ||
     pathname.startsWith('/politica-privacidad/')
   );
