@@ -30,6 +30,14 @@ export default defineConfig({
       filter: shouldIncludePage,
     }),
   ],
+  markdown: {
+    shikiConfig: {
+      themes: {
+        light: 'github-light',
+        dark: 'github-dark',
+      },
+    },
+  },
   vite: {
     plugins: [tailwindcss()],
   },
