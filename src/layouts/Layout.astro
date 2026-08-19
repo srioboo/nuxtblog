@@ -1,0 +1,47 @@
+---
+import '../styles/global.css'
+import { ClientRouter } from "astro:transitions";
+import { site, seoData, iconsLinks } from "../data/site";
+import { buildMeta } from "../utils/seo";
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  path?: string;
+}
+
+const { title = seoData.title, description, ogImage, path = "/" } = Astro.props as Props;
+const canonical = `${site.siteUrl}${path.startsWith("/") ? path : `/${path}`}`;
+const meta = buildMeta({ title, description, ogImage, canonicalPath: path });
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
+		{iconsLinks.map((link) => <link {...link} />)}
+		<meta name="generator" content={Astro.generator} />
+		{meta.map((tag) => <meta {...tag} />)}
+    <link rel="canonical" href={canonical} />
+    {site.googleSiteVerification && (
+      <meta name="google-site-verification" content={site.googleSiteVerification} />
+    )}
+		<title>{title}</title>
+		<ClientRouter />
+	</head>
+	<body class="bg-[#F1F2F4] dark:text-zinc-300 dark:bg-slate-950">
+		<slot />
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+</style>
+

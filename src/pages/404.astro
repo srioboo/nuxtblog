@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="404 | Salrion Blog" description="Página no encontrada">
+  <Header />
+  <div class="m-8 flex flex-col items-center text-center">
+    <h1 class="text-6xl font-bold text-gray-700">404</h1>
+    <p class="my-4 text-gray-600">Página no encontrada.</p>
+    <a href="/" class="underline">Volver al inicio</a>
+  </div>
+  <Footer />
+</Layout>
