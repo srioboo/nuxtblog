@@ -1,28 +1,35 @@
 ---
 import '../styles/global.css'
-import { site } from "../data/site";
+import { site, seoData, iconsLinks } from "../data/site";
+import { buildMeta } from "../utils/seo";
 
-const { title, description, path = "/" } = Astro.props;
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  path?: string;
+}
+
+const { title = seoData.title, description, ogImage, path = "/" } = Astro.props as Props;
 const canonical = `${site.siteUrl}${path.startsWith("/") ? path : `/${path}`}`;
+const meta = buildMeta({ title, description, ogImage, canonicalPath: path });
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
+		{iconsLinks.map((link) => <link {...link} />)}
 		<meta name="generator" content={Astro.generator} />
-    <meta name="description" content={description} />
+		{meta.map((tag) => <meta {...tag} />)}
     <link rel="canonical" href={canonical} />
-    <meta property="og:url" content={canonical} />
     {site.googleSiteVerification && (
       <meta name="google-site-verification" content={site.googleSiteVerification} />
     )}
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="bg-[#F1F2F4] dark:text-zinc-300 dark:bg-slate-950">
 		<slot />
 	</body>
 </html>
