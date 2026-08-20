@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # eslint cache
 .eslintcache
+
+# Local Netlify folder
+.netlify
